@@ -283,7 +283,7 @@
                     <navigationItem key="navigationItem" title="Add HotSpot" id="qVd-5v-ZpY">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="NQ0-IG-Rpw">
                             <connections>
-                                <action selector="saveNewHotSpot:" destination="ZGt-W1-dhf" id="CsO-ft-1Tb"/>
+                                <action selector="savePressed" destination="ZGt-W1-dhf" id="rqV-TT-aR8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

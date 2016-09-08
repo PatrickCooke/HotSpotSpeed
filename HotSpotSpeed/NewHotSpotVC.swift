@@ -13,6 +13,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let pageLoc = CLLocationManager()
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
+    
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UITextField!
     @IBOutlet weak var dlSpeedTfield: UITextField!
@@ -23,12 +24,24 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityTfield: UITextField!
     @IBOutlet weak var zipTfield: UITextField!
     
-    @IBAction func savePressed (sender: AnyObject) {
+    //MARK: - Save Method
+    
+    @IBAction func savePressed () {
         print("save pressed")
-        
+        if (ssidTfield.text != "" || latTfield.text != "" || lonTfield.text != "") {
+            saveRecordSYNC()
+        } else {
+            print("didn't save")
+            let alert = UIAlertController(title: "Warning", message: "To Save This Hotspot, Please Enter Hotspot SSID, GPS Coordinates, And Up/Down Speeds", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
+    
     func saveRecordSYNC() {
+        
         let newHS = HotSpot()
+        
         if let ssid = ssidTfield.text {
             newHS.hpSSIDName = ssid
         }
@@ -64,6 +77,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         let result = dataStore.save(newHS, fault: &error) as? HotSpot
         if error == nil {
             print("Hotspot has been saved: \(result?.hpSSIDName)")
+            self.navigationController?.popViewControllerAnimated(true)
         }
         else {
             print("Server reported an error: \(error)")
