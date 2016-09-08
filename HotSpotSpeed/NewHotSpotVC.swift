@@ -51,10 +51,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             newHS.hpLocName = loc
         }
         if let downSpeed = dlSpeedTfield.text {
-            newHS.hpDown = Double(downSpeed)!
+            newHS.hpDown = downSpeed
         }
         if let upSpeed = upSpeedTfield.text {
-            newHS.hpUp = Double(upSpeed)!
+            newHS.hpUp = upSpeed
         }
         if let lat = latTfield.text {
             newHS.hpLat = lat

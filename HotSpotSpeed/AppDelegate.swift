@@ -16,11 +16,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let VERSION_NUM = "v1"
     
     var backendless = Backendless.sharedInstance()
+    var dataManager = DataManager.sharedInstance
+    
     var window: UIWindow?
     
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
+        dataManager.fetchData()
+        
         return true
     }
 
