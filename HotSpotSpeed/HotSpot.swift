@@ -12,8 +12,8 @@ class HotSpot: NSObject {
 
     var hpSSIDName  : String!
     var hpLocName   : String!
-    var hpDown      : Double!
-    var hpUp        : Double!
+    var hpDown      : Double = 0
+    var hpUp        : Double = 0
     var hpLat       : String!
     var hpLon       : String!
     var hpStreet    : String!

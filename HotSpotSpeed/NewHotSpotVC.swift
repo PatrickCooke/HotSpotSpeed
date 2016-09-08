@@ -20,6 +20,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var upSpeedTfield: UITextField!
     @IBOutlet weak var latTfield: UITextField!
     @IBOutlet weak var lonTfield: UITextField!
+    @IBOutlet weak var latLabel: UILabel!
+    @IBOutlet weak var lonLabel: UILabel!
     @IBOutlet weak var addressTfield: UITextField!
     @IBOutlet weak var cityTfield: UITextField!
     @IBOutlet weak var zipTfield: UITextField!
@@ -28,7 +30,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func savePressed () {
         print("save pressed")
-        if (ssidTfield.text != "" || latTfield.text != "" || lonTfield.text != "") {
+        if (ssidTfield.text != "" && latTfield.text != "" && lonTfield.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
             saveRecordSYNC()
         } else {
             print("didn't save")
@@ -49,10 +51,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             newHS.hpLocName = loc
         }
         if let downSpeed = dlSpeedTfield.text {
-            newHS.hpDown = Double(downSpeed)
+            newHS.hpDown = Double(downSpeed)!
         }
         if let upSpeed = upSpeedTfield.text {
-            newHS.hpUp = Double(upSpeed)
+            newHS.hpUp = Double(upSpeed)!
         }
         if let lat = latTfield.text {
             newHS.hpLat = lat
