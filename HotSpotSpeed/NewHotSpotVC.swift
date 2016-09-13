@@ -56,10 +56,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         if let upSpeed = upSpeedTfield.text {
             newHS.hpUp = upSpeed
         }
-        if let lat = latTfield.text {
+        if let lat = latLabel.text {
             newHS.hpLat = lat
         }
-        if let lon = lonTfield.text {
+        if let lon = lonLabel.text {
             newHS.hpLon = lon
         }
         if let street = addressTfield.text {
@@ -93,10 +93,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBAction func useCurrent (sender: UIButton) {
         
         if let lat = pageLoc.location?.coordinate.latitude {
-            latTfield.text = String(lat)
+            latLabel.text = String(lat)
         }
         if let lon = pageLoc.location?.coordinate.longitude {
-            lonTfield.text = String(lon)
+            lonLabel.text = String(lon)
         }
         
     }
@@ -120,8 +120,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             }
             if let placemark = placemarks?.first {
                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                self.latTfield.text = "\(coordinates.latitude)"
-                self.lonTfield.text = "\(coordinates.longitude)"
+                self.latLabel.text = "\(coordinates.latitude)"
+                self.latLabel.text = "\(coordinates.longitude)"
             }
         }
         
@@ -137,8 +137,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         locNameTfield.delegate=self
         dlSpeedTfield.delegate=self
         upSpeedTfield.delegate=self
-        latTfield.delegate=self
-        lonTfield.delegate=self
         addressTfield.delegate=self
         cityTfield.delegate=self
         zipTfield.delegate=self
@@ -155,12 +153,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             self.upSpeedTfield.becomeFirstResponder()
         }
         if textField == self.upSpeedTfield {
-            self.latTfield.becomeFirstResponder()
-        }
-        if textField == self.latTfield {
-            self.lonTfield.becomeFirstResponder()
-        }
-        if textField == self.lonTfield {
             self.addressTfield.becomeFirstResponder()
         }
         if textField == self.addressTfield {
