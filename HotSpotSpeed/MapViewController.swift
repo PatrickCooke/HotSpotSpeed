@@ -20,7 +20,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func setupMap() {
         hsMapView.delegate = self
         hsMapView.showsUserLocation = true
-        hsMapView.userTrackingMode = .FollowWithHeading
+        hsMapView.userTrackingMode = .Follow
         let regionRadius: CLLocationDistance = 1000
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(hsMapView.userLocation.coordinate,
                                                                   regionRadius*2.0,
@@ -28,34 +28,33 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         hsMapView.regionThatFits(coordinateRegion)
     }
     
-    func setArray() {
-        self.wifiArray = self.dataManager.hSArray
-        print("array set with \(self.wifiArray.count) items")
-    }
+
     
-    func displayEndpoints(array: [HotSpot]) {
-        let location = MKPointAnnotation()
+    func displayEndpoints() {
         print("displaying endpoints")
-        let count = array.count - 1
-        for index in 0...count {
-            print("endpoint #\(index)")
-            guard let lat = Double(array[index].hpLat) else {
+        //let array = self.dataManager.hSArray
+        //let count = array.count - 1
+        
+        for wifi in self.dataManager.hSArray {
+            print("endpoint: \(wifi.hpLocName)")
+            guard let lat = Double(wifi.hpLat) else {
                 return
             }
-            guard let lon = Double(array[index].hpLon) else {
+            guard let lon = Double(wifi.hpLon) else {
                 return
             }
-            guard let title = array[index].hpSSIDName  else {
+            guard let title = wifi.hpSSIDName  else {
                 return
             }
-            guard let downSpeed = array[index].hpDown else {
+            guard let downSpeed = wifi.hpDown else {
                 return
             }
-            guard let upSpeed = array[index].hpUp else {
+            guard let upSpeed = wifi.hpUp else {
                 return
             }
             let subtitle = "Down: \(downSpeed) Up: \(upSpeed)"
             let coords = CLLocationCoordinate2DMake(lat, lon)
+            let location = MKPointAnnotation()
             location.coordinate = coords
             location.title = title
             location.subtitle = subtitle
@@ -64,17 +63,29 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    //MARK: - reusable methods
+    
+    func reFetch () {
+        dataManager.fetchData()
+    }
+    
+    func fetchAndReload() {
+        displayEndpoints()
+        
+    }
+
+    //MARK: - Lifecycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         hsMapView.showsUserLocation = true
-        setArray()
-        setupMap()
         
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        displayEndpoints(self.dataManager.hSArray)
+        setupMap()
+        displayEndpoints()
     }
 
     override func didReceiveMemoryWarning() {

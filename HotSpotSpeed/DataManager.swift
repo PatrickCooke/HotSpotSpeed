@@ -11,7 +11,6 @@ import UIKit
 class DataManager: NSObject {
     static let sharedInstance = DataManager()
     var backendless = Backendless.sharedInstance()
-    
     var hSArray    :   [HotSpot]!
     
     func fetchData() {

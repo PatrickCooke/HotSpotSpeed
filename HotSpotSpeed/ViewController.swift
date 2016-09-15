@@ -37,6 +37,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Reoccuring Method
     
+    func reFetch () {
+        dataManager.fetchData()
+    }
+    
     func fetchAndReload() {
         self.hotspotArray = dataManager.hSArray
         print("array loaded")
@@ -51,6 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
     }
 
     override func didReceiveMemoryWarning() {

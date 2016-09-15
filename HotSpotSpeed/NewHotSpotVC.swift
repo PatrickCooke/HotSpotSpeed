@@ -30,7 +30,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func savePressed () {
         print("save pressed")
-        if (ssidTfield.text != "" && latTfield.text != "" && lonTfield.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
+        if (ssidTfield.text != "" && latLabel.text != "" && lonLabel.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
             saveRecordSYNC()
         } else {
             print("didn't save")
@@ -58,9 +58,11 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
         if let lat = latLabel.text {
             newHS.hpLat = lat
+            print("\(lat)")
         }
         if let lon = lonLabel.text {
             newHS.hpLon = lon
+            print("\(lon)")
         }
         if let street = addressTfield.text {
             newHS.hpStreet = street
@@ -80,6 +82,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         if error == nil {
             print("Hotspot has been saved: \(result?.hpSSIDName)")
             self.navigationController?.popViewControllerAnimated(true)
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "saved", object: nil))
         }
         else {
             print("Server reported an error: \(error)")
@@ -121,7 +124,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             if let placemark = placemarks?.first {
                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
                 self.latLabel.text = "\(coordinates.latitude)"
-                self.latLabel.text = "\(coordinates.longitude)"
+                self.lonLabel.text = "\(coordinates.longitude)"
             }
         }
         
