@@ -28,12 +28,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         hsMapView.regionThatFits(coordinateRegion)
     }
     
-
-    
     func displayEndpoints() {
         print("displaying endpoints")
-        //let array = self.dataManager.hSArray
-        //let count = array.count - 1
         
         for wifi in self.dataManager.hSArray {
             print("endpoint: \(wifi.hpLocName)")
@@ -55,13 +51,81 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             let subtitle = "Down: \(downSpeed) Up: \(upSpeed)"
             let coords = CLLocationCoordinate2DMake(lat, lon)
             let location = MKPointAnnotation()
+            let pin = wifiPin()
             location.coordinate = coords
             location.title = title
             location.subtitle = subtitle
+            if (Int(downSpeed) < 1) {
+                pin.image = UIImage(named: "unlockedRed")
+                //pin.speed = "slow"
+                
+            } else if (Int(downSpeed) <  10) {
+                pin.image = UIImage(named: "unlockedYellow")
+//                pin.speed = "med"
+                
+            } else if (Int(downSpeed) < 50) {
+                pin.image = UIImage(named: "unlockedBlack")
+//                pin.speed = "fast"
+                
+            } else {
+                pin.image = UIImage(named: "unlockedBlack")
+//                pin.speed = "lightning"
+                
+            }
+            
             
             hsMapView.addAnnotation(location)
         }
     }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        if (annotation is MKUserLocation) {
+            //if annotation is not an MKPointAnnotation (eg. MKUserLocation),
+            //return nil so map draws default view for it (eg. blue dot)...
+            return nil
+        }
+        
+        let reuseId = "test"
+        
+        var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        if anView == nil {
+            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            anView!.image = UIImage(named:"unlockBlack")
+            anView!.canShowCallout = true
+        }
+        else {
+            //we are re-using a view, update its annotation reference...
+            anView!.annotation = annotation
+        }
+        
+        return anView
+    }
+    
+//    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+//        
+//        if annotation is MKUserLocation {
+//            return nil
+//        } else {
+//            
+//            let reuseId = "pin"
+//            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as?
+//            wifiPin
+//            
+//            pinView = wifiPin(annotation: annotation, reuseIdentifier: reuseId)
+//            
+//            if let speed = pinView!.speed {
+//                switch speed {
+//                case "slow":
+//                    pinView?.image = UIImage(named: "unlockRed")
+//                default:
+//                    pinView?.image = UIImage(named: "unlockBlack")
+//                }
+//                //pinView!.annotation = annotation
+//                return pinView
+//            }
+//            return pinView
+//        }
+//    }
     
     //MARK: - reusable methods
     
@@ -79,6 +143,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         hsMapView.showsUserLocation = true
+        hsMapView.delegate = self
         
     }
     

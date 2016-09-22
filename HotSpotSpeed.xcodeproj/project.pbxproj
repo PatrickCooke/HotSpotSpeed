@@ -17,6 +17,7 @@
 		43722C151D80E0740095672A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C141D80E0740095672A /* LocationManager.swift */; };
 		43722C171D82093B0095672A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C161D82093B0095672A /* MapViewController.swift */; };
 		43722C191D820C010095672A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C181D820C010095672A /* DataManager.swift */; };
+		43722C221D8CCC340095672A /* wifiPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C211D8CCC340095672A /* wifiPin.swift */; };
 		EFA6BA48EB3C222D30F96920 /* Pods_HotSpotSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		43722C141D80E0740095672A /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		43722C161D82093B0095672A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43722C181D820C010095672A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		43722C211D8CCC340095672A /* wifiPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wifiPin.swift; sourceTree = "<group>"; };
 		771AE0734FAD060A1B0FBC46 /* Pods-HotSpotSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotSpotSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.release.xcconfig"; sourceTree = "<group>"; };
 		BC68CDA26FF4483C3841A46B /* Pods-HotSpotSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotSpotSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -83,6 +85,7 @@
 				43722BFF1D7F66980095672A /* ViewController.swift */,
 				43722C161D82093B0095672A /* MapViewController.swift */,
 				43722C121D80D6DF0095672A /* NewHotSpotVC.swift */,
+				43722C211D8CCC340095672A /* wifiPin.swift */,
 				43722C1A1D820D870095672A /* Singletons */,
 				43722C111D7F67630095672A /* Model */,
 				43722C011D7F66980095672A /* Main.storyboard */,
@@ -247,6 +250,7 @@
 				43722C191D820C010095672A /* DataManager.swift in Sources */,
 				43722C151D80E0740095672A /* LocationManager.swift in Sources */,
 				43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */,
+				43722C221D8CCC340095672A /* wifiPin.swift in Sources */,
 				43722C101D7F66D80095672A /* HotSpot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
