@@ -25,27 +25,8 @@ class DataManager: NSObject {
                 let hotspotsArray = result.getCurrentPage() as! [HotSpot]
                 self.hSArray = hotspotsArray
                 print(self.hSArray.count)
-                
-                self.sortForSpeed(hotspotsArray)
-                
-//                for spots in hotspotsArray {
-//                    guard let speed = Int(spots.hpDown) else {
-//                        return
-//                    }
-//                    if (Int(speed) < 2) {
-//                        self.sloArray.append(spots)
-//                    } else if (speed < 5) {
-//                        self.medArray.append(spots)
-//                    } else if (speed < 20) {
-//                        self.fasArray.append(spots)
-//                    } else {
-//                        self.maxArray.append(spots)
-//                    }
-//                }
-//                print("slo \(self.sloArray), med \(self.medArray), fas \(self.fasArray), max \(self.maxArray)")
-                
-                
 //                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
+                self.sortForSpeed(hotspotsArray)
             },
             error: { (fault: Fault!) -> Void in
                 print("Server reported an error: \(fault)")
@@ -53,22 +34,36 @@ class DataManager: NSObject {
     }
     
     func sortForSpeed(array: [HotSpot]){
+        defer {
+            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
+            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
+        }
+        var tempSloArray = [HotSpot]()
+        var tempMedArray = [HotSpot]()
+        var tempFasArray = [HotSpot]()
+        var tempMaxArray = [HotSpot]()
         for spots in array {
             guard let speed = spots.hpDown else {
-                return}
-                print("speed \(speed)")
-                if (Int(speed) < 2) {
-                    sloArray.append(spots)
-                } else if (Int(speed) < 5) {
-                    medArray.append(spots)
-                } else if (Int(speed) < 20) {
-                    fasArray.append(spots)
-                } else {
-                    maxArray.append(spots)
+                return
             }
-            
+            print("speed \(speed)")
+            if (Float(speed) < 2) {
+                tempSloArray.append(spots)
+                print("slow")
+            } else if (Float(speed) < 5) {
+                tempMedArray.append(spots)
+                print("med")
+            } else if (Float(speed) < 20) {
+                tempFasArray.append(spots)
+                print("fast")
+            } else {
+                tempMaxArray.append(spots)
+                print("wow")
+            }
+            self.sloArray = tempSloArray
+            self.medArray = tempMedArray
+            self.fasArray = tempFasArray
+            self.maxArray = tempMaxArray
         }
-        print("slo \(self.sloArray), med \(self.medArray), fas \(self.fasArray), max \(self.maxArray)")
-        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
     }
 }

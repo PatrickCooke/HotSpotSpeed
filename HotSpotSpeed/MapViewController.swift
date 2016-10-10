@@ -50,12 +50,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
             let subtitle = "Down: \(downSpeed) Up: \(upSpeed)"
             let coords = CLLocationCoordinate2DMake(lat, lon)
-            let location = MKPointAnnotation() as! wifiPin
-            location.speed = downSpeed
+            let location = MKPointAnnotation()
+            let loc = wifiPin()
+            loc.speed = downSpeed
             location.coordinate = coords
             location.title = title
             location.subtitle = subtitle
-
+            
             hsMapView.addAnnotation(location)
         }
     }
