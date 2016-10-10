@@ -42,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func fetchAndReload() {
+        print("slo \(dataManager.sloArray), med \(dataManager.medArray), fas \(dataManager.fasArray), max \(dataManager.maxArray)")
         self.hotspotArray = dataManager.hSArray
         print("array loaded")
         defer {

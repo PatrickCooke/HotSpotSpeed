@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2c1-La-aa9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--WiFynder 1Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WiFynder1Page" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aEC-cQ-nyb">
+                                <rect key="frame" x="20" y="72" width="560" height="320"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UPG-pH-ezR">
+                                <rect key="frame" x="20" y="400" width="560" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="5FT-Il-bNF"/>
+                                </constraints>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aEC-cQ-nyb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="N0f-VX-4WM"/>
+                            <constraint firstItem="UPG-pH-ezR" firstAttribute="top" secondItem="aEC-cQ-nyb" secondAttribute="bottom" constant="8" id="TEa-Hl-Gtg"/>
+                            <constraint firstItem="aEC-cQ-nyb" firstAttribute="leading" secondItem="UPG-pH-ezR" secondAttribute="trailing" constant="-560" id="Uue-Op-0Sz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UPG-pH-ezR" secondAttribute="trailing" id="XMg-f8-ocI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UPG-pH-ezR" secondAttribute="bottom" constant="20" id="YDj-Hz-n25"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="UPG-pH-ezR" secondAttribute="leading" id="gxS-eq-jKM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aEC-cQ-nyb" secondAttribute="trailing" id="m1k-9P-Rvk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aEC-cQ-nyb" secondAttribute="leading" id="wAb-F7-gBC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Uue-Op-0Sz"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="WiFynder 1Page" id="KgN-dj-nHu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="358"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DSf-u0-9f8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2c1-La-aa9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="OWr-La-nfV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NK9-zE-SGt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Riw-Na-FRn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="280" y="358"/>
+        </scene>
+    </scenes>
+</document>

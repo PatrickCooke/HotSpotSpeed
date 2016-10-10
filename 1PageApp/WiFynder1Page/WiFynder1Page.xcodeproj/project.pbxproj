@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		43565AA31DA195830078CF9E /* GoogleService-Info(1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 43565AA21DA195830078CF9E /* GoogleService-Info(1).plist */; };
+		43722C301DA191C80095672A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C2F1DA191C80095672A /* AppDelegate.swift */; };
+		43722C321DA191C80095672A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C311DA191C80095672A /* ViewController.swift */; };
+		43722C351DA191C80095672A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43722C331DA191C80095672A /* Main.storyboard */; };
+		43722C371DA191C80095672A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43722C361DA191C80095672A /* Assets.xcassets */; };
+		43722C3A1DA191C80095672A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43722C381DA191C80095672A /* LaunchScreen.storyboard */; };
+		D3A79583A36B0C0020F0F032 /* Pods_WiFynder1Page.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7422363512E4D46F40F165 /* Pods_WiFynder1Page.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		43565AA21DA195830078CF9E /* GoogleService-Info(1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info(1).plist"; sourceTree = "<group>"; };
+		43722C2C1DA191C80095672A /* WiFynder1Page.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiFynder1Page.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		43722C2F1DA191C80095672A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		43722C311DA191C80095672A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43722C341DA191C80095672A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43722C361DA191C80095672A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		43722C391DA191C80095672A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		43722C3B1DA191C80095672A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86717085C35B797CBE18B1DA /* Pods-WiFynder1Page.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFynder1Page.release.xcconfig"; path = "Pods/Target Support Files/Pods-WiFynder1Page/Pods-WiFynder1Page.release.xcconfig"; sourceTree = "<group>"; };
+		CD7422363512E4D46F40F165 /* Pods_WiFynder1Page.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WiFynder1Page.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8F207EA37D59EE0F5E601F /* Pods-WiFynder1Page.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WiFynder1Page.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WiFynder1Page/Pods-WiFynder1Page.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43722C291DA191C80095672A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3A79583A36B0C0020F0F032 /* Pods_WiFynder1Page.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		43722C231DA191C80095672A = {
+			isa = PBXGroup;
+			children = (
+				43722C2E1DA191C80095672A /* WiFynder1Page */,
+				43722C2D1DA191C80095672A /* Products */,
+				6307D8F15D1FA590F328F2FE /* Pods */,
+				54DF3A0A1685FC7DE6F98615 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		43722C2D1DA191C80095672A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43722C2C1DA191C80095672A /* WiFynder1Page.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43722C2E1DA191C80095672A /* WiFynder1Page */ = {
+			isa = PBXGroup;
+			children = (
+				43722C2F1DA191C80095672A /* AppDelegate.swift */,
+				43722C311DA191C80095672A /* ViewController.swift */,
+				43722C331DA191C80095672A /* Main.storyboard */,
+				43722C361DA191C80095672A /* Assets.xcassets */,
+				43722C381DA191C80095672A /* LaunchScreen.storyboard */,
+				43565AA21DA195830078CF9E /* GoogleService-Info(1).plist */,
+				43722C3B1DA191C80095672A /* Info.plist */,
+			);
+			path = WiFynder1Page;
+			sourceTree = "<group>";
+		};
+		54DF3A0A1685FC7DE6F98615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD7422363512E4D46F40F165 /* Pods_WiFynder1Page.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6307D8F15D1FA590F328F2FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FB8F207EA37D59EE0F5E601F /* Pods-WiFynder1Page.debug.xcconfig */,
+				86717085C35B797CBE18B1DA /* Pods-WiFynder1Page.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43722C2B1DA191C80095672A /* WiFynder1Page */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43722C3E1DA191C80095672A /* Build configuration list for PBXNativeTarget "WiFynder1Page" */;
+			buildPhases = (
+				A3A9A5833A2D86CF5ADAC09E /* 📦 Check Pods Manifest.lock */,
+				43722C281DA191C80095672A /* Sources */,
+				43722C291DA191C80095672A /* Frameworks */,
+				43722C2A1DA191C80095672A /* Resources */,
+				517D464C53D63B56460FFBEE /* 📦 Embed Pods Frameworks */,
+				6F9466F6F0CD0717819E9B36 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiFynder1Page;
+			productName = WiFynder1Page;
+			productReference = 43722C2C1DA191C80095672A /* WiFynder1Page.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43722C241DA191C80095672A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Patrick Cooke";
+				TargetAttributes = {
+					43722C2B1DA191C80095672A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 43722C271DA191C80095672A /* Build configuration list for PBXProject "WiFynder1Page" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 43722C231DA191C80095672A;
+			productRefGroup = 43722C2D1DA191C80095672A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43722C2B1DA191C80095672A /* WiFynder1Page */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43722C2A1DA191C80095672A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43722C3A1DA191C80095672A /* LaunchScreen.storyboard in Resources */,
+				43722C371DA191C80095672A /* Assets.xcassets in Resources */,
+				43722C351DA191C80095672A /* Main.storyboard in Resources */,
+				43565AA31DA195830078CF9E /* GoogleService-Info(1).plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		517D464C53D63B56460FFBEE /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiFynder1Page/Pods-WiFynder1Page-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F9466F6F0CD0717819E9B36 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WiFynder1Page/Pods-WiFynder1Page-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3A9A5833A2D86CF5ADAC09E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43722C281DA191C80095672A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43722C321DA191C80095672A /* ViewController.swift in Sources */,
+				43722C301DA191C80095672A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		43722C331DA191C80095672A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43722C341DA191C80095672A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		43722C381DA191C80095672A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43722C391DA191C80095672A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		43722C3C1DA191C80095672A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		43722C3D1DA191C80095672A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		43722C3F1DA191C80095672A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB8F207EA37D59EE0F5E601F /* Pods-WiFynder1Page.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WiFynder1Page/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsbypat.WiFynder1Page;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		43722C401DA191C80095672A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86717085C35B797CBE18B1DA /* Pods-WiFynder1Page.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WiFynder1Page/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.appsbypat.WiFynder1Page;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43722C271DA191C80095672A /* Build configuration list for PBXProject "WiFynder1Page" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43722C3C1DA191C80095672A /* Debug */,
+				43722C3D1DA191C80095672A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43722C3E1DA191C80095672A /* Build configuration list for PBXNativeTarget "WiFynder1Page" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43722C3F1DA191C80095672A /* Debug */,
+				43722C401DA191C80095672A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43722C241DA191C80095672A /* Project object */;
+}

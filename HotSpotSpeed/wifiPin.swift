@@ -6,9 +6,9 @@
 //  Copyright © 2016 Patrick Cooke. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class wifiPin: MKAnnotationView {
+class wifiPin: MKPointAnnotation {
+    var speed : String!
 
-    var speed:String!
 }
