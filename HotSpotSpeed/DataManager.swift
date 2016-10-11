@@ -46,19 +46,19 @@ class DataManager: NSObject {
             guard let speed = spots.hpDown else {
                 return
             }
-            print("speed \(speed)")
+//            print("speed \(speed)")
             if (Float(speed) < 2) {
                 tempSloArray.append(spots)
-                print("slow")
+//                print("slow")
             } else if (Float(speed) < 5) {
                 tempMedArray.append(spots)
-                print("med")
+//                print("med")
             } else if (Float(speed) < 20) {
                 tempFasArray.append(spots)
-                print("fast")
+//                print("fast")
             } else {
                 tempMaxArray.append(spots)
-                print("wow")
+//                print("wow")
             }
             self.sloArray = tempSloArray
             self.medArray = tempMedArray

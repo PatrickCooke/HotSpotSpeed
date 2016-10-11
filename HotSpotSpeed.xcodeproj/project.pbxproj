@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */; };
 		43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722BFD1D7F66980095672A /* AppDelegate.swift */; };
 		43722C001D7F66980095672A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722BFF1D7F66980095672A /* ViewController.swift */; };
 		43722C031D7F66980095672A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43722C011D7F66980095672A /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotSpotSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerView.swift; sourceTree = "<group>"; };
 		43722BFA1D7F66980095672A /* HotSpotSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSpotSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43722BFD1D7F66980095672A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43722BFF1D7F66980095672A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				43722C1A1D820D870095672A /* Singletons */,
 				43722C111D7F67630095672A /* Model */,
 				43722C011D7F66980095672A /* Main.storyboard */,
+				435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */,
 				43722C041D7F66980095672A /* Assets.xcassets */,
 				43722C061D7F66980095672A /* LaunchScreen.storyboard */,
 				43722C091D7F66980095672A /* Info.plist */,
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */,
 				43722C001D7F66980095672A /* ViewController.swift in Sources */,
 				43722C171D82093B0095672A /* MapViewController.swift in Sources */,
 				43722C131D80D6DF0095672A /* NewHotSpotVC.swift in Sources */,
