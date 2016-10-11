@@ -23,7 +23,7 @@ class LocationManager: NSObject,CLLocationManagerDelegate {
     
     func setupLocationMonitoring() {
         locManager.delegate = self
-        locManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locManager.startUpdatingLocation()
         if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager .authorizationStatus() {

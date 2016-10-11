@@ -120,20 +120,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-Qt-oMc">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-Qt-oMc" customClass="roundedCornerMap" customModule="HotSpotSpeed" customModuleProvider="target">
+                                <rect key="frame" x="20" y="147" width="560" height="391"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.1728462455" green="0.76862745099999996" blue="0.70206931390000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="JS4-c6-AtI" id="OpK-dU-9tS"/>
                                 </connections>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HotSpot Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-kW-fWy">
+                                <rect key="frame" x="20" y="72" width="560" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="LbE-Z7-fr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="DTZ-Qt-oMc" secondAttribute="trailing" constant="-20" id="0pl-Sm-64k"/>
-                            <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" id="8Wv-AY-7VZ"/>
-                            <constraint firstItem="DTZ-Qt-oMc" firstAttribute="leading" secondItem="cOX-Ro-o9L" secondAttribute="leadingMargin" constant="-20" id="S4A-az-7iX"/>
-                            <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="DTZ-Qt-oMc" secondAttribute="bottom" id="dJp-0a-aaO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DTZ-Qt-oMc" secondAttribute="trailing" id="0pl-Sm-64k"/>
+                            <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="75" id="8Wv-AY-7VZ"/>
+                            <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="OFZ-kW-fWy" secondAttribute="bottom" constant="8" id="A8L-VX-NLx"/>
+                            <constraint firstItem="DTZ-Qt-oMc" firstAttribute="leading" secondItem="cOX-Ro-o9L" secondAttribute="leadingMargin" id="S4A-az-7iX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="OFZ-kW-fWy" secondAttribute="leading" id="Vek-gw-pgk"/>
+                            <constraint firstItem="OFZ-kW-fWy" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="8" id="XCL-nZ-6r8"/>
+                            <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="DTZ-Qt-oMc" secondAttribute="bottom" constant="13" id="dJp-0a-aaO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OFZ-kW-fWy" secondAttribute="trailing" id="v9k-AU-7iu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Wv-AY-7VZ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="HotSpotSpeed" id="Lak-Ib-Nod">
                         <barButtonItem key="backBarButtonItem" title="Map" id="OlF-Wn-Ob1"/>
@@ -512,6 +541,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="JZD-xh-xYD"/>
+        <segue reference="WpN-2S-Lrz"/>
     </inferredMetricsTieBreakers>
 </document>
