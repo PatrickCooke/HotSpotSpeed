@@ -57,9 +57,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             location.subtitle = subtitle
             if Float(downSpeed) < 2.00 {
                 location.imageName = "unlockRed"
-            } else if Float(downSpeed) < 5.00 {
+            } else if Float(downSpeed) < 10.00 {
                 location.imageName = "unlockYellow"
-            } else if Float(downSpeed) < 20.00 {
+            } else if Float(downSpeed) < 100.00 {
                 location.imageName = "unlockGreen"
             } else {
                 location.imageName = "unlockWhite"

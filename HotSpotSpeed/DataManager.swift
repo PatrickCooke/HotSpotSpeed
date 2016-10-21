@@ -50,10 +50,10 @@ class DataManager: NSObject {
             if (Float(speed) < 2) {
                 tempSloArray.append(spots)
 //                print("slow")
-            } else if (Float(speed) < 5) {
+            } else if (Float(speed) < 10) {
                 tempMedArray.append(spots)
 //                print("med")
-            } else if (Float(speed) < 20) {
+            } else if (Float(speed) < 100) {
                 tempFasArray.append(spots)
 //                print("fast")
             } else {
