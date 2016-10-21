@@ -50,13 +50,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
             let subtitle = "Down: \(downSpeed) Up: \(upSpeed)"
             let coords = CLLocationCoordinate2DMake(lat, lon)
-            let location = MKPointAnnotation()
-            let loc = wifiPin()
-            loc.speed = downSpeed
+            //let location = MKPointAnnotation()
+            let location = wifiPin()
             location.coordinate = coords
             location.title = title
             location.subtitle = subtitle
-            
+            if Float(downSpeed) < 2.00 {
+                location.imageName = "unlockRed"
+            } else if Float(downSpeed) < 5.00 {
+                location.imageName = "unlockYellow"
+            } else if Float(downSpeed) < 20.00 {
+                location.imageName = "unlockGreen"
+            } else {
+                location.imageName = "unlockWhite"
+            }
             hsMapView.addAnnotation(location)
         }
     }
@@ -72,22 +79,16 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         if anView == nil {
             anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-            anView!.image = UIImage(named:"unlockBlack")
+            //anView!.image = UIImage(named:"unlockBlack")
             anView!.canShowCallout = true
-            if annotation.isKindOfClass(wifiPin) {
-//                if (anView > 1) {
-//                    anView?.image = UIImage(named: "unlockBlack")
-//                } else {
-//                    anView?.image = UIImage(named: "unlockRed")
-//                }
-                
-                
-            }
             
             
         } else {
             anView!.annotation = annotation
         }
+        
+        let pinImage = annotation as! wifiPin
+        anView!.image = UIImage(named:pinImage.imageName)
         
         return anView
     }

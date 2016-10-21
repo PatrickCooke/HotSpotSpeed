@@ -1,0 +1,9 @@
+project 'WiFynder1Page.xcodeproj'
+
+platform :ios, '9.0'
+
+target 'WiFynder1Page' do
+  use_frameworks!
+pod 'Firebase'
+
+end

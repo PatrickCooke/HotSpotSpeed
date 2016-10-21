@@ -10,5 +10,5 @@ import UIKit
 
 class wifiPin: MKPointAnnotation {
     var speed : String!
-
+    var imageName : String!
 }
