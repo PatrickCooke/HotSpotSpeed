@@ -28,6 +28,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         hsMapView.regionThatFits(coordinateRegion)
     }
     
+    //http://stackoverflow.com/questions/25631410/swift-different-images-for-annotation
+    
     func displayEndpoints() {
         print("displaying endpoints")
         

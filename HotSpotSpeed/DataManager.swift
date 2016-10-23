@@ -49,17 +49,22 @@ class DataManager: NSObject {
 //            print("speed \(speed)")
             if (Float(speed) < 2) {
                 tempSloArray.append(spots)
+                tempSloArray.sortInPlace({$0.hpDown > $1.hpDown})
 //                print("slow")
             } else if (Float(speed) < 10) {
                 tempMedArray.append(spots)
-//                print("med")
+//              tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
+                print("med")
             } else if (Float(speed) < 100) {
                 tempFasArray.append(spots)
+                tempFasArray.sortInPlace({$0.hpDown > $1.hpDown})
 //                print("fast")
             } else {
                 tempMaxArray.append(spots)
+                tempMaxArray.sortInPlace({$0.hpDown > $1.hpDown})
 //                print("wow")
             }
+            
             self.sloArray = tempSloArray
             self.medArray = tempMedArray
             self.fasArray = tempFasArray
