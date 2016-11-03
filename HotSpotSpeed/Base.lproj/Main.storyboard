@@ -196,7 +196,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi Network Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zo0-oP-a4C">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="k6E-Gv-eBl"/>
-                                    <constraint firstAttribute="width" constant="106" id="w7X-lN-JKu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -236,7 +235,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USK-34-tvf">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="1bU-zG-z8d"/>
                                     <constraint firstAttribute="height" constant="21" id="xom-3i-Lqq"/>
                                     <constraint firstAttribute="width" constant="71" id="yTh-Gj-wIJ"/>
                                 </constraints>
@@ -304,7 +302,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bWP-3T-VrL"/>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="loc name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mmK-UA-qC0">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next"/>
@@ -319,7 +316,6 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOe-MI-CuU">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="NvH-n3-kzM"/>
                                     <constraint firstAttribute="height" constant="21" id="dka-Ue-Wr5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
@@ -342,19 +338,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password feature not set yet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kqQ-Xy-Rka">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FgD-Yn-Eiu">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="CHa-Ox-bjh"/>
-                                    <constraint firstAttribute="height" constant="21" id="M5B-aK-s5h"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -363,13 +346,11 @@
                             <constraint firstItem="mmK-UA-qC0" firstAttribute="top" secondItem="OOe-MI-CuU" secondAttribute="bottom" constant="-2" id="34K-71-HP2"/>
                             <constraint firstItem="emD-aa-Pug" firstAttribute="leading" secondItem="efj-ug-DGX" secondAttribute="trailing" constant="10" id="3iw-Py-aou"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mmK-UA-qC0" secondAttribute="trailing" id="3kz-Wn-eYa"/>
-                            <constraint firstItem="bWP-3T-VrL" firstAttribute="top" secondItem="FgD-Yn-Eiu" secondAttribute="bottom" id="4ax-ev-CRu"/>
                             <constraint firstItem="4Zz-4t-nrK" firstAttribute="width" secondItem="Kla-Oe-fwQ" secondAttribute="width" id="4ui-cD-xWz"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mmK-UA-qC0" secondAttribute="leading" id="5cm-ud-Q3q"/>
                             <constraint firstItem="Zjl-ZM-bCQ" firstAttribute="top" secondItem="NUI-w5-rL3" secondAttribute="bottom" constant="3" id="5uz-Vp-suG"/>
                             <constraint firstItem="emD-aa-Pug" firstAttribute="top" secondItem="dth-Yb-FP6" secondAttribute="bottom" constant="7" id="6HX-Vm-dST"/>
                             <constraint firstItem="4Zz-4t-nrK" firstAttribute="top" secondItem="8LL-fT-cF8" secondAttribute="bottom" constant="-1" id="6R1-jE-hLv"/>
-                            <constraint firstItem="FgD-Yn-Eiu" firstAttribute="top" secondItem="Gvd-tQ-fBZ" secondAttribute="bottom" constant="-1" id="8IO-f3-usa"/>
                             <constraint firstItem="tdh-Ww-flq" firstAttribute="width" secondItem="mof-eb-cHa" secondAttribute="width" id="94v-E8-rIC"/>
                             <constraint firstItem="8LL-fT-cF8" firstAttribute="top" secondItem="USK-34-tvf" secondAttribute="bottom" constant="-2" id="9HQ-pW-cdV"/>
                             <constraint firstItem="j8g-Bs-cDl" firstAttribute="top" secondItem="T0f-D7-Dij" secondAttribute="bottom" constant="9" id="CZ0-Gz-nUX"/>
@@ -377,12 +358,11 @@
                             <constraint firstAttribute="leadingMargin" secondItem="8LL-fT-cF8" secondAttribute="leading" id="Chr-f6-oIt"/>
                             <constraint firstItem="8LL-fT-cF8" firstAttribute="leading" secondItem="USK-34-tvf" secondAttribute="leading" id="Dh1-Ji-RKJ"/>
                             <constraint firstItem="Kla-Oe-fwQ" firstAttribute="top" secondItem="8LL-fT-cF8" secondAttribute="bottom" constant="-1" id="DoI-N5-hc3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OOe-MI-CuU" secondAttribute="trailing" id="Ebh-0E-xxS"/>
                             <constraint firstItem="OOe-MI-CuU" firstAttribute="top" secondItem="jcN-nw-a6O" secondAttribute="bottom" id="Fh2-uu-Zyx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="jcN-nw-a6O" secondAttribute="leading" id="I0X-tC-GH5"/>
                             <constraint firstItem="Gvd-tQ-fBZ" firstAttribute="top" secondItem="Kla-Oe-fwQ" secondAttribute="bottom" constant="-3" id="I84-s0-l9M"/>
                             <constraint firstItem="8LL-fT-cF8" firstAttribute="top" secondItem="L29-1T-6Oh" secondAttribute="bottom" constant="1" id="Kdw-3Y-aPT"/>
-                            <constraint firstItem="kqQ-Xy-Rka" firstAttribute="leading" secondItem="bWP-3T-VrL" secondAttribute="trailing" constant="20" id="Kur-0B-z8X"/>
-                            <constraint firstItem="kqQ-Xy-Rka" firstAttribute="top" secondItem="Gvd-tQ-fBZ" secondAttribute="bottom" constant="20" id="LBr-4f-NuY"/>
                             <constraint firstItem="mmK-UA-qC0" firstAttribute="leading" secondItem="OOe-MI-CuU" secondAttribute="leading" id="N3D-Gg-QAL"/>
                             <constraint firstItem="Zo0-oP-a4C" firstAttribute="leading" secondItem="jcN-nw-a6O" secondAttribute="leading" id="NI8-zy-EZ1"/>
                             <constraint firstItem="Zo0-oP-a4C" firstAttribute="top" secondItem="Z4U-cu-Zr2" secondAttribute="bottom" constant="8" id="OXO-B1-Q2l"/>
@@ -395,11 +375,11 @@
                             <constraint firstItem="Zjl-ZM-bCQ" firstAttribute="top" secondItem="tdh-Ww-flq" secondAttribute="bottom" constant="-2" id="VrJ-vo-f7Q"/>
                             <constraint firstItem="SvP-Tn-qfz" firstAttribute="width" secondItem="Gvd-tQ-fBZ" secondAttribute="width" id="Xch-Wn-gyu"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mmK-UA-qC0" secondAttribute="leading" id="Zbp-1a-hhE"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="bWP-3T-VrL" secondAttribute="leading" id="Ze7-fR-0dP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="L29-1T-6Oh" secondAttribute="trailing" id="aOa-gW-M9D"/>
                             <constraint firstItem="efj-ug-DGX" firstAttribute="top" secondItem="j8g-Bs-cDl" secondAttribute="bottom" constant="8" id="aab-gT-XiQ"/>
                             <constraint firstItem="4Zz-4t-nrK" firstAttribute="leading" secondItem="Kla-Oe-fwQ" secondAttribute="trailing" constant="8" id="akg-vE-KR6"/>
                             <constraint firstItem="SvP-Tn-qfz" firstAttribute="leading" secondItem="Gvd-tQ-fBZ" secondAttribute="trailing" constant="11" id="be7-gz-TmC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zo0-oP-a4C" secondAttribute="trailing" constant="-2" id="cBr-bu-Q99"/>
                             <constraint firstItem="NUI-w5-rL3" firstAttribute="top" secondItem="mmK-UA-qC0" secondAttribute="bottom" constant="6" id="cfZ-PI-ba2"/>
                             <constraint firstItem="Zjl-ZM-bCQ" firstAttribute="width" secondItem="T0f-D7-Dij" secondAttribute="width" id="eMS-ce-EW1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tdh-Ww-flq" secondAttribute="trailing" id="fEq-Sm-q3N"/>
@@ -409,9 +389,8 @@
                             <constraint firstItem="dth-Yb-FP6" firstAttribute="top" secondItem="Zjl-ZM-bCQ" secondAttribute="bottom" constant="9" id="hne-NE-xJI"/>
                             <constraint firstItem="NUI-w5-rL3" firstAttribute="top" secondItem="Zjl-ZM-bCQ" secondAttribute="bottom" id="iQA-if-4bh"/>
                             <constraint firstItem="jcN-nw-a6O" firstAttribute="top" secondItem="Zo0-oP-a4C" secondAttribute="bottom" constant="-2" id="iRw-fB-z9P"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kqQ-Xy-Rka" secondAttribute="trailing" constant="0.5" id="iXQ-fj-OR5"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="FgD-Yn-Eiu" secondAttribute="leading" id="ios-wg-GTP"/>
                             <constraint firstItem="efj-ug-DGX" firstAttribute="leading" secondItem="ewC-P5-ZwP" secondAttribute="leadingMargin" constant="2" id="jhF-pj-gaH"/>
+                            <constraint firstItem="L29-1T-6Oh" firstAttribute="leading" secondItem="USK-34-tvf" secondAttribute="trailing" constant="8" id="m9U-2p-aWg"/>
                             <constraint firstItem="Kla-Oe-fwQ" firstAttribute="leading" secondItem="ewC-P5-ZwP" secondAttribute="leadingMargin" constant="2" id="mcU-Up-82Y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8LL-fT-cF8" secondAttribute="trailing" id="o4G-UJ-6gh"/>
                             <constraint firstItem="Zjl-ZM-bCQ" firstAttribute="leading" secondItem="T0f-D7-Dij" secondAttribute="trailing" constant="10" id="p6r-6C-4W9"/>
@@ -454,13 +433,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qp-Yg-sXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2207" y="472"/>
+            <point key="canvasLocation" x="2205.5999999999999" y="471.8140929535233"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--List-->
         <scene sceneID="QT5-TC-Pxt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
+                    <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -493,11 +472,11 @@
             </objects>
             <point key="canvasLocation" x="-276" y="457"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Map-->
         <scene sceneID="ua9-Uc-LcB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="Map Marker-30" id="Gke-w5-HVd"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		432584641DB0F9400020BCB7 /* reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584631DB0F9400020BCB7 /* reachability.swift */; };
+		432584661DBD27880020BCB7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584651DBD27880020BCB7 /* UIColors.swift */; };
 		435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */; };
 		435CDCE01DAD0DC900AD2411 /* roundedCornerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */; };
 		43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722BFD1D7F66980095672A /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotSpotSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		432584631DB0F9400020BCB7 /* reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = reachability.swift; path = ../reachability.swift; sourceTree = "<group>"; };
+		432584651DBD27880020BCB7 /* UIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerView.swift; sourceTree = "<group>"; };
 		435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerMap.swift; sourceTree = "<group>"; };
 		43722BFA1D7F66980095672A /* HotSpotSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSpotSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,7 @@
 				43722C111D7F67630095672A /* Model */,
 				43722C011D7F66980095672A /* Main.storyboard */,
 				435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */,
+				432584651DBD27880020BCB7 /* UIColors.swift */,
 				435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */,
 				43722C041D7F66980095672A /* Assets.xcassets */,
 				43722C061D7F66980095672A /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 				43722C171D82093B0095672A /* MapViewController.swift in Sources */,
 				43722C131D80D6DF0095672A /* NewHotSpotVC.swift in Sources */,
 				43722C191D820C010095672A /* DataManager.swift in Sources */,
+				432584661DBD27880020BCB7 /* UIColors.swift in Sources */,
 				43722C151D80E0740095672A /* LocationManager.swift in Sources */,
 				43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */,
 				435CDCE01DAD0DC900AD2411 /* roundedCornerMap.swift in Sources */,

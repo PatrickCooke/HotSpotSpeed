@@ -120,6 +120,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 */
+    
+    
     //MARK: - Reoccuring Method
     
     func reFetch () {
@@ -166,7 +168,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        amIOnline()
+        //amIOnline()
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)

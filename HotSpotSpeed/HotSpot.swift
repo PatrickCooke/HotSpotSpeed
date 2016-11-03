@@ -19,5 +19,7 @@ class HotSpot: NSObject {
     var hpStreet    : String!
     var hpCity      : String!
     var hpZip       : String!
+    //var objectID    : String?
+    //var created     : String?
 
 }
