@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var backendless = Backendless.sharedInstance()
     var dataManager = DataManager.sharedInstance
-    
+    //test
     var window: UIWindow?
     
     private func cutomizedAppearance() {
