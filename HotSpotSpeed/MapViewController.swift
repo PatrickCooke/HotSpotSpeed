@@ -114,7 +114,9 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewDidLoad()
         hsMapView.showsUserLocation = true
         hsMapView.delegate = self
-        
+        self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
     }
     
     override func viewWillAppear(animated: Bool) {

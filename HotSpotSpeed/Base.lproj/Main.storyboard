@@ -34,6 +34,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zb9-9o-HzD" customClass="roundedCornerView" customModule="HotSpotSpeed" customModuleProvider="target">
                                 <rect key="frame" x="16" y="147" width="343" height="458"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.17174279689788818" green="0.76713091135025024" blue="0.70332330465316772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cCell" rowHeight="99" id="646-w4-RNM" customClass="wifiTableCell" customModule="HotSpotSpeed" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="99"/>
@@ -65,13 +66,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="O5h-oq-hUc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-1D-yRg">
-                                                    <rect key="frame" x="174" y="60" width="161" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <rect key="frame" x="174" y="63" width="161" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -90,7 +91,7 @@
                                                         <constraint firstAttribute="height" constant="21" id="cfI-VB-Hvy"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -177,7 +178,7 @@
             </objects>
             <point key="canvasLocation" x="1224.8" y="138.98050974512745"/>
         </scene>
-        <!--HotSpotSpeed-->
+        <!--Map View Controller-->
         <scene sceneID="zIi-AN-lq7">
             <objects>
                 <viewController id="JS4-c6-AtI" customClass="MapViewController" customModule="HotSpotSpeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,7 +234,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="HotSpotSpeed" id="Lak-Ib-Nod">
+                    <navigationItem key="navigationItem" id="Lak-Ib-Nod">
                         <barButtonItem key="backBarButtonItem" title="Map" id="OlF-Wn-Ob1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="65k-ws-KLU">
                             <connections>
@@ -499,8 +500,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="cfZ-PI-ba2"/>
                                 <exclude reference="5uz-Vp-suG"/>
+                                <exclude reference="cfZ-PI-ba2"/>
                             </mask>
                         </variation>
                     </view>
@@ -590,6 +591,6 @@
         <image name="Map Marker-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WpN-2S-Lrz"/>
+        <segue reference="JZD-xh-xYD"/>
     </inferredMetricsTieBreakers>
 </document>

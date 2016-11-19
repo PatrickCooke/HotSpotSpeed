@@ -46,7 +46,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return 99
     }
     
-
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerview = UITableViewHeaderFooterView()
+        headerview.contentView.backgroundColor = UIColor().AquaGreen()
+        
+        return headerview
+        
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cCell", forIndexPath: indexPath) as! wifiTableCell
@@ -275,7 +281,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
-
+        self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
     }
 
     override func didReceiveMemoryWarning() {

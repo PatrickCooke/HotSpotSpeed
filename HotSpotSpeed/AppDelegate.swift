@@ -21,13 +21,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private func cutomizedAppearance() {
-        UITabBar.appearance().tintColor = UIColor().AquaGreen()
+        UITabBar.appearance().barTintColor = UIColor().AquaGreen()
+        UITabBar.appearance().tintColor = UIColor.whiteColor()
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.greenColor()
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
     }
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         dataManager.fetchData()
-        
+        cutomizedAppearance()
         return true
     }
 

@@ -116,7 +116,6 @@
 		43722C1A1D820D870095672A /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
-				43722BFD1D7F66980095672A /* AppDelegate.swift */,
 				43722C141D80E0740095672A /* LocationManager.swift */,
 				43722C181D820C010095672A /* DataManager.swift */,
 			);
@@ -126,6 +125,7 @@
 		43C2A14D1DDFBFBD00CC5A62 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				43722BFD1D7F66980095672A /* AppDelegate.swift */,
 				43722BFF1D7F66980095672A /* ViewController.swift */,
 				43722C161D82093B0095672A /* MapViewController.swift */,
 				43722C121D80D6DF0095672A /* NewHotSpotVC.swift */,
