@@ -41,44 +41,150 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return 0
         }
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+            return 99
+    }
+    
+
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("cCell", forIndexPath: indexPath) as! wifiTableCell
+        
         switch indexPath.section {
         case 0:
             let selectedHP = locMaxArray[indexPath.row]
+
             if let ssidName = selectedHP.hpSSIDName {
-                cell.textLabel!.text = ssidName
+                cell.SSID.text = "Network: \(ssidName)"
+             }
+            if let cityName = selectedHP.hpCity {
+                cell.City.text = cityName
+            }
+            if let locName = selectedHP.hpLocName {
+                cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.detailTextLabel!.text = "Down: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " mbps"
             }
+            if let down = selectedHP.hpUp {
+                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+            }
+            
+            if let destlat = selectedHP.hpLat  {
+                if let destlon = selectedHP.hpLon  {
+                    let lattitude : CLLocationDegrees = Double(destlat)!
+                    let longitude : CLLocationDegrees = Double(destlon)!
+                    let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
+                    let myLoc = locManager.locManager.location
+                    let distance = destination.distanceFromLocation(myLoc!)
+                    let distInMiles = Double(distance)/1609.344
+                    let distString = String(format:"%.1f", distInMiles)
+                    cell.distFromMe.text = "\(distString) miles away"
+                    
+                }
+            }
+            
             return cell
         case 1:
             let selectedHP = locFasArray[indexPath.row]
             if let ssidName = selectedHP.hpSSIDName {
-                cell.textLabel!.text = ssidName
+                cell.SSID.text = "Network: \(ssidName)"
+            }
+            if let cityName = selectedHP.hpCity {
+                cell.City.text = cityName
+            }
+            if let locName = selectedHP.hpLocName {
+                cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.detailTextLabel!.text = "Down: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " mbps"
             }
+            if let down = selectedHP.hpUp {
+                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+            }
+            
+            if let destlat = selectedHP.hpLat  {
+                if let destlon = selectedHP.hpLon  {
+                    let lattitude : CLLocationDegrees = Double(destlat)!
+                    let longitude : CLLocationDegrees = Double(destlon)!
+                    let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
+                    let myLoc = locManager.locManager.location
+                    let distance = destination.distanceFromLocation(myLoc!)
+                    let distInMiles = Double(distance)/1609.344
+                    let distString = String(format:"%.1f", distInMiles)
+                    cell.distFromMe.text = "\(distString) miles away"
+                    
+                }
+            }
+            
             return cell
+
         case 2:
             let selectedHP = locMedArray[indexPath.row]
             if let ssidName = selectedHP.hpSSIDName {
-                cell.textLabel!.text = ssidName
+                cell.SSID.text = "Network: \(ssidName)"
+            }
+            if let cityName = selectedHP.hpCity {
+                cell.City.text = cityName
+            }
+            if let locName = selectedHP.hpLocName {
+                cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.detailTextLabel!.text = "Down: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " mbps"
             }
+            if let down = selectedHP.hpUp {
+                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+            }
+            
+            if let destlat = selectedHP.hpLat  {
+                if let destlon = selectedHP.hpLon  {
+                    let lattitude : CLLocationDegrees = Double(destlat)!
+                    let longitude : CLLocationDegrees = Double(destlon)!
+                    let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
+                    let myLoc = locManager.locManager.location
+                    let distance = destination.distanceFromLocation(myLoc!)
+                    let distInMiles = Double(distance)/1609.344
+                    let distString = String(format:"%.1f", distInMiles)
+                    cell.distFromMe.text = "\(distString) miles away"
+                    
+                }
+            }
+            
             return cell
+
         case 3:
             let selectedHP = locSloArray[indexPath.row]
             if let ssidName = selectedHP.hpSSIDName {
-                cell.textLabel!.text = ssidName
+                cell.SSID.text = "Network: \(ssidName)"
+            }
+            if let cityName = selectedHP.hpCity {
+                cell.City.text = cityName
+            }
+            if let locName = selectedHP.hpLocName {
+                cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.detailTextLabel!.text = "Down: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " mbps"
             }
+            if let down = selectedHP.hpUp {
+                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+            }
+            
+            if let destlat = selectedHP.hpLat  {
+                if let destlon = selectedHP.hpLon  {
+                    let lattitude : CLLocationDegrees = Double(destlat)!
+                    let longitude : CLLocationDegrees = Double(destlon)!
+                    let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
+                    let myLoc = locManager.locManager.location
+                    let distance = destination.distanceFromLocation(myLoc!)
+                    let distInMiles = Double(distance)/1609.344
+                    let distString = String(format:"%.1f", distInMiles)
+                    cell.distFromMe.text = "\(distString) miles away"
+                }
+            }
+            
             return cell
         default:
             cell.textLabel?.text = "What What What???"
@@ -95,7 +201,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 2:
             return "Merh Internet"
         case 3:
-            return "Slow enough to make you hate life"
+            return "Slow enough to avoid"
         default:
             return "How are you seeing this?"
         }
@@ -120,7 +226,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 */
-    
     
     //MARK: - Reoccuring Method
     
@@ -159,8 +264,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 // ...
             }
             
-            //let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
-            //alert.show()
         }
     }
     
@@ -172,9 +275,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
-        
 
-        
     }
 
     override func didReceiveMemoryWarning() {

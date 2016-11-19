@@ -22,6 +22,7 @@
 		43722C171D82093B0095672A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C161D82093B0095672A /* MapViewController.swift */; };
 		43722C191D820C010095672A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C181D820C010095672A /* DataManager.swift */; };
 		43722C221D8CCC340095672A /* wifiPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C211D8CCC340095672A /* wifiPin.swift */; };
+		43C2A1501DDFC2F300CC5A62 /* wifiTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2A14F1DDFC2F300CC5A62 /* wifiTableCell.swift */; };
 		EFA6BA48EB3C222D30F96920 /* Pods_HotSpotSpeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		43722C161D82093B0095672A /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43722C181D820C010095672A /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		43722C211D8CCC340095672A /* wifiPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wifiPin.swift; sourceTree = "<group>"; };
+		43C2A14F1DDFC2F300CC5A62 /* wifiTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wifiTableCell.swift; sourceTree = "<group>"; };
 		771AE0734FAD060A1B0FBC46 /* Pods-HotSpotSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotSpotSpeed.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.release.xcconfig"; sourceTree = "<group>"; };
 		BC68CDA26FF4483C3841A46B /* Pods-HotSpotSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotSpotSpeed.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,18 +91,11 @@
 		43722BFC1D7F66980095672A /* HotSpotSpeed */ = {
 			isa = PBXGroup;
 			children = (
-				43722BFD1D7F66980095672A /* AppDelegate.swift */,
-				43722BFF1D7F66980095672A /* ViewController.swift */,
-				43722C161D82093B0095672A /* MapViewController.swift */,
-				43722C121D80D6DF0095672A /* NewHotSpotVC.swift */,
-				43722C211D8CCC340095672A /* wifiPin.swift */,
-				432584631DB0F9400020BCB7 /* reachability.swift */,
+				43C2A14D1DDFBFBD00CC5A62 /* View Controllers */,
 				43722C1A1D820D870095672A /* Singletons */,
 				43722C111D7F67630095672A /* Model */,
 				43722C011D7F66980095672A /* Main.storyboard */,
-				435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */,
-				432584651DBD27880020BCB7 /* UIColors.swift */,
-				435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */,
+				43C2A14E1DDFBFC900CC5A62 /* Helpers */,
 				43722C041D7F66980095672A /* Assets.xcassets */,
 				43722C061D7F66980095672A /* LaunchScreen.storyboard */,
 				43722C091D7F66980095672A /* Info.plist */,
@@ -111,6 +106,8 @@
 		43722C111D7F67630095672A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				43722C211D8CCC340095672A /* wifiPin.swift */,
+				43C2A14F1DDFC2F300CC5A62 /* wifiTableCell.swift */,
 				43722C0F1D7F66D80095672A /* HotSpot.swift */,
 			);
 			name = Model;
@@ -119,10 +116,32 @@
 		43722C1A1D820D870095672A /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
+				43722BFD1D7F66980095672A /* AppDelegate.swift */,
 				43722C141D80E0740095672A /* LocationManager.swift */,
 				43722C181D820C010095672A /* DataManager.swift */,
 			);
 			name = Singletons;
+			sourceTree = "<group>";
+		};
+		43C2A14D1DDFBFBD00CC5A62 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43722BFF1D7F66980095672A /* ViewController.swift */,
+				43722C161D82093B0095672A /* MapViewController.swift */,
+				43722C121D80D6DF0095672A /* NewHotSpotVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		43C2A14E1DDFBFC900CC5A62 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				432584631DB0F9400020BCB7 /* reachability.swift */,
+				435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */,
+				432584651DBD27880020BCB7 /* UIColors.swift */,
+				435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		9C063BA76F526CFBE1D570C0 /* Pods */ = {
@@ -268,6 +287,7 @@
 				43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */,
 				435CDCE01DAD0DC900AD2411 /* roundedCornerMap.swift in Sources */,
 				432584641DB0F9400020BCB7 /* reachability.swift in Sources */,
+				43C2A1501DDFC2F300CC5A62 /* wifiTableCell.swift in Sources */,
 				43722C221D8CCC340095672A /* wifiPin.swift in Sources */,
 				43722C101D7F66D80095672A /* HotSpot.swift in Sources */,
 			);
