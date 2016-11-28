@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import GooglePlaces
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let APP_ID = "78344749-E1A4-2316-FFF6-1F0E6D11A200"
     let SECRET_KEY = "960102E6-D2E0-110B-FF69-4BBBED912C00"
     let VERSION_NUM = "v1"
+    let mapsAPI = "AIzaSyCo36p2PB6wwKHnjLNcEHkmB95r0nIBIZU"
+    let placesAPI = "AIzaSyAS166OTTY9ztWc-DDKWCLDk33_ZhfY-4Q"
+    let emergencyKey = "AIzaSyBMtIxtyZd9fVu8bxHLWh8PF5D-B8LwHuI"
     
     var backendless = Backendless.sharedInstance()
     var dataManager = DataManager.sharedInstance
@@ -32,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backendless.initApp(APP_ID, secret:SECRET_KEY, version:VERSION_NUM)
         dataManager.fetchData()
         cutomizedAppearance()
+        GMSServices.provideAPIKey(emergencyKey)
+        GMSPlacesClient.provideAPIKey(emergencyKey)
+        
         return true
     }
 

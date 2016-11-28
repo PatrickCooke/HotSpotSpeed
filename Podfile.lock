@@ -1,12 +1,28 @@
 PODS:
   - Backendless (3.0.27)
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - GooglePlacePicker (2.1.1):
+    - GoogleMaps (= 2.1.1)
+    - GooglePlaces (= 2.1.1)
+  - GooglePlaces (2.1.1):
+    - GoogleMaps/Base (= 2.1.1)
 
 DEPENDENCIES:
   - Backendless (>= 3.0.0)
+  - GoogleMaps
+  - GooglePlacePicker
+  - GooglePlaces
 
 SPEC CHECKSUMS:
   Backendless: 565a82d9aa6ec01257e904e0a5c0146ffdb503ed
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
+  GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
 
-PODFILE CHECKSUM: 03ba716681978089016204402d36e5e00933fbae
+PODFILE CHECKSUM: 01d15b0800a16ea19510c8e1a1e184f48bfa24c2
 
 COCOAPODS: 1.0.0

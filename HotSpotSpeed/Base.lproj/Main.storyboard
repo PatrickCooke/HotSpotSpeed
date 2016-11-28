@@ -190,7 +190,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-Qt-oMc" customClass="roundedCornerMap" customModule="HotSpotSpeed" customModuleProvider="target">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DTZ-Qt-oMc" customClass="roundedCornerMap" customModule="HotSpotSpeed" customModuleProvider="target">
                                 <rect key="frame" x="16" y="147" width="343" height="458"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -203,9 +203,6 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="delegate" destination="JS4-c6-AtI" id="OpK-dU-9tS"/>
-                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HotSpot Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-kW-fWy">
                                 <rect key="frame" x="16" y="72" width="343" height="67"/>
@@ -216,17 +213,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ev-o8-1yL" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="147" width="343" height="458"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="DTZ-Qt-oMc" secondAttribute="trailing" id="0pl-Sm-64k"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Ev-o8-1yL" secondAttribute="leading" id="7Wj-AM-LUI"/>
                             <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="75" id="8Wv-AY-7VZ"/>
                             <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="OFZ-kW-fWy" secondAttribute="bottom" constant="8" id="A8L-VX-NLx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ev-o8-1yL" secondAttribute="trailing" id="F0K-9N-t88"/>
                             <constraint firstItem="DTZ-Qt-oMc" firstAttribute="leading" secondItem="cOX-Ro-o9L" secondAttribute="leadingMargin" id="S4A-az-7iX"/>
                             <constraint firstAttribute="leadingMargin" secondItem="OFZ-kW-fWy" secondAttribute="leading" id="Vek-gw-pgk"/>
                             <constraint firstItem="OFZ-kW-fWy" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="8" id="XCL-nZ-6r8"/>
                             <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="DTZ-Qt-oMc" secondAttribute="bottom" constant="13" id="dJp-0a-aaO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OFZ-kW-fWy" secondAttribute="trailing" id="v9k-AU-7iu"/>
+                            <constraint firstItem="3Ev-o8-1yL" firstAttribute="top" secondItem="OFZ-kW-fWy" secondAttribute="bottom" constant="8" id="zOW-E9-dE8"/>
+                            <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="3Ev-o8-1yL" secondAttribute="bottom" constant="13" id="zup-eF-49i"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -243,7 +248,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="hsMapView" destination="DTZ-Qt-oMc" id="9l5-px-Ful"/>
+                        <outlet property="GMapView" destination="3Ev-o8-1yL" id="tCf-k6-9Ze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9k-1u-651" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -534,7 +539,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -572,7 +577,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -583,7 +588,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpZ-3a-5qK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="825"/>
+            <point key="canvasLocation" x="544" y="860"/>
         </scene>
     </scenes>
     <resources>
@@ -591,6 +596,6 @@
         <image name="Map Marker-30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZD-xh-xYD"/>
+        <segue reference="WpN-2S-Lrz"/>
     </inferredMetricsTieBreakers>
 </document>
