@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreLocation
+import GooglePlacePicker
 
 class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let pageLoc = CLLocationManager()
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
+    var placePicker: GMSPlacePicker?
     
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UITextField!
@@ -90,6 +92,65 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    //MARK: - Use Google Place Picker
+    
+    @IBAction func UsePlacePicker() {
+        let lat = locManager.locManager.location?.coordinate.latitude
+        let lon = locManager.locManager.location?.coordinate.longitude
+        let center = CLLocationCoordinate2DMake(lat!,lon!)
+        let northEast = CLLocationCoordinate2DMake(center.latitude + 0.001, center.longitude + 0.001)
+        let southWest = CLLocationCoordinate2DMake(center.latitude - 0.001, center.longitude - 0.001)
+        let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
+        let config = GMSPlacePickerConfig(viewport: viewport)
+        placePicker = GMSPlacePicker(config: config)
+        
+        
+        
+        placePicker?.pickPlaceWithCallback({ (foundPlace, error) -> Void in
+            
+            if let error = error {
+                print("Pick Place error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let place = foundPlace {
+                
+                //let street = place.addressComponents["street"]
+                //                print(street)
+                self.locNameTfield.text = place.name
+                //self.addressLabel.text = place.formattedAddress!.components(separatedBy:", ").joined(separator:"\n")
+                let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                guard let streetAddress = addressArray?[0] else {
+                    return
+                }
+                self.addressTfield.text = streetAddress
+                
+                guard let cityAddress = addressArray?[1] else {
+                    return
+                }
+                print(cityAddress)
+                self.cityTfield.text = cityAddress
+                guard let stateZipAddress = addressArray?[2] else {
+                    return
+                }
+                let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+                let zipAddress = stateZipArray[1]
+                self.zipTfield.text = zipAddress
+                self.latLabel.text = "\(place.coordinate.latitude)"
+                self.lonLabel.text = "\(place.coordinate.longitude)"
+                
+                
+//                print(zipAddress)
+//                print("lat: \(place.coordinate.latitude)")
+//                print("lon: \(place.coordinate.longitude)")
+                
+            } else {
+                self.locNameTfield.text = "No place selected"
+                self.addressTfield.text = ""
+            }
+        })
+
+    }
     
     //MARK: - Get GPS Coords from Loc
     
