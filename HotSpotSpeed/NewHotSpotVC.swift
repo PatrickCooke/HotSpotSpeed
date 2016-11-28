@@ -115,9 +115,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             
             if let place = foundPlace {
                 
-                //let street = place.addressComponents["street"]
-                //                print(street)
                 self.locNameTfield.text = place.name
+            
                 //self.addressLabel.text = place.formattedAddress!.components(separatedBy:", ").joined(separator:"\n")
                 let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
                 guard let streetAddress = addressArray?[0] else {
@@ -132,6 +131,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 self.cityTfield.text = cityAddress
                 guard let stateZipAddress = addressArray?[2] else {
                     return
+                }
+                if place.name == "Starbucks" {
+                    self.locNameTfield.text = "\(place.name) \(cityAddress)"
                 }
                 let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
                 let zipAddress = stateZipArray[1]
