@@ -65,7 +65,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.SSID.text = "Network: \(ssidName)"
              }
             if let cityName = selectedHP.hpCity {
-                cell.City.text = cityName
+                if let stateName = selectedHP.hpState {
+                    cell.City.text = "\(cityName), \(stateName)"
+                }
             }
             if let locName = selectedHP.hpLocName {
                 cell.locTitle.text = locName
@@ -98,7 +100,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.SSID.text = "Network: \(ssidName)"
             }
             if let cityName = selectedHP.hpCity {
-                cell.City.text = cityName
+                if let stateName = selectedHP.hpState {
+                    cell.City.text = "\(cityName), \(stateName)"
+                }
             }
             if let locName = selectedHP.hpLocName {
                 cell.locTitle.text = locName
@@ -132,7 +136,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.SSID.text = "Network: \(ssidName)"
             }
             if let cityName = selectedHP.hpCity {
-                cell.City.text = cityName
+                if let stateName = selectedHP.hpState {
+                    cell.City.text = "\(cityName), \(stateName)"
+                }
             }
             if let locName = selectedHP.hpLocName {
                 cell.locTitle.text = locName
