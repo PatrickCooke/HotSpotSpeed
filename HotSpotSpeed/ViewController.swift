@@ -166,16 +166,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.SSID.text = "Network: \(ssidName)"
             }
             if let cityName = selectedHP.hpCity {
-                cell.City.text = cityName
+                if let stateName = selectedHP.hpState {
+                cell.City.text = "\(cityName), \(stateName)"
+                }
             }
             if let locName = selectedHP.hpLocName {
                 cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.downSpeed.text = "Download Speed: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " Mbps"
             }
             if let down = selectedHP.hpUp {
-                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+                cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
             if let destlat = selectedHP.hpLat  {
