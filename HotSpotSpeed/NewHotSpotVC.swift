@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreLocation
+import GooglePlacePicker
 
 class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let pageLoc = CLLocationManager()
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
+    var placePicker: GMSPlacePicker?
     
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UITextField!
@@ -25,6 +27,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addressTfield: UITextField!
     @IBOutlet weak var cityTfield: UITextField!
     @IBOutlet weak var zipTfield: UITextField!
+    @IBOutlet weak var stateTfield: UITextField!
     
     //MARK: - Save Method
     
@@ -73,6 +76,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         if let zip = zipTfield.text {
             newHS.hpZip = zip
         }
+        if let state = stateTfield.text {
+            newHS.hpState = state
+        }
         
         let dataStore = backendless.data.of(HotSpot.ofClass())
         
@@ -90,6 +96,64 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    //MARK: - Use Google Place Picker
+    
+    @IBAction func UsePlacePicker() {
+        let lat = locManager.locManager.location?.coordinate.latitude
+        let lon = locManager.locManager.location?.coordinate.longitude
+        let center = CLLocationCoordinate2DMake(lat!,lon!)
+        let northEast = CLLocationCoordinate2DMake(center.latitude + 0.001, center.longitude + 0.001)
+        let southWest = CLLocationCoordinate2DMake(center.latitude - 0.001, center.longitude - 0.001)
+        let viewport = GMSCoordinateBounds(coordinate: northEast, coordinate: southWest)
+        let config = GMSPlacePickerConfig(viewport: viewport)
+        
+        placePicker = GMSPlacePicker(config: config)
+        
+        
+        placePicker?.pickPlaceWithCallback({ (foundPlace, error) -> Void in
+            
+            if let error = error {
+                print("Pick Place error: \(error.localizedDescription)")
+                return
+            }
+            
+            if let place = foundPlace {
+                
+                self.locNameTfield.text = place.name
+            
+                //self.addressLabel.text = place.formattedAddress!.components(separatedBy:", ").joined(separator:"\n")
+                let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                guard let streetAddress = addressArray?[0] else {
+                    return
+                }
+                self.addressTfield.text = streetAddress
+                
+                guard let cityAddress = addressArray?[1] else {
+                    return
+                }
+                print(cityAddress)
+                self.cityTfield.text = cityAddress
+                guard let stateZipAddress = addressArray?[2] else {
+                    return
+                }
+                if place.name == "Starbucks" {
+                    self.locNameTfield.text = "\(place.name) \(cityAddress)"
+                }
+                let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+                let zipAddress = stateZipArray[1]
+                let stateAddress = stateZipArray[0]
+                self.stateTfield.text = stateAddress
+                self.zipTfield.text = zipAddress
+                self.latLabel.text = "\(place.coordinate.latitude)"
+                self.lonLabel.text = "\(place.coordinate.longitude)"
+                
+            } else {
+                self.locNameTfield.text = "No place selected"
+                self.addressTfield.text = ""
+            }
+        })
+
+    }
     
     //MARK: - Get GPS Coords from Loc
     
@@ -143,6 +207,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         addressTfield.delegate=self
         cityTfield.delegate=self
         zipTfield.delegate=self
+        stateTfield.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -165,7 +230,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             self.zipTfield.becomeFirstResponder()
         }
         if textField == self.zipTfield {
-            self.resignFirstResponder()
+            self.stateTfield.becomeFirstResponder()
+        }
+        if textField == self.stateTfield {
+            self.stateTfield.resignFirstResponder()
         }
         
         return true

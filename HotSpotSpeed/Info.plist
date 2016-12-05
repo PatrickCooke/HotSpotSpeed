@@ -45,5 +45,10 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>HotSpotSpeed would like to use your location to help you find the fastest Hot Spots in your area</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>googlechromes</string>
+		<string>comgooglemaps</string>
+	</array>
 </dict>
 </plist>

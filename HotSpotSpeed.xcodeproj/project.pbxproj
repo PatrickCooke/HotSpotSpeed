@@ -11,6 +11,7 @@
 		432584661DBD27880020BCB7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584651DBD27880020BCB7 /* UIColors.swift */; };
 		435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */; };
 		435CDCE01DAD0DC900AD2411 /* roundedCornerMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */; };
+		436831341DEF884A00DE7DC8 /* RoundedEdgesButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436831331DEF884A00DE7DC8 /* RoundedEdgesButton.swift */; };
 		43722BFE1D7F66980095672A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722BFD1D7F66980095672A /* AppDelegate.swift */; };
 		43722C001D7F66980095672A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722BFF1D7F66980095672A /* ViewController.swift */; };
 		43722C031D7F66980095672A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43722C011D7F66980095672A /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 		432584651DBD27880020BCB7 /* UIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerView.swift; sourceTree = "<group>"; };
 		435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerMap.swift; sourceTree = "<group>"; };
+		436831331DEF884A00DE7DC8 /* RoundedEdgesButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedEdgesButton.swift; sourceTree = "<group>"; };
 		43722BFA1D7F66980095672A /* HotSpotSpeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSpotSpeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43722BFD1D7F66980095672A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43722BFF1D7F66980095672A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				432584631DB0F9400020BCB7 /* reachability.swift */,
 				435CDCDF1DAD0DC900AD2411 /* roundedCornerMap.swift */,
+				436831331DEF884A00DE7DC8 /* RoundedEdgesButton.swift */,
 				432584651DBD27880020BCB7 /* UIColors.swift */,
 				435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */,
 			);
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				436831341DEF884A00DE7DC8 /* RoundedEdgesButton.swift in Sources */,
 				435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */,
 				43722C001D7F66980095672A /* ViewController.swift in Sources */,
 				43722C171D82093B0095672A /* MapViewController.swift in Sources */,
