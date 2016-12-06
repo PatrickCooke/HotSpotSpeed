@@ -16,20 +16,18 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
     
-    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA", "IHOP", "Panera", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
+    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
     @IBOutlet weak var ssidTfield: UITextField!
-    @IBOutlet weak var locNameTfield: UITextField!
+    @IBOutlet weak var locNameTfield: UILabel!
     @IBOutlet weak var dlSpeedTfield: UITextField!
     @IBOutlet weak var upSpeedTfield: UITextField!
-    @IBOutlet weak var latTfield: UITextField!
-    @IBOutlet weak var lonTfield: UITextField!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var lonLabel: UILabel!
-    @IBOutlet weak var addressTfield: UITextField!
-    @IBOutlet weak var cityTfield: UITextField!
-    @IBOutlet weak var zipTfield: UITextField!
-    @IBOutlet weak var stateTfield: UITextField!
+    @IBOutlet weak var addressTfield: UILabel!
+    @IBOutlet weak var cityTfield: UILabel!
+    @IBOutlet weak var zipTfield: UILabel!
+    @IBOutlet weak var stateTfield: UILabel!
     
     //MARK: - Save Method
     
@@ -121,14 +119,14 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             
             if let place = foundPlace {
                 
-                self.locNameTfield.text = place.name
+//                self.locNameTfield.text = place.name
             
                 //self.addressLabel.text = place.formattedAddress!.components(separatedBy:", ").joined(separator:"\n")
                 let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
                 guard let streetAddress = addressArray?[0] else {
                     return
                 }
-                self.addressTfield.text = streetAddress
+                self.addressTfield.text  = streetAddress
                 
                 guard let cityAddress = addressArray?[1] else {
                     return
@@ -139,9 +137,17 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     return
                 }
                 
-                for i in 0...self.chainLocationArray.count{
-                    if place.name.lowercaseString == self.chainLocationArray[i].lowercaseString {
+                
+                for i in 0...(self.chainLocationArray.count - 1) {
+                    let chainString = self.chainLocationArray[i]
+                    if place.name.lowercaseString == chainString.lowercaseString {
                         self.locNameTfield.text = "\(place.name) \(cityAddress)"
+                        if place.name.lowercaseString == "qdoba mexican eats" {
+                            self.locNameTfield.text = "Qdoba \(cityAddress)"
+                        }
+                        break
+                    } else {
+                        self.locNameTfield.text = place.name
                     }
                 }
                 
@@ -162,7 +168,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     }
     
     //MARK: - Get GPS Coords from Loc
-    
+    /*
     @IBAction func useCurrent (sender: UIButton) {
         
         if let lat = pageLoc.location?.coordinate.latitude {
@@ -173,9 +179,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
+    */
     //MARK: - Get GPS Coords from Address
-    
+    /*
     @IBAction func useAddress (sender: UIButton) {
         guard let street = addressTfield.text else{
             return
@@ -199,12 +205,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
         
     }
-    
-    //MARK: - Use Local Search to fill in address and GPS???
-    
+    */
     
     //MARK: - Textfield Return button Methods
-    
+    /*
     func makeTextFieldintoDelegrates() {
         ssidTfield.delegate=self
         locNameTfield.delegate=self
@@ -244,13 +248,13 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         
         return true
     }
-    
+    */
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pageLoc.startUpdatingLocation()
-        makeTextFieldintoDelegrates()
+//        makeTextFieldintoDelegrates()
     }
     
     override func didReceiveMemoryWarning() {
