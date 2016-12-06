@@ -18,13 +18,13 @@ class DataManager: NSObject {
     var maxArray    :   [HotSpot]!
     
     func fetchData() {
-        print("fetch async")
+//        print("fetch async")
         let dataStore = backendless.data.of(HotSpot.ofClass())
         dataStore.find(
             { (result: BackendlessCollection!) -> Void in
                 let hotspotsArray = result.getCurrentPage() as! [HotSpot]
                 self.hSArray = hotspotsArray
-                print(self.hSArray.count)
+//                print(self.hSArray.count)
 //                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
                 self.sortForSpeed(hotspotsArray)
             },
@@ -35,7 +35,7 @@ class DataManager: NSObject {
     
     func sortForSpeed(array: [HotSpot]){
         defer {
-            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
+//            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
         }
         var tempSloArray = [HotSpot]()
@@ -54,7 +54,7 @@ class DataManager: NSObject {
             } else if (Float(speed) < 10) {
                 tempMedArray.append(spots)
 //              tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
-                print("med")
+//                print("med")
             } else if (Float(speed) < 100) {
                 tempFasArray.append(spots)
                 tempFasArray.sortInPlace({$0.hpDown > $1.hpDown})

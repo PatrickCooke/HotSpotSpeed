@@ -16,7 +16,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
     
-    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA", "IHOP", "Panera"]
+    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA", "IHOP", "Panera", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UITextField!
@@ -138,9 +138,13 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 guard let stateZipAddress = addressArray?[2] else {
                     return
                 }
-                if place.name == "Starbucks" {
-                    self.locNameTfield.text = "\(place.name) \(cityAddress)"
+                
+                for i in 0...self.chainLocationArray.count{
+                    if place.name.lowercaseString == self.chainLocationArray[i].lowercaseString {
+                        self.locNameTfield.text = "\(place.name) \(cityAddress)"
+                    }
                 }
+                
                 let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
                 let zipAddress = stateZipArray[1]
                 let stateAddress = stateZipArray[0]
