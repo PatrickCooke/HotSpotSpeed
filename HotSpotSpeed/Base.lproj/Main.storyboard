@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,12 +23,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HotSpot Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-t8-XE7">
-                                <rect key="frame" x="20" y="72" width="339" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WifiWombat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uq-t8-XE7">
+                                <rect key="frame" x="91" y="72" width="268" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="VZ0-JE-3Q9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -142,14 +143,24 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="eVs-fQ-w9C"/>
                                 </connections>
                             </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifiwombaticon" translatesAutoresizingMaskIntoConstraints="NO" id="Bi8-dk-JEg">
+                                <rect key="frame" x="16" y="72" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Bi8-dk-JEg" secondAttribute="height" multiplier="1:1" id="3Vx-2t-TcM"/>
+                                    <constraint firstAttribute="height" constant="67" id="dbV-zf-4HI"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zb9-9o-HzD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="83" id="94L-Ia-uQ5"/>
+                            <constraint firstItem="Zb9-9o-HzD" firstAttribute="top" secondItem="Bi8-dk-JEg" secondAttribute="bottom" constant="8" id="GWK-mb-AZs"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Bi8-dk-JEg" secondAttribute="leading" id="GbR-Vd-PE8"/>
                             <constraint firstItem="Zb9-9o-HzD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KwI-PG-U1z"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6Uq-t8-XE7" secondAttribute="trailing" id="UgN-EP-EKp"/>
+                            <constraint firstItem="Bi8-dk-JEg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Tj8-Fg-iUg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zb9-9o-HzD" secondAttribute="trailing" id="XoW-1R-ARi"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="6Uq-t8-XE7" secondAttribute="leading" constant="-4" id="fUv-Hc-CLO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Uq-t8-XE7" secondAttribute="trailing" id="b5P-cN-Cty"/>
+                            <constraint firstItem="6Uq-t8-XE7" firstAttribute="leading" secondItem="Bi8-dk-JEg" secondAttribute="trailing" constant="8" id="fx0-t5-pye"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Zb9-9o-HzD" secondAttribute="bottom" constant="13" id="g3n-xm-9C4"/>
                             <constraint firstItem="Zb9-9o-HzD" firstAttribute="top" secondItem="6Uq-t8-XE7" secondAttribute="bottom" constant="8" id="l29-kB-7ek"/>
                             <constraint firstItem="6Uq-t8-XE7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="wyD-t0-t2j"/>
@@ -204,12 +215,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HotSpot Speed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-kW-fWy">
-                                <rect key="frame" x="16" y="72" width="343" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WifiWombat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFZ-kW-fWy">
+                                <rect key="frame" x="91" y="72" width="268" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="LbE-Z7-fr8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -217,6 +228,13 @@
                                 <rect key="frame" x="16" y="147" width="343" height="458"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifiwombaticon" translatesAutoresizingMaskIntoConstraints="NO" id="TUa-c9-exI">
+                                <rect key="frame" x="16" y="72" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="11P-0k-98A"/>
+                                    <constraint firstAttribute="width" secondItem="TUa-c9-exI" secondAttribute="height" multiplier="1:1" id="FXn-5Y-ns5"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -226,10 +244,12 @@
                             <constraint firstItem="DTZ-Qt-oMc" firstAttribute="top" secondItem="OFZ-kW-fWy" secondAttribute="bottom" constant="8" id="A8L-VX-NLx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3Ev-o8-1yL" secondAttribute="trailing" id="F0K-9N-t88"/>
                             <constraint firstItem="DTZ-Qt-oMc" firstAttribute="leading" secondItem="cOX-Ro-o9L" secondAttribute="leadingMargin" id="S4A-az-7iX"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="OFZ-kW-fWy" secondAttribute="leading" id="Vek-gw-pgk"/>
                             <constraint firstItem="OFZ-kW-fWy" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="8" id="XCL-nZ-6r8"/>
+                            <constraint firstItem="OFZ-kW-fWy" firstAttribute="leading" secondItem="TUa-c9-exI" secondAttribute="trailing" constant="8" id="dI4-Np-r6X"/>
                             <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="DTZ-Qt-oMc" secondAttribute="bottom" constant="13" id="dJp-0a-aaO"/>
+                            <constraint firstItem="TUa-c9-exI" firstAttribute="top" secondItem="fLA-qA-dOt" secondAttribute="bottom" constant="8" id="v83-JG-Ngc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OFZ-kW-fWy" secondAttribute="trailing" id="v9k-AU-7iu"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="TUa-c9-exI" secondAttribute="leading" id="yDK-I6-I0e"/>
                             <constraint firstItem="3Ev-o8-1yL" firstAttribute="top" secondItem="OFZ-kW-fWy" secondAttribute="bottom" constant="8" id="zOW-E9-dE8"/>
                             <constraint firstItem="mOv-pT-ZhR" firstAttribute="top" secondItem="3Ev-o8-1yL" secondAttribute="bottom" constant="13" id="zup-eF-49i"/>
                         </constraints>
@@ -586,7 +606,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -624,7 +644,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -641,8 +661,9 @@
     <resources>
         <image name="Bulleted List Filled-30" width="30" height="30"/>
         <image name="Map Marker-30" width="30" height="30"/>
+        <image name="wifiwombaticon" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZD-xh-xYD"/>
+        <segue reference="WpN-2S-Lrz"/>
     </inferredMetricsTieBreakers>
 </document>

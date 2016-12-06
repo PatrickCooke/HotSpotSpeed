@@ -16,6 +16,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
     
+    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA", "IHOP", "Panera"]
+    
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UITextField!
     @IBOutlet weak var dlSpeedTfield: UITextField!

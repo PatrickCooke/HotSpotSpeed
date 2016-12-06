@@ -73,10 +73,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.downSpeed.text = "Download Speed: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " Mbps"
             }
             if let down = selectedHP.hpUp {
-                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+                cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
             if let destlat = selectedHP.hpLat  {
@@ -108,10 +108,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.downSpeed.text = "Download Speed: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " Mbps"
             }
             if let down = selectedHP.hpUp {
-                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+                cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
             if let destlat = selectedHP.hpLat  {
@@ -144,10 +144,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.locTitle.text = locName
             }
             if let down = selectedHP.hpDown {
-                cell.downSpeed.text = "Download Speed: " + down + " mbps"
+                cell.downSpeed.text = "Download Speed: " + down + " Mbps"
             }
             if let down = selectedHP.hpUp {
-                cell.upSpeed.text = "Upload Speed: " + down + " mbps"
+                cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
             if let destlat = selectedHP.hpLat  {
@@ -209,13 +209,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Max Speed!!!"
+            return "Max Speed!!! Over 100 Mbps"
         case 1:
-            return "Fast Internet"
+            return "Fast Internet 10-100 Mbps"
         case 2:
-            return "Merh Internet"
+            return "Merh Internet 2-10 Mbps"
         case 3:
-            return "Slow enough to avoid"
+            return "Slow enough to avoid Under 2 Mbps"
         default:
             return "How are you seeing this?"
         }
