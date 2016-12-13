@@ -28,7 +28,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityTfield: UILabel!
     @IBOutlet weak var zipTfield: UILabel!
     @IBOutlet weak var stateTfield: UILabel!
+    @IBOutlet weak var speedTestWebView: UIWebView!
     
+
     //MARK: - Save Method
     
     @IBAction func savePressed () {
@@ -94,6 +96,16 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             print("Server reported an error: \(error)")
         }
         
+    }
+    
+    //MARK: - SpeedTest Website Viewer
+    
+    func displaySpeedTest() {
+        let URLString = "https://fast.com"
+        let myURL = NSURL (string: URLString)
+        let myURLRequest = NSURLRequest(URL: myURL!)
+        
+        speedTestWebView.loadRequest(myURLRequest)
     }
     
     //MARK: - Use Google Place Picker
@@ -255,6 +267,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         pageLoc.startUpdatingLocation()
 //        makeTextFieldintoDelegrates()
+        displaySpeedTest()
     }
     
     override func didReceiveMemoryWarning() {

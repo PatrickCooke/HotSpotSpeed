@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tsb-bR-BCq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tsb-bR-BCq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -421,6 +421,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-Gl-TAJ">
+                                <rect key="frame" x="16" y="320" width="343" height="290"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -445,6 +450,7 @@
                             <constraint firstItem="Zo0-oP-a4C" firstAttribute="leading" secondItem="jcN-nw-a6O" secondAttribute="leading" id="NI8-zy-EZ1"/>
                             <constraint firstAttribute="leadingMargin" secondItem="xx0-il-8vj" secondAttribute="leading" id="Npk-k2-CsZ"/>
                             <constraint firstItem="Zo0-oP-a4C" firstAttribute="top" secondItem="Z4U-cu-Zr2" secondAttribute="bottom" constant="8" id="OXO-B1-Q2l"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="qX4-Gl-TAJ" secondAttribute="leading" id="Va9-9r-pe5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zjl-ZM-bCQ" secondAttribute="trailing" id="Yck-TC-xpO"/>
                             <constraint firstItem="gVX-E3-Esp" firstAttribute="leading" secondItem="gdO-SV-wMh" secondAttribute="trailing" constant="8" id="YwD-v4-2Ig"/>
                             <constraint firstItem="tdh-Ww-flq" firstAttribute="leading" secondItem="mof-eb-cHa" secondAttribute="trailing" constant="7" id="ap6-2U-LMi"/>
@@ -457,7 +463,10 @@
                             <constraint firstItem="jcN-nw-a6O" firstAttribute="top" secondItem="Zo0-oP-a4C" secondAttribute="bottom" constant="-2" id="iRw-fB-z9P"/>
                             <constraint firstItem="gdO-SV-wMh" firstAttribute="top" secondItem="xx0-il-8vj" secondAttribute="bottom" id="j1z-nV-DbK"/>
                             <constraint firstItem="gdO-SV-wMh" firstAttribute="leading" secondItem="g86-07-WK9" secondAttribute="trailing" constant="8" id="mG4-DP-3UK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qX4-Gl-TAJ" secondAttribute="trailing" id="nkI-eb-lvG"/>
+                            <constraint firstItem="qX4-Gl-TAJ" firstAttribute="top" secondItem="T0f-D7-Dij" secondAttribute="bottom" constant="8" id="pkh-4s-HsG"/>
                             <constraint firstItem="Zjl-ZM-bCQ" firstAttribute="leading" secondItem="T0f-D7-Dij" secondAttribute="trailing" constant="9" id="qAD-lx-uLG"/>
+                            <constraint firstItem="RW3-Z6-FQF" firstAttribute="top" secondItem="qX4-Gl-TAJ" secondAttribute="bottom" constant="8" id="qNv-Kk-Ibb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IGo-yF-idF" secondAttribute="trailing" id="rFT-z4-rSp"/>
                             <constraint firstItem="xx0-il-8vj" firstAttribute="top" secondItem="QJ1-nB-DSw" secondAttribute="bottom" constant="4" id="rih-ed-HWN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jcN-nw-a6O" secondAttribute="trailing" id="sBV-EB-8Yw"/>
@@ -482,6 +491,7 @@
                         <outlet property="latLabel" destination="j8g-Bs-cDl" id="DWd-x7-km6"/>
                         <outlet property="locNameTfield" destination="QJ1-nB-DSw" id="lLF-U7-WKq"/>
                         <outlet property="lonLabel" destination="dth-Yb-FP6" id="17E-Ix-2wH"/>
+                        <outlet property="speedTestWebView" destination="qX4-Gl-TAJ" id="X9b-bQ-vF4"/>
                         <outlet property="ssidTfield" destination="jcN-nw-a6O" id="RfW-I7-MBq"/>
                         <outlet property="stateTfield" destination="gVX-E3-Esp" id="yS1-g6-Nhs"/>
                         <outlet property="upSpeedTfield" destination="Zjl-ZM-bCQ" id="JRf-Hp-iAm"/>
