@@ -1,5 +1,8 @@
 PODS:
   - Backendless (3.0.27)
+  - Crashlytics (3.8.3):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
   - GoogleMaps (2.1.1):
     - GoogleMaps/Maps (= 2.1.1)
   - GoogleMaps/Base (2.1.1)
@@ -13,16 +16,20 @@ PODS:
 
 DEPENDENCIES:
   - Backendless (>= 3.0.0)
+  - Crashlytics
+  - Fabric
   - GoogleMaps
   - GooglePlacePicker
   - GooglePlaces
 
 SPEC CHECKSUMS:
   Backendless: 565a82d9aa6ec01257e904e0a5c0146ffdb503ed
+  Crashlytics: 2b6dbe138a42395577cfa73dfa1aa7248cadf39e
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlacePicker: 665f39f931f2df32f9dd3fcc45f7e8abf71e535c
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
 
-PODFILE CHECKSUM: 01d15b0800a16ea19510c8e1a1e184f48bfa24c2
+PODFILE CHECKSUM: 26d4d225b7ef7d29cb82bb7069aa45cde849423b
 
 COCOAPODS: 1.0.0

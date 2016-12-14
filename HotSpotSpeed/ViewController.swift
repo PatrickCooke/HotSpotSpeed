@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Crashlytics
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -20,6 +21,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var locFasArray = [HotSpot]()
     var locMedArray = [HotSpot]()
     var locSloArray = [HotSpot]()
+    
     
     //MARK: - Table Methods
     
@@ -281,6 +283,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    @IBAction func crashButtonTapped(sender: AnyObject) {
+        Crashlytics.sharedInstance().crash()
+    }
+    
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
@@ -291,11 +297,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
         self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
 
 }

@@ -8,5 +8,7 @@ target 'HotSpotSpeed' do
   pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
+  pod 'Fabric'
+  pod 'Crashlytics'
 
 end

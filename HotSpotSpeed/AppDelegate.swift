@@ -9,6 +9,8 @@
 import UIKit
 import GooglePlaces
 import GoogleMaps
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         cutomizedAppearance()
         GMSServices.provideAPIKey(emergencyKey)
         GMSPlacesClient.provideAPIKey(emergencyKey)
+        Fabric.with([Crashlytics.self])
+        
         
         return true
     }
