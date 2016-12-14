@@ -101,10 +101,13 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     //MARK: - SpeedTest Website Viewer
     
     func displaySpeedTest() {
-        let URLString = "https://fast.com"
+        let URLString = "http://speedtest.att.com/speedtest/"
         let myURL = NSURL (string: URLString)
         let myURLRequest = NSURLRequest(URL: myURL!)
         
+        speedTestWebView.layer.cornerRadius = 8
+        speedTestWebView.layer.borderWidth = 2
+        //speedTestWebView.layer.borderColor = (UIColor().AquaGreen() as! CGColor)
         speedTestWebView.loadRequest(myURLRequest)
     }
     
@@ -261,6 +264,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         return true
     }
     */
+    
+    
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
@@ -268,6 +273,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         pageLoc.startUpdatingLocation()
 //        makeTextFieldintoDelegrates()
         displaySpeedTest()
+
     }
     
     override func didReceiveMemoryWarning() {
