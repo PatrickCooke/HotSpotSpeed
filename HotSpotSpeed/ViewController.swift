@@ -297,7 +297,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
         self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+<<<<<<< HEAD
 
+=======
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+>>>>>>> origin/master
     }
 
 }
