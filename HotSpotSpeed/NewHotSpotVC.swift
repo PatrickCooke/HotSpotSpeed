@@ -29,7 +29,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zipTfield: UILabel!
     @IBOutlet weak var stateTfield: UILabel!
     @IBOutlet weak var speedTestWebView: UIWebView!
-    
+    let ownerID = UIDevice.currentDevice().name
 
     //MARK: - Save Method
     
@@ -81,6 +81,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         if let state = stateTfield.text {
             newHS.hpState = state
         }
+        newHS.ownerId = ownerID
         
         let dataStore = backendless.data.of(HotSpot.ofClass())
         
