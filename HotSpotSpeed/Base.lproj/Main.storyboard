@@ -77,7 +77,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From Me" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-kz-ikP">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfl-kz-ikP">
                                                     <rect key="frame" x="8" y="77" width="327" height="16"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="16" id="Hgm-RG-pf9"/>
@@ -515,7 +515,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -553,7 +553,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -573,6 +573,6 @@
         <image name="wifiwombaticon" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WpN-2S-Lrz"/>
+        <segue reference="JZD-xh-xYD"/>
     </inferredMetricsTieBreakers>
 </document>

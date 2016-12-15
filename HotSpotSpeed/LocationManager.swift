@@ -19,13 +19,15 @@ class LocationManager: NSObject,CLLocationManagerDelegate {
     func turnOnLocationMonitoring() {
         locManager.startUpdatingLocation()
         locManager.startUpdatingHeading()
-    }
-    
-    func setupLocationMonitoring() {
         locManager.delegate = self
         locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locManager.startUpdatingLocation()
-        if CLLocationManager.locationServicesEnabled() {
+        NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "locationOn", object: nil))
+
+    }
+    
+    func setupLocationMonitoring() {
+                if CLLocationManager.locationServicesEnabled() {
             switch CLLocationManager .authorizationStatus() {
             case .AuthorizedAlways:
                 turnOnLocationMonitoring()
@@ -35,7 +37,6 @@ class LocationManager: NSObject,CLLocationManagerDelegate {
                 break
             case .NotDetermined:
                 locManager .requestWhenInUseAuthorization()
-                locManager .requestAlwaysAuthorization()
                 break
             case .Restricted:
                 break

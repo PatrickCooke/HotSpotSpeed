@@ -86,11 +86,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let lattitude : CLLocationDegrees = Double(destlat)!
                     let longitude : CLLocationDegrees = Double(destlon)!
                     let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-                    let myLoc = locManager.locManager.location
-                    let distance = destination.distanceFromLocation(myLoc!)
-                    let distInMiles = Double(distance)/1609.344
-                    let distString = String(format:"%.1f", distInMiles)
-                    cell.distFromMe.text = "\(distString) miles away"
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                        let myLoc = locManager.locManager.location
+                        let distance = destination.distanceFromLocation((myLoc)!)
+                        let distInMiles = Double(distance)/1609.344
+                        let distString = String(format:"%.1f", distInMiles)
+                        cell.distFromMe.text = "\(distString) miles away"
+                    }
+                    
                     
                 }
             }
@@ -121,11 +124,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let lattitude : CLLocationDegrees = Double(destlat)!
                     let longitude : CLLocationDegrees = Double(destlon)!
                     let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-                    let myLoc = locManager.locManager.location
-                    let distance = destination.distanceFromLocation(myLoc!)
-                    let distInMiles = Double(distance)/1609.344
-                    let distString = String(format:"%.1f", distInMiles)
-                    cell.distFromMe.text = "\(distString) miles away"
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                        let myLoc = locManager.locManager.location
+                        let distance = destination.distanceFromLocation((myLoc)!)
+                        let distInMiles = Double(distance)/1609.344
+                        let distString = String(format:"%.1f", distInMiles)
+                        cell.distFromMe.text = "\(distString) miles away"
+                    }
                     
                 }
             }
@@ -157,11 +162,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let lattitude : CLLocationDegrees = Double(destlat)!
                     let longitude : CLLocationDegrees = Double(destlon)!
                     let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-                    let myLoc = locManager.locManager.location
-                    let distance = destination.distanceFromLocation(myLoc!)
-                    let distInMiles = Double(distance)/1609.344
-                    let distString = String(format:"%.1f", distInMiles)
-                    cell.distFromMe.text = "\(distString) miles away"
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                        let myLoc = locManager.locManager.location
+                        let distance = destination.distanceFromLocation((myLoc)!)
+                        let distInMiles = Double(distance)/1609.344
+                        let distString = String(format:"%.1f", distInMiles)
+                        cell.distFromMe.text = "\(distString) miles away"
+                    }
                     
                 }
             }
@@ -193,11 +200,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     let lattitude : CLLocationDegrees = Double(destlat)!
                     let longitude : CLLocationDegrees = Double(destlon)!
                     let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-                    let myLoc = locManager.locManager.location
-                    let distance = destination.distanceFromLocation(myLoc!)
-                    let distInMiles = Double(distance)/1609.344
-                    let distString = String(format:"%.1f", distInMiles)
-                    cell.distFromMe.text = "\(distString) miles away"
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                        let myLoc = locManager.locManager.location
+                        let distance = destination.distanceFromLocation((myLoc)!)
+                        let distInMiles = Double(distance)/1609.344
+                        let distString = String(format:"%.1f", distInMiles)
+                        cell.distFromMe.text = "\(distString) miles away"
+                    }
                 }
             }
             
@@ -249,6 +258,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dataManager.fetchData()
     }
     
+    func reLoadTable() {
+        hsTable.reloadData()
+    }
+    
     func fetchAndReload() {
         self.hotspotArray = dataManager.hSArray
         self.locMaxArray = dataManager.maxArray
@@ -295,6 +308,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "locationOn", object: nil)
         self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         

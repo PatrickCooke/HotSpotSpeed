@@ -186,6 +186,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         setupGMap()
         displayGEndpoints()
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
