@@ -16,7 +16,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
     
-    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
+    let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera bread", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
     @IBOutlet weak var ssidTfield: UITextField!
     @IBOutlet weak var locNameTfield: UILabel!
@@ -224,56 +224,35 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     */
     
     //MARK: - Textfield Return button Methods
-    /*
+    
     func makeTextFieldintoDelegrates() {
         ssidTfield.delegate=self
-        locNameTfield.delegate=self
-        dlSpeedTfield.delegate=self
-        upSpeedTfield.delegate=self
-        addressTfield.delegate=self
-        cityTfield.delegate=self
-        zipTfield.delegate=self
-        stateTfield.delegate = self
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField == self.ssidTfield {
-            self.locNameTfield.becomeFirstResponder()
+            self.ssidTfield.resignFirstResponder()
         }
-        if textField == self.locNameTfield {
-            self.dlSpeedTfield.becomeFirstResponder()
-        }
-        if textField == self.dlSpeedTfield {
-            self.upSpeedTfield.becomeFirstResponder()
-        }
-        if textField == self.upSpeedTfield {
-            self.addressTfield.becomeFirstResponder()
-        }
-        if textField == self.addressTfield {
-            self.cityTfield.becomeFirstResponder()
-        }
-        if textField == self.cityTfield {
-            self.zipTfield.becomeFirstResponder()
-        }
-        if textField == self.zipTfield {
-            self.stateTfield.becomeFirstResponder()
-        }
-        if textField == self.stateTfield {
-            self.stateTfield.resignFirstResponder()
-        }
-        
         return true
     }
-    */
+ 
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
     
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pageLoc.startUpdatingLocation()
-//        makeTextFieldintoDelegrates()
+        makeTextFieldintoDelegrates()
         displaySpeedTest()
+        hideKeyboardWhenTappedAround()
 
     }
     
