@@ -30,6 +30,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var stateTfield: UILabel!
     @IBOutlet weak var speedTestWebView: UIWebView!
     let ownerID = UIDevice.currentDevice().name
+    var googlePlaceID = ""
 
     //MARK: - Save Method
     
@@ -82,6 +83,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             newHS.hpState = state
         }
         newHS.ownerId = ownerID
+        newHS.placeId = googlePlaceID
         
         let dataStore = backendless.data.of(HotSpot.ofClass())
         
@@ -143,6 +145,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     return
                 }
                 self.addressTfield.text  = streetAddress
+                
+                self.googlePlaceID = place.placeID
+                print("placeID = \(self.googlePlaceID)")
                 
                 guard let cityAddress = addressArray?[1] else {
                     return
