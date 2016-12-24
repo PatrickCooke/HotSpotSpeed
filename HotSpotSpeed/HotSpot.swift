@@ -22,7 +22,7 @@ class HotSpot: NSObject {
     var hpState     : String!
     var ownerId     : String!
     var placeId     : String!
-    var distanceToSelf  : String!
+    var distanceToSelf  : Double!
     //var objectID    : String?
     //var created     : String?
 

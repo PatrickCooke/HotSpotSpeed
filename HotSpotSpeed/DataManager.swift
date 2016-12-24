@@ -37,7 +37,9 @@ class DataManager: NSObject {
     }
     
     func CalcDistanceToPoint (HSArray: [HotSpot]) {
-        self.sortForSpeed(HSArray)
+        defer {
+         self.sortForSpeed(HSArray)
+        }
         for hotspot in HSArray {
             if let destlat = hotspot.hpLat  {
                 if let destlon = hotspot.hpLon  {
@@ -48,8 +50,9 @@ class DataManager: NSObject {
                         let myLoc = locManager.locManager.location
                         let distance = destination.distanceFromLocation((myLoc)!)
                         let distInMiles = Double(distance)/1609.344
-                        let distString = String(format:"%.1f", distInMiles)
-                        hotspot.distanceToSelf = distString
+                        hotspot.distanceToSelf = distInMiles
+//                        let distString = String(format:"%.1f", distInMiles)
+//                        hotspot.distanceToSelf = distString
                     }
                 }
             }
@@ -58,7 +61,7 @@ class DataManager: NSObject {
     
     func sortForSpeed(array: [HotSpot]){
         defer {
-//            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
+            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
         }
         var tempSloArray = [HotSpot]()
@@ -67,8 +70,14 @@ class DataManager: NSObject {
         var tempMaxArray = [HotSpot]()
         var distSortArray = [HotSpot]()
         
-        distSortArray = array
-        distSortArray.sortInPlace({$0.distanceToSelf > $1.distanceToSelf})
+        for hotspots in array {
+            print(hotspots.hpLocName)
+            distSortArray.append(hotspots)
+            distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
+            
+        }
+//        distSortArray = array
+//        distSortArray.sortInPlace({$0.distanceToSelf > $1.distanceToSelf})
         
         
         for spots in array {

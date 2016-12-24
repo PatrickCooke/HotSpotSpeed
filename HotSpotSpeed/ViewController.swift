@@ -24,6 +24,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var locDistArray =   [HotSpot]()
     var sort = 0
     
+    //MARK: - Sort Method
+    
+    @IBAction func changeSort(sender:UIBarButtonItem) {
+        if sort == 0 {
+            sort = 1
+            reLoadTable()
+        } else {
+            sort = 0
+            reLoadTable()
+        }
+    }
     
     //MARK: - Table Methods
     
@@ -54,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return 0
             }
         case 1:
-            return dataManager.hSArray.count
+            return locDistArray.count
         default:
             return 0
         }
@@ -118,7 +129,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             */
             if let dist = selectedHP.distanceToSelf {
-                cell.distFromMe.text = "\(dist) miles away"
+                let distString = String(format:"%.1f", dist)
+                cell.distFromMe.text = "\(distString) miles away"
             }
             return cell
         case 1:
@@ -160,7 +172,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
              }
              */
             if let dist = selectedHP.distanceToSelf {
-                cell.distFromMe.text = "\(dist) miles away"
+                let distString = String(format:"%.1f", dist)
+                cell.distFromMe.text = "\(distString) miles away"
             }
             
             return cell
@@ -204,7 +217,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
              }
              */
             if let dist = selectedHP.distanceToSelf {
-                cell.distFromMe.text = "\(dist) miles away"
+                let distString = String(format:"%.1f", dist)
+                cell.distFromMe.text = "\(distString) miles away"
             }
             
             return cell
@@ -248,7 +262,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
              }
              */
             if let dist = selectedHP.distanceToSelf {
-                cell.distFromMe.text = "\(dist) miles away"
+                let distString = String(format:"%.1f", dist)
+                cell.distFromMe.text = "\(distString) miles away"
             }
             
             return cell
@@ -276,7 +291,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             if let dist = selectedHP.distanceToSelf {
-                cell.distFromMe.text = "\(dist) miles away"
+                let distString = String(format:"%.1f", dist)
+                cell.distFromMe.text = "\(distString) miles away"
             }
             return cell
         default:
@@ -303,7 +319,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 return "How are you seeing this?"
             }
         case 1:
-            return "Sort by Distance"
+            return ""
         default:
             return ""
         }
