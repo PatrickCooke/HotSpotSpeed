@@ -20,15 +20,12 @@ class DataManager: NSObject {
     var distArray   :   [HotSpot]!
     
     func fetchData() {
-//        print("fetch async")
+        //        print("fetch async")
         let dataStore = backendless.data.of(HotSpot.ofClass())
         dataStore.find(
             { (result: BackendlessCollection!) -> Void in
                 let hotspotsArray = result.getCurrentPage() as! [HotSpot]
                 self.hSArray = hotspotsArray
-//                print(self.hSArray.count)
-//                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
-                //self.sortForSpeed(hotspotsArray)
                 self.CalcDistanceToPoint(hotspotsArray)
             },
             error: { (fault: Fault!) -> Void in
@@ -38,7 +35,7 @@ class DataManager: NSObject {
     
     func CalcDistanceToPoint (HSArray: [HotSpot]) {
         defer {
-         self.sortForSpeed(HSArray)
+            self.sortForSpeed(HSArray)
         }
         for hotspot in HSArray {
             if let destlat = hotspot.hpLat  {
@@ -51,8 +48,6 @@ class DataManager: NSObject {
                         let distance = destination.distanceFromLocation((myLoc)!)
                         let distInMiles = Double(distance)/1609.344
                         hotspot.distanceToSelf = distInMiles
-//                        let distString = String(format:"%.1f", distInMiles)
-//                        hotspot.distanceToSelf = distString
                     }
                 }
             }
@@ -61,7 +56,7 @@ class DataManager: NSObject {
     
     func sortForSpeed(array: [HotSpot]){
         defer {
-            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
+            //print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
         }
         var tempSloArray = [HotSpot]()
@@ -71,36 +66,26 @@ class DataManager: NSObject {
         var distSortArray = [HotSpot]()
         
         for hotspots in array {
-            print(hotspots.hpLocName)
             distSortArray.append(hotspots)
             distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
-            
         }
-//        distSortArray = array
-//        distSortArray.sortInPlace({$0.distanceToSelf > $1.distanceToSelf})
-        
         
         for spots in array {
             guard let speed = spots.hpDown else {
                 return
             }
-//            print("speed \(speed)")
             if (Float(speed) < 2) {
                 tempSloArray.append(spots)
                 tempSloArray.sortInPlace({$0.hpDown > $1.hpDown})
-//                print("slow")
             } else if (Float(speed) < 10) {
                 tempMedArray.append(spots)
-//              tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
-//                print("med")
+                tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
             } else if (Float(speed) < 100) {
                 tempFasArray.append(spots)
                 tempFasArray.sortInPlace({$0.hpDown > $1.hpDown})
-//                print("fast")
             } else {
                 tempMaxArray.append(spots)
                 tempMaxArray.sortInPlace({$0.hpDown > $1.hpDown})
-//                print("wow")
             }
             
             self.sloArray = tempSloArray

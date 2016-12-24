@@ -31,10 +31,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
    
     func displayGEndpoints() {
-        print("displaying endpoints")
+        
+//        print("displaying endpoints")
         
         for wifi in self.dataManager.hSArray {
-            print("endpoint: \(wifi.hpLocName)")
+//            print("endpoint: \(wifi.hpLocName)")
             guard let lat = Double(wifi.hpLat) else {
                 return
             }
@@ -163,26 +164,29 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         dataManager.fetchData()
     }
     
-    func fetchAndReload() {
-        //displayEndpoints()
-        
+    func reloadMap() {
+        self.GMapView.clear()
+        setupGMap()
+        displayGEndpoints()
     }
 
     //MARK: - Lifecycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //hsMapView.showsUserLocation = true
-        //hsMapView.delegate = self
         self.navigationController?.navigationBar.barTintColor = UIColor().AquaGreen()
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reloadMap), name: "datarcv", object: nil)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        //setupMap()
-        //displayEndpoints()
         setupGMap()
         displayGEndpoints()
     }

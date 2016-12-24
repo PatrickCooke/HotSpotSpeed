@@ -288,10 +288,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.locMedArray = dataManager.medArray
         self.locSloArray = dataManager.sloArray
         self.locDistArray = dataManager.distArray
-        print("array loaded")
+//        print("array loaded")
         defer {
             hsTable.reloadData()
-            print("table loaded")
+//            print("table loaded")
         }
         
     }
@@ -315,16 +315,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
     }
-    
-    @IBAction func crashButtonTapped(sender: AnyObject) {
-        Crashlytics.sharedInstance().crash()
-    }
+
     
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //amIOnline()
+        amIOnline()
         locManager.setupLocationMonitoring()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(fetchAndReload), name: "datarcv", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
