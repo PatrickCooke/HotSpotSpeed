@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="646-w4-RNM" id="4iW-bU-MDg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-p2-lkP">
@@ -175,6 +175,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yde-UI-kSb">
                         <barButtonItem key="backBarButtonItem" title="List" id="kWe-TQ-Lub"/>
+                        <barButtonItem key="leftBarButtonItem" title="Sort" id="qBx-nt-8DL">
+                            <connections>
+                                <action selector="changeSort:" destination="BYZ-38-t0r" id="d58-HI-QQd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PdS-pK-dRw">
                             <connections>
                                 <segue destination="ZGt-W1-dhf" kind="show" id="JZD-xh-xYD"/>

@@ -10,12 +10,14 @@ import UIKit
 
 class DataManager: NSObject {
     static let sharedInstance = DataManager()
+    let locManager = LocationManager.sharedInstance
     var backendless = Backendless.sharedInstance()
     var hSArray     :   [HotSpot]!
     var sloArray    :   [HotSpot]!
     var medArray    :   [HotSpot]!
     var fasArray    :   [HotSpot]!
     var maxArray    :   [HotSpot]!
+    var distArray   :   [HotSpot]!
     
     func fetchData() {
 //        print("fetch async")
@@ -26,22 +28,58 @@ class DataManager: NSObject {
                 self.hSArray = hotspotsArray
 //                print(self.hSArray.count)
 //                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
-                self.sortForSpeed(hotspotsArray)
+                //self.sortForSpeed(hotspotsArray)
+                self.CalcDistanceToPoint(hotspotsArray)
             },
             error: { (fault: Fault!) -> Void in
                 print("Server reported an error: \(fault)")
         })
     }
     
+    func CalcDistanceToPoint (HSArray: [HotSpot]) {
+        defer {
+         self.sortForSpeed(HSArray)
+        }
+        for hotspot in HSArray {
+            if let destlat = hotspot.hpLat  {
+                if let destlon = hotspot.hpLon  {
+                    let lattitude : CLLocationDegrees = Double(destlat)!
+                    let longitude : CLLocationDegrees = Double(destlon)!
+                    let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
+                        let myLoc = locManager.locManager.location
+                        let distance = destination.distanceFromLocation((myLoc)!)
+                        let distInMiles = Double(distance)/1609.344
+                        hotspot.distanceToSelf = distInMiles
+//                        let distString = String(format:"%.1f", distInMiles)
+//                        hotspot.distanceToSelf = distString
+                    }
+                }
+            }
+        }
+    }
+    
     func sortForSpeed(array: [HotSpot]){
         defer {
-//            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
+            print("slo \(sloArray.count), med \(medArray.count), fas \(fasArray.count), max \(maxArray.count)")
             NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "datarcv", object: nil))
         }
         var tempSloArray = [HotSpot]()
         var tempMedArray = [HotSpot]()
         var tempFasArray = [HotSpot]()
         var tempMaxArray = [HotSpot]()
+        var distSortArray = [HotSpot]()
+        
+        for hotspots in array {
+            print(hotspots.hpLocName)
+            distSortArray.append(hotspots)
+            distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
+            
+        }
+//        distSortArray = array
+//        distSortArray.sortInPlace({$0.distanceToSelf > $1.distanceToSelf})
+        
+        
         for spots in array {
             guard let speed = spots.hpDown else {
                 return
@@ -70,5 +108,6 @@ class DataManager: NSObject {
             self.fasArray = tempFasArray
             self.maxArray = tempMaxArray
         }
+        self.distArray = distSortArray
     }
 }
