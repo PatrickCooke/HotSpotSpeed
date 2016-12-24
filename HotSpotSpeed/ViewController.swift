@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 1:
             return 1
         default:
-            return 4
+            return 1
         }
     }
     
@@ -153,24 +153,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
-            /*
-             if let destlat = selectedHP.hpLat  {
-             if let destlon = selectedHP.hpLon  {
-             let lattitude : CLLocationDegrees = Double(destlat)!
-             let longitude : CLLocationDegrees = Double(destlon)!
-             let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-             if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-             let myLoc = locManager.locManager.location
-             let distance = destination.distanceFromLocation((myLoc)!)
-             let distInMiles = Double(distance)/1609.344
-             let distString = String(format:"%.1f", distInMiles)
-             cell.distFromMe.text = "\(distString) miles away"
-             }
-             
-             
-             }
-             }
-             */
             if let dist = selectedHP.distanceToSelf {
                 let distString = String(format:"%.1f", dist)
                 cell.distFromMe.text = "\(distString) miles away"
@@ -198,24 +180,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
-            /*
-             if let destlat = selectedHP.hpLat  {
-             if let destlon = selectedHP.hpLon  {
-             let lattitude : CLLocationDegrees = Double(destlat)!
-             let longitude : CLLocationDegrees = Double(destlon)!
-             let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-             if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-             let myLoc = locManager.locManager.location
-             let distance = destination.distanceFromLocation((myLoc)!)
-             let distInMiles = Double(distance)/1609.344
-             let distString = String(format:"%.1f", distInMiles)
-             cell.distFromMe.text = "\(distString) miles away"
-             }
-             
-             
-             }
-             }
-             */
             if let dist = selectedHP.distanceToSelf {
                 let distString = String(format:"%.1f", dist)
                 cell.distFromMe.text = "\(distString) miles away"
@@ -243,24 +207,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.upSpeed.text = "Upload Speed: " + down + " Mbps"
             }
             
-            /*
-             if let destlat = selectedHP.hpLat  {
-             if let destlon = selectedHP.hpLon  {
-             let lattitude : CLLocationDegrees = Double(destlat)!
-             let longitude : CLLocationDegrees = Double(destlon)!
-             let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-             if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
-             let myLoc = locManager.locManager.location
-             let distance = destination.distanceFromLocation((myLoc)!)
-             let distInMiles = Double(distance)/1609.344
-             let distString = String(format:"%.1f", distInMiles)
-             cell.distFromMe.text = "\(distString) miles away"
-             }
-             
-             
-             }
-             }
-             */
             if let dist = selectedHP.distanceToSelf {
                 let distString = String(format:"%.1f", dist)
                 cell.distFromMe.text = "\(distString) miles away"
@@ -324,26 +270,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return ""
         }
     }
-    
- /*
-     This is the basic table... use if all else fails
-     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return hotspotArray.count
-    }
- 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-        let selectedHP = hotspotArray[indexPath.row]
-        if let ssidName = selectedHP.hpSSIDName {
-        cell.textLabel!.text = ssidName
-        }
-        if let down = selectedHP.hpDown {
-        cell.detailTextLabel!.text = "Down: " + down + " mbps"
-        }
-        return cell
-    }
-*/
     
     //MARK: - Reoccuring Method
     
