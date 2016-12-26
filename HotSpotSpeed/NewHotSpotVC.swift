@@ -250,6 +250,26 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    func amIOnline() {
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet connection OK")
+        } else {
+            print("Internet connection FAILED")
+            
+            let alertController = UIAlertController(title: "No Wifi Connection", message: "Please Make Sure Your Device Is Connected To A Wifi HotSpot", preferredStyle: .Alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
+                // ...
+            }
+            alertController.addAction(OKAction)
+            
+            self.presentViewController(alertController, animated: true) {
+                // ...
+            }
+            
+        }
+    }
+    
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
@@ -258,7 +278,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         makeTextFieldintoDelegrates()
         displaySpeedTest()
         hideKeyboardWhenTappedAround()
-
+        amIOnline()
     }
     
     override func didReceiveMemoryWarning() {
