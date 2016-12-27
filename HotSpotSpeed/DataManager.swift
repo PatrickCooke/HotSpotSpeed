@@ -66,26 +66,30 @@ class DataManager: NSObject {
         var distSortArray = [HotSpot]()
         
         for hotspots in array {
-            distSortArray.append(hotspots)
-            distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
+            if hotspots.distanceToSelf < 25 {
+                distSortArray.append(hotspots)
+                distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
+            }
         }
         
         for spots in array {
             guard let speed = spots.hpDown else {
                 return
             }
-            if (Float(speed) < 2) {
-                tempSloArray.append(spots)
-                tempSloArray.sortInPlace({$0.hpDown > $1.hpDown})
-            } else if (Float(speed) < 10) {
-                tempMedArray.append(spots)
-                tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
-            } else if (Float(speed) < 100) {
-                tempFasArray.append(spots)
-                tempFasArray.sortInPlace({$0.hpDown > $1.hpDown})
-            } else {
-                tempMaxArray.append(spots)
-                tempMaxArray.sortInPlace({$0.hpDown > $1.hpDown})
+            if spots.distanceToSelf < 25 {
+                if (Float(speed) < 2) {
+                    tempSloArray.append(spots)
+                    tempSloArray.sortInPlace({$0.hpDown > $1.hpDown})
+                } else if (Float(speed) < 10) {
+                    tempMedArray.append(spots)
+                    tempMedArray.sortInPlace({$0.hpDown > $1.hpDown})
+                } else if (Float(speed) < 100) {
+                    tempFasArray.append(spots)
+                    tempFasArray.sortInPlace({$0.hpDown > $1.hpDown})
+                } else {
+                    tempMaxArray.append(spots)
+                    tempMaxArray.sortInPlace({$0.hpDown > $1.hpDown})
+                }
             }
             
             self.sloArray = tempSloArray
