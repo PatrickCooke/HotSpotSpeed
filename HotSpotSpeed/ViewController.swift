@@ -24,6 +24,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var locDistArray =   [HotSpot]()
     var sort = 0
     
+    
+    /*
+    //MARK: - Popover control 
+    
+    @IBAction func actionWasTapped(sender: UIBarButtonItem) {
+        let storyboard : UIStoryboard = UIStoryboard(name: "Options", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("PopoverViewController") as! OptionsPopOverViewController
+        vc.modalPresentationStyle = UIModalPresentationStyle.None
+        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
+        popover.barButtonItem = sender
+        presentViewController(vc, animated: true, completion:nil)
+    }
+    */
     //MARK: - Sort Method
     
     @IBAction func changeSort(sender:UIBarButtonItem) {
@@ -316,4 +329,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 }
-
+/*
+extension UIPopoverControllerDelegate {
+    //MARK: - Popover methods
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .None
+    }
+}
+*/
