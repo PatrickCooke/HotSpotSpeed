@@ -25,6 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14.0)
                 self.GMapView.camera = camera
                 self.GMapView.myLocationEnabled = true
+                self.GMapView.settings.myLocationButton = true
             }
         }
 
