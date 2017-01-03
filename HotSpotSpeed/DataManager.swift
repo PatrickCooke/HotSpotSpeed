@@ -12,6 +12,7 @@ class DataManager: NSObject {
     static let sharedInstance = DataManager()
     let locManager = LocationManager.sharedInstance
     var backendless = Backendless.sharedInstance()
+    var optionsManager = Options.sharedInstance
     var hSArray     :   [HotSpot]!
     var sloArray    :   [HotSpot]!
     var medArray    :   [HotSpot]!
@@ -66,7 +67,7 @@ class DataManager: NSObject {
         var distSortArray = [HotSpot]()
         
         for hotspots in array {
-            if hotspots.distanceToSelf < 25 {
+            if hotspots.distanceToSelf < optionsManager.listRange {
                 distSortArray.append(hotspots)
                 distSortArray.sortInPlace({$1.distanceToSelf > $0.distanceToSelf})
             }
@@ -76,7 +77,7 @@ class DataManager: NSObject {
             guard let speed = spots.hpDown else {
                 return
             }
-            if spots.distanceToSelf < 25 {
+            if spots.distanceToSelf < optionsManager.listRange {
                 if (Float(speed) < 2) {
                     tempSloArray.append(spots)
                     tempSloArray.sortInPlace({$0.hpDown > $1.hpDown})

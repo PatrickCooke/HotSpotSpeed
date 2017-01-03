@@ -4,13 +4,115 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Options Pop Over View Controller-->
+        <scene sceneID="78a-1W-aCP">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="win-ht-cHz" customClass="OptionsPopOverViewController" customModule="HotSpotSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUh-Fn-joL"/>
+                        <viewControllerLayoutGuide type="bottom" id="nn1-PC-mVK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="onZ-3c-Eys">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-uX-X3V">
+                                <rect key="frame" x="176" y="27" width="183" height="29"/>
+                                <segments>
+                                    <segment title="Speed"/>
+                                    <segment title="Proximity"/>
+                                </segments>
+                                <color key="tintColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="setSortByOption:" destination="win-ht-cHz" eventType="valueChanged" id="8se-DV-mJT"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luk-Wt-EDW">
+                                <rect key="frame" x="16" y="28" width="117" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="H7H-Ot-Kaq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6g-wD-7Mh">
+                                <rect key="frame" x="16" y="69" width="343" height="33"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-j5-uxP">
+                                <rect key="frame" x="16" y="110" width="343" height="29"/>
+                                <segments>
+                                    <segment title=".5 miles"/>
+                                    <segment title="1 mile"/>
+                                    <segment title="5 miles"/>
+                                    <segment title="10 miles"/>
+                                    <segment title="25 Miles"/>
+                                    <segment title="All"/>
+                                </segments>
+                                <color key="tintColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="setSortByDistance:" destination="win-ht-cHz" eventType="valueChanged" id="fEl-w9-qg3"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8A-we-Xj5" customClass="RoundedEdgesButton" customModule="HotSpotSpeed" customModuleProvider="target">
+                                <rect key="frame" x="242" y="146" width="117" height="36"/>
+                                <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="CIx-K1-48Z"/>
+                                    <constraint firstAttribute="width" constant="117" id="dYT-bx-d9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
+                                <state key="normal" title="Dismiss Options">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissPopover" destination="win-ht-cHz" eventType="touchUpInside" id="XgK-pR-RVP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y8A-we-Xj5" secondAttribute="trailing" id="36n-vo-Uc6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kT2-j5-uxP" secondAttribute="trailing" id="67W-8Z-ZDk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kT2-j5-uxP" secondAttribute="leading" id="AkP-8I-k72"/>
+                            <constraint firstItem="luk-Wt-EDW" firstAttribute="top" secondItem="qwe-uX-X3V" secondAttribute="top" constant="1" id="COd-LC-USL"/>
+                            <constraint firstItem="K6g-wD-7Mh" firstAttribute="top" secondItem="luk-Wt-EDW" secondAttribute="bottom" constant="8" id="FCs-la-ses"/>
+                            <constraint firstItem="nn1-PC-mVK" firstAttribute="top" secondItem="Y8A-we-Xj5" secondAttribute="bottom" constant="8" id="Vpx-5g-roc"/>
+                            <constraint firstItem="luk-Wt-EDW" firstAttribute="leading" secondItem="onZ-3c-Eys" secondAttribute="leadingMargin" id="Wr4-Eo-2Yi"/>
+                            <constraint firstItem="qwe-uX-X3V" firstAttribute="trailing" secondItem="onZ-3c-Eys" secondAttribute="trailingMargin" id="YSv-VJ-Gvt"/>
+                            <constraint firstItem="kT2-j5-uxP" firstAttribute="top" secondItem="K6g-wD-7Mh" secondAttribute="bottom" constant="8" id="ipV-gq-Qv4"/>
+                            <constraint firstItem="luk-Wt-EDW" firstAttribute="top" secondItem="sUh-Fn-joL" secondAttribute="bottom" constant="8" symbolic="YES" id="kO6-K3-Heg"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="K6g-wD-7Mh" secondAttribute="leading" id="o1Y-pF-yFL"/>
+                            <constraint firstItem="qwe-uX-X3V" firstAttribute="leading" secondItem="luk-Wt-EDW" secondAttribute="trailing" constant="43" id="sLK-QZ-KIr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K6g-wD-7Mh" secondAttribute="trailing" id="tgm-wF-ghF"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="375" height="160"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="190"/>
+                    <connections>
+                        <outlet property="sortDistance" destination="kT2-j5-uxP" id="bpy-Sb-JCy"/>
+                        <outlet property="sortSpeedOrProx" destination="qwe-uX-X3V" id="zMY-9j-uPO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H4h-t8-r0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260" y="-373.31334332833586"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -41,7 +143,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="646-w4-RNM" id="4iW-bU-MDg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-p2-lkP">
@@ -177,7 +279,9 @@
                         <barButtonItem key="backBarButtonItem" title="List" id="kWe-TQ-Lub"/>
                         <barButtonItem key="leftBarButtonItem" title="Sort" id="qBx-nt-8DL">
                             <connections>
-                                <action selector="changeSort:" destination="BYZ-38-t0r" id="d58-HI-QQd"/>
+                                <segue destination="win-ht-cHz" kind="popoverPresentation" identifier="segue" popoverAnchorBarButtonItem="qBx-nt-8DL" id="PUx-Bw-oss">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PdS-pK-dRw">
@@ -520,7 +624,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -558,7 +662,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -569,7 +673,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpZ-3a-5qK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="544" y="860"/>
+            <point key="canvasLocation" x="544" y="862"/>
         </scene>
     </scenes>
     <resources>

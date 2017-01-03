@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var backendless = Backendless.sharedInstance()
     var dataManager = DataManager.sharedInstance
+    var optionsmanager = Options.sharedInstance
     
     var window: UIWindow?
     
@@ -42,6 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(emergencyKey)
         GMSPlacesClient.provideAPIKey(emergencyKey)
         Fabric.with([Crashlytics.self])
+        optionsmanager.listRange = 4000
+        optionsmanager.sortMethod = 0
         
         
         return true
