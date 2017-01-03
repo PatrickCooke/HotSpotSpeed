@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey(emergencyKey)
         GMSPlacesClient.provideAPIKey(emergencyKey)
         Fabric.with([Crashlytics.self])
-        optionsmanager.listRange = 4
+        optionsmanager.listRange = 4000
         optionsmanager.sortMethod = 0
         
         

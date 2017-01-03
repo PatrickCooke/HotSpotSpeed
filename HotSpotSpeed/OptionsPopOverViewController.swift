@@ -10,6 +10,7 @@ import UIKit
 
 class OptionsPopOverViewController: UIViewController {
 
+    var dataManager = DataManager.sharedInstance
     @IBOutlet weak var sortSpeedOrProx: UISegmentedControl!
     @IBOutlet weak var sortDistance: UISegmentedControl!
     var optionManager = Options.sharedInstance
@@ -38,6 +39,8 @@ class OptionsPopOverViewController: UIViewController {
             optionManager.listRange = 10
         case 4:
             optionManager.listRange = 25
+        case 5:
+            optionManager.listRange = 4000
         default:
             optionManager.listRange = 25
         }
@@ -55,9 +58,16 @@ class OptionsPopOverViewController: UIViewController {
             self.sortDistance.selectedSegmentIndex = 3
         case 25:
             self.sortDistance.selectedSegmentIndex = 4
+        case 4000:
+            self.sortDistance.selectedSegmentIndex = 5
         default:
             self.sortDistance.selectedSegmentIndex = 4
         }
+    }
+    
+    @IBAction func dismissPopover() {
+        dataManager.CalcDistanceToPoint(dataManager.hSArray)
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -67,7 +77,7 @@ class OptionsPopOverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.preferredContentSize = CGSizeMake(375, 150)
+        self.preferredContentSize = CGSizeMake(375, 190)
     }
 
     override func didReceiveMemoryWarning() {

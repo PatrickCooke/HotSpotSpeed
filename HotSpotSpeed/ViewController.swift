@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    //MARK: - Popover control 
+    //MARK: - Sort/Popover control
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue" {
@@ -43,22 +43,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         return .None
     }
-    
-    
-    //MARK: - Sort Method
-    
-    /*
-    @IBAction func changeSort(sender:UIBarButtonItem) {
-        let sort = optionsManager.sortMethod
-        if sort == 0 {
-            sort = 1
-            reLoadTable()
-        } else {
-            sort = 0
-            reLoadTable()
-        }
-    }
-    */
+
     //MARK: - Table Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -343,15 +328,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
 }
-/*
-extension UIPopoverControllerDelegate {
-    //MARK: - Popover methods
-    
-    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
-    }
-    
-    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .None
-    }
-}
-*/
+

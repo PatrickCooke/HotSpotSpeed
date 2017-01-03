@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="nn1-PC-mVK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="onZ-3c-Eys">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-uX-X3V">
@@ -56,19 +56,42 @@
                                     <segment title="5 miles"/>
                                     <segment title="10 miles"/>
                                     <segment title="25 Miles"/>
+                                    <segment title="All"/>
                                 </segments>
                                 <color key="tintColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="setSortByDistance:" destination="win-ht-cHz" eventType="valueChanged" id="fEl-w9-qg3"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8A-we-Xj5" customClass="RoundedEdgesButton" customModule="HotSpotSpeed" customModuleProvider="target">
+                                <rect key="frame" x="242" y="146" width="117" height="36"/>
+                                <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="CIx-K1-48Z"/>
+                                    <constraint firstAttribute="width" constant="117" id="dYT-bx-d9C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
+                                <state key="normal" title="Dismiss Options">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissPopover" destination="win-ht-cHz" eventType="touchUpInside" id="XgK-pR-RVP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Y8A-we-Xj5" secondAttribute="trailing" id="36n-vo-Uc6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kT2-j5-uxP" secondAttribute="trailing" id="67W-8Z-ZDk"/>
                             <constraint firstAttribute="leadingMargin" secondItem="kT2-j5-uxP" secondAttribute="leading" id="AkP-8I-k72"/>
                             <constraint firstItem="luk-Wt-EDW" firstAttribute="top" secondItem="qwe-uX-X3V" secondAttribute="top" constant="1" id="COd-LC-USL"/>
                             <constraint firstItem="K6g-wD-7Mh" firstAttribute="top" secondItem="luk-Wt-EDW" secondAttribute="bottom" constant="8" id="FCs-la-ses"/>
+                            <constraint firstItem="nn1-PC-mVK" firstAttribute="top" secondItem="Y8A-we-Xj5" secondAttribute="bottom" constant="8" id="Vpx-5g-roc"/>
                             <constraint firstItem="luk-Wt-EDW" firstAttribute="leading" secondItem="onZ-3c-Eys" secondAttribute="leadingMargin" id="Wr4-Eo-2Yi"/>
                             <constraint firstItem="qwe-uX-X3V" firstAttribute="trailing" secondItem="onZ-3c-Eys" secondAttribute="trailingMargin" id="YSv-VJ-Gvt"/>
                             <constraint firstItem="kT2-j5-uxP" firstAttribute="top" secondItem="K6g-wD-7Mh" secondAttribute="bottom" constant="8" id="ipV-gq-Qv4"/>
@@ -80,7 +103,7 @@
                     </view>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="160"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="160"/>
+                    <size key="freeformSize" width="375" height="190"/>
                     <connections>
                         <outlet property="sortDistance" destination="kT2-j5-uxP" id="bpy-Sb-JCy"/>
                         <outlet property="sortSpeedOrProx" destination="qwe-uX-X3V" id="zMY-9j-uPO"/>
@@ -88,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4h-t8-r0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="-301"/>
+            <point key="canvasLocation" x="1260" y="-373.31334332833586"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -650,7 +673,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WpZ-3a-5qK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="543" y="824"/>
+            <point key="canvasLocation" x="544" y="862"/>
         </scene>
     </scenes>
     <resources>
