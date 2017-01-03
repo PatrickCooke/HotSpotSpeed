@@ -160,7 +160,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="13" id="ob1-I6-FuP"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -169,13 +169,13 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="O5h-oq-hUc"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-1D-yRg">
-                                                    <rect key="frame" x="174" y="63" width="161" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <rect key="frame" x="174" y="60.5" width="161" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -193,7 +193,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="cfI-VB-Hvy"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                                     <color key="textColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -624,7 +624,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -662,7 +662,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
