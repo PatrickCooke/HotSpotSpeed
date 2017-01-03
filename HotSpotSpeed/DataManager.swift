@@ -41,14 +41,16 @@ class DataManager: NSObject {
         for hotspot in HSArray {
             if let destlat = hotspot.hpLat  {
                 if let destlon = hotspot.hpLon  {
+                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
                     let lattitude : CLLocationDegrees = Double(destlat)!
                     let longitude : CLLocationDegrees = Double(destlon)!
                     let destination :CLLocation = CLLocation(latitude: lattitude, longitude: longitude)
-                    if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
                         let myLoc = locManager.locManager.location
                         let distance = destination.distanceFromLocation((myLoc)!)
                         let distInMiles = Double(distance)/1609.344
                         hotspot.distanceToSelf = distInMiles
+                    } else {
+                        hotspot.distanceToSelf = 0
                     }
                 }
             }
