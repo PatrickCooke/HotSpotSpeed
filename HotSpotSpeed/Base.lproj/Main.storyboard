@@ -256,7 +256,7 @@
                         <barButtonItem key="backBarButtonItem" title="List" id="kWe-TQ-Lub"/>
                         <barButtonItem key="leftBarButtonItem" title="Sort" id="qBx-nt-8DL">
                             <connections>
-                                <segue destination="win-ht-cHz" kind="popoverPresentation" popoverAnchorBarButtonItem="qBx-nt-8DL" id="PUx-Bw-oss">
+                                <segue destination="win-ht-cHz" kind="popoverPresentation" identifier="segue" popoverAnchorBarButtonItem="qBx-nt-8DL" id="PUx-Bw-oss">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>

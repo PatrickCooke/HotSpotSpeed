@@ -10,11 +10,12 @@ import UIKit
 import CoreLocation
 import Crashlytics
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
 
     var locManager = LocationManager.sharedInstance
     var dataManager = DataManager.sharedInstance
     let backendless = Backendless.sharedInstance()
+    let optionsManager = Options.sharedInstance
     @IBOutlet private weak var hsTable  :UITableView!
     var hotspotArray = [HotSpot]()
     var locMaxArray = [HotSpot]()
@@ -22,24 +23,33 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var locMedArray = [HotSpot]()
     var locSloArray = [HotSpot]()
     var locDistArray =   [HotSpot]()
-    var sort = 0
     
     
-    /*
+    
+    
     //MARK: - Popover control 
     
-    @IBAction func actionWasTapped(sender: UIBarButtonItem) {
-        let storyboard : UIStoryboard = UIStoryboard(name: "Options", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("PopoverViewController") as! OptionsPopOverViewController
-        vc.modalPresentationStyle = UIModalPresentationStyle.None
-        let popover: UIPopoverPresentationController = vc.popoverPresentationController!
-        popover.barButtonItem = sender
-        presentViewController(vc, animated: true, completion:nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "segue" {
+            let destController = segue.destinationViewController as! OptionsPopOverViewController
+            destController.popoverPresentationController?.delegate = self
+        }
     }
-    */
+    
+    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
+        dataManager.CalcDistanceToPoint(dataManager.hSArray)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        return .None
+    }
+    
+    
     //MARK: - Sort Method
     
+    /*
     @IBAction func changeSort(sender:UIBarButtonItem) {
+        let sort = optionsManager.sortMethod
         if sort == 0 {
             sort = 1
             reLoadTable()
@@ -48,10 +58,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             reLoadTable()
         }
     }
-    
+    */
     //MARK: - Table Methods
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        let sort = optionsManager.sortMethod
         switch sort {
         case 0:
             return 4
@@ -63,6 +74,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let sort = optionsManager.sortMethod
         switch sort {
         case 0:
             switch section {
@@ -97,6 +109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let sort = optionsManager.sortMethod
         let cell = tableView.dequeueReusableCellWithIdentifier("cCell", forIndexPath: indexPath) as! wifiTableCell
         
         switch sort {
@@ -262,6 +275,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let sort = optionsManager.sortMethod
         switch sort {
         case 0:
             
