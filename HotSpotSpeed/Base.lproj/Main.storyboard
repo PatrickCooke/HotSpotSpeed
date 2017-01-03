@@ -42,7 +42,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance From Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6g-wD-7Mh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miles Away From Me:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6g-wD-7Mh">
                                 <rect key="frame" x="16" y="69" width="343" height="33"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -51,11 +51,11 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kT2-j5-uxP">
                                 <rect key="frame" x="16" y="110" width="343" height="29"/>
                                 <segments>
-                                    <segment title=".5 miles"/>
-                                    <segment title="1 mile"/>
-                                    <segment title="5 miles"/>
-                                    <segment title="10 miles"/>
-                                    <segment title="25 Miles"/>
+                                    <segment title=".5"/>
+                                    <segment title="1"/>
+                                    <segment title="5"/>
+                                    <segment title="10"/>
+                                    <segment title="25"/>
                                     <segment title="All"/>
                                 </segments>
                                 <color key="tintColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -624,7 +624,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -662,7 +662,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
