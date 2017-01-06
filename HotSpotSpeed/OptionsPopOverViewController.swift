@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class OptionsPopOverViewController: UIViewController {
 
     var dataManager = DataManager.sharedInstance
@@ -78,6 +79,11 @@ class OptionsPopOverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.preferredContentSize = CGSizeMake(375, 190)
+//        self.view.clipsToBounds = true
+//        self.view.layer.cornerRadius = 1
+//        self.view.layer.borderWidth = 4
+//        self.view.layer.borderColor = UIColor().AquaGreen().CGColor
+        
     }
 
     override func didReceiveMemoryWarning() {

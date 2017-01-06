@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tsb-bR-BCq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tsb-bR-BCq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,15 +70,10 @@
                                     <constraint firstAttribute="height" constant="36" id="CIx-K1-48Z"/>
                                     <constraint firstAttribute="width" constant="117" id="dYT-bx-d9C"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="12"/>
-                                <state key="normal" title="Dismiss Options">
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="17"/>
+                                <state key="normal" title="Sort">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="dismissPopover" destination="win-ht-cHz" eventType="touchUpInside" id="XgK-pR-RVP"/>
                                 </connections>
@@ -111,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4h-t8-r0b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1260" y="-373.31334332833586"/>
+            <point key="canvasLocation" x="1260" y="-376.01199400299851"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
