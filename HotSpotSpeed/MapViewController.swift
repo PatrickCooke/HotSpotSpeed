@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import GoogleMaps
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate {
 
     var locManager = LocationManager.sharedInstance
     var dataManager = DataManager.sharedInstance
@@ -76,6 +76,21 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
 
+    //MARK: - Launch Map from Marker
+    
+    func mapView(mapView: GMSMapView, didTapInfoWindowOfMarker marker: GMSMarker) {
+        launchMapApp(marker.position.latitude, lon: marker.position.longitude, name: marker.title!)
+    }
+    
+    
+    func launchMapApp(lat: CLLocationDegrees, lon : CLLocationDegrees, name: String) {
+        let coordinate = CLLocationCoordinate2DMake(lat, lon)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+        mapItem.name = name
+        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsMapCenterKey])
+    }
+    
+    
     /*
     func setupMap() {
         hsMapView.delegate = self
@@ -190,6 +205,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         super.viewWillAppear(animated)
         setupGMap()
         displayGEndpoints()
+        GMapView.delegate = self
     }
     
     
