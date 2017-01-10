@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3899A7081E1AC6ED008FE18A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7071E1AC6ED008FE18A /* Options.swift */; };
 		3899A70A1E1AC9A2008FE18A /* OptionsPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */; };
+		38AEB9871E2599B000627C18 /* NewHotSpotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C121D80D6DF0095672A /* NewHotSpotVC.swift */; };
 		432584641DB0F9400020BCB7 /* reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584631DB0F9400020BCB7 /* reachability.swift */; };
 		432584661DBD27880020BCB7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584651DBD27880020BCB7 /* UIColors.swift */; };
 		435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */; };
@@ -20,7 +21,6 @@
 		43722C051D7F66980095672A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43722C041D7F66980095672A /* Assets.xcassets */; };
 		43722C081D7F66980095672A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43722C061D7F66980095672A /* LaunchScreen.storyboard */; };
 		43722C101D7F66D80095672A /* HotSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C0F1D7F66D80095672A /* HotSpot.swift */; };
-		43722C131D80D6DF0095672A /* NewHotSpotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C121D80D6DF0095672A /* NewHotSpotVC.swift */; };
 		43722C151D80E0740095672A /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C141D80E0740095672A /* LocationManager.swift */; };
 		43722C171D82093B0095672A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C161D82093B0095672A /* MapViewController.swift */; };
 		43722C191D820C010095672A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C181D820C010095672A /* DataManager.swift */; };
@@ -300,11 +300,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AEB9871E2599B000627C18 /* NewHotSpotVC.swift in Sources */,
 				436831341DEF884A00DE7DC8 /* RoundedEdgesButton.swift in Sources */,
 				435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */,
 				43722C001D7F66980095672A /* ViewController.swift in Sources */,
 				43722C171D82093B0095672A /* MapViewController.swift in Sources */,
-				43722C131D80D6DF0095672A /* NewHotSpotVC.swift in Sources */,
 				43722C191D820C010095672A /* DataManager.swift in Sources */,
 				432584661DBD27880020BCB7 /* UIColors.swift in Sources */,
 				43722C151D80E0740095672A /* LocationManager.swift in Sources */,
