@@ -52,7 +52,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
             guard let upSpeed = wifi.hpUp else {
                 return
             }
-            let subtitle = "Down: \(downSpeed) Up: \(upSpeed)"
+            let subtitle = "Down: \(downSpeed) Up: \(upSpeed) \n Tap For Directions"
             let coords = CLLocationCoordinate2DMake(lat, lon)
             
             
@@ -87,7 +87,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
         let coordinate = CLLocationCoordinate2DMake(lat, lon)
         let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
         mapItem.name = name
-        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsMapCenterKey])
+        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsMapTypeKey])
     }
     
     
