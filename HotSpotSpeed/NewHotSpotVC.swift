@@ -19,7 +19,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera bread", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
-    @IBOutlet weak var ssidTfield: UITextField!
+//    @IBOutlet weak var ssidTfield: UITextField!
+    @IBOutlet weak var ssidLabel: UILabel!
     @IBOutlet weak var locNameTfield: UILabel!
     @IBOutlet weak var dlSpeedTfield: UITextField!
     @IBOutlet weak var upSpeedTfield: UITextField!
@@ -57,7 +58,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
         networkSSID = currentSSID
         if let ssid = networkSSID {
-            self.ssidTfield.text = ssid
+            self.ssidLabel.text = ssid
         } else {
             print("no network found")
         }
@@ -71,7 +72,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     @IBAction func savePressed () {
         print("save pressed")
-        if (ssidTfield.text != "" && latLabel.text != "" && lonLabel.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
+        if (ssidLabel.text != "" && latLabel.text != "" && lonLabel.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
             saveRecordSYNC()
         } else {
             print("didn't save")
@@ -85,7 +86,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         
         let newHS = HotSpot()
         
-        if let ssid = ssidTfield.text {
+        if let ssid = ssidLabel.text {
             newHS.hpSSIDName = ssid
         }
         if let loc = locNameTfield.text {
@@ -264,7 +265,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     */
     
     //MARK: - Textfield Return button Methods
-    
+    /*
     func makeTextFieldintoDelegrates() {
         ssidTfield.delegate=self
     }
@@ -275,7 +276,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
         return true
     }
- 
+ */
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -311,7 +312,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageLoc.startUpdatingLocation()
-        makeTextFieldintoDelegrates()
+//        makeTextFieldintoDelegrates()
         displaySpeedTest()
         hideKeyboardWhenTappedAround()
         amIOnline()
