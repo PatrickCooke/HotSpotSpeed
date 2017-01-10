@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import GooglePlacePicker
+import SystemConfiguration.CaptiveNetwork
 
 class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let pageLoc = CLLocationManager()
@@ -32,6 +33,40 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
 
+    
+    //MARK: - Get SSID
+    var networkSSID : String?
+    var currentSSID = ""
+    
+    func fetchSSIDInfo() ->  String {
+        //var currentSSID = ""
+        if let interfaces:CFArray = CNCopySupportedInterfaces() {
+            for i in 0..<CFArrayGetCount(interfaces){
+                let allInterfaceNames = CFArrayGetValueAtIndex(interfaces, i)
+                let rec = unsafeBitCast(allInterfaceNames, AnyObject.self)
+                let unsafeInterfaceData = CNCopyCurrentNetworkInfo("\(rec)" as CFString)
+                if unsafeInterfaceData != nil {
+                    let interfaceData = unsafeInterfaceData! as Dictionary!
+                    for dictData in interfaceData! {
+                        if dictData.0 as! String == "SSID" {
+                            currentSSID = dictData.1 as! String
+                        }
+                    }
+                }
+            }
+        }
+        networkSSID = currentSSID
+        if let ssid = networkSSID {
+            self.ssidTfield.text = ssid
+        } else {
+            print("no network found")
+        }
+        return currentSSID
+    }
+    
+
+    
+    
     //MARK: - Save Method
     
     @IBAction func savePressed () {
@@ -253,6 +288,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     func amIOnline() {
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
+            fetchSSIDInfo()
         } else {
             print("Internet connection FAILED")
             
