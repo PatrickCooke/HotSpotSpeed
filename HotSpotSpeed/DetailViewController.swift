@@ -11,32 +11,38 @@ import GoogleMaps
 
 class DetailViewController: UIViewController {
 
-    var selectedHotSpot = HotSpot()
+    var selectedHotSpot = HotSpot?()
     @IBOutlet weak var DetailMapView : GMSMapView!
     
     func setupDetailMap(){
-        let lat = Double(selectedHotSpot.hpLat)! as CLLocationDegrees
-        let lon = Double(selectedHotSpot.hpLon)! as CLLocationDegrees
+        if let hotspot = selectedHotSpot {
+        let lat = Double(hotspot.hpLat)! as CLLocationDegrees
+        let lon = Double(hotspot.hpLon)! as CLLocationDegrees
         
         let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14.0)
         self.DetailMapView.camera = camera
         self.DetailMapView.myLocationEnabled = true
         self.DetailMapView.settings.myLocationButton = true
+        }
     }
     
     func addHotSpot() {
-        let lat = Double(selectedHotSpot.hpLat)! as CLLocationDegrees
-        let lon = Double(selectedHotSpot.hpLon)! as CLLocationDegrees
+        if let hotspot = selectedHotSpot {
+        let lat = Double(hotspot.hpLat)! as CLLocationDegrees
+        let lon = Double(hotspot.hpLon)! as CLLocationDegrees
         
         let hotSpotMarker = GMSMarker()
         hotSpotMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        hotSpotMarker.title = selectedHotSpot.hpLocName
+        hotSpotMarker.title = hotspot.hpLocName
         hotSpotMarker.map = DetailMapView
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(selectedHotSpot.hpLocName)
+//        if let name = selectedHotSpot!.hpLocName {
+//        print(name)
+//        }
         setupDetailMap()
         addHotSpot()
         

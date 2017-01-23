@@ -296,15 +296,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             case 0:
                 selectedHotSpot = locMaxArray[indexPath.row]
                 print(selectedHotSpot.hpLocName)
+//                performSegueWithIdentifier("detail", sender: self)
             case 1:
                 selectedHotSpot = locFasArray[indexPath.row]
                 print(selectedHotSpot.hpLocName)
+//                performSegueWithIdentifier("detail", sender: self)
             case 2:
                 selectedHotSpot = locMedArray[indexPath.row]
                 print(selectedHotSpot.hpLocName)
+//                performSegueWithIdentifier("detail", sender: self)
             case 3:
                 selectedHotSpot = locSloArray[indexPath.row]
                 print(selectedHotSpot.hpLocName)
+//                performSegueWithIdentifier("detail", sender: self)
             default:
                 print("what")
             }
@@ -312,24 +316,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("you selected cell at row \(indexPath.row)")
             selectedHotSpot = locDistArray[indexPath.row]
             print(selectedHotSpot.hpLocName)
+//            performSegueWithIdentifier("detail", sender: self)
         default:
             print("what?")
         }
-        let destivationVC = DetailViewController()
-        destivationVC.selectedHotSpot = selectedHotSpot
-        destivationVC.performSegueWithIdentifier("detail", sender: self)
+//        let destivationVC = DetailViewController()
+//        destivationVC.selectedHotSpot = selectedHotSpot
+//        destivationVC.performSegueWithIdentifier("detail", sender: self)
     }
-    /*
+
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if selectedHotSpot != nil {
             print(selectedHotSpot.hpLocName)
             if segue.identifier == "detail" {
                 let destController : DetailViewController = segue.destinationViewController as! DetailViewController
                 destController.selectedHotSpot = selectedHotSpot
+                destController.title = selectedHotSpot.hpLocName
             }
         }
     }
-    */
+    
     //MARK: - Reoccuring Method
     
     func reFetch () {
