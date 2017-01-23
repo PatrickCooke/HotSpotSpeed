@@ -10,50 +10,86 @@ import UIKit
 import GoogleMaps
 
 class DetailViewController: UIViewController {
-
+    
     var selectedHotSpot = HotSpot?()
     var hotspotGID : String!
     @IBOutlet weak var DetailMapView : GMSMapView!
+    @IBOutlet weak var SSIDLabel: UILabel!
+    @IBOutlet weak var downloadLabel: UILabel!
+    @IBOutlet weak var uploadLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     func setupDetailMap(){
         if let hotspot = selectedHotSpot {
-        let lat = Double(hotspot.hpLat)! as CLLocationDegrees
-        let lon = Double(hotspot.hpLon)! as CLLocationDegrees
-        
-        let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 14.0)
-        self.DetailMapView.camera = camera
-        self.DetailMapView.myLocationEnabled = true
-        self.DetailMapView.settings.myLocationButton = true
+            let lat = Double(hotspot.hpLat)! as CLLocationDegrees
+            let lon = Double(hotspot.hpLon)! as CLLocationDegrees
+            
+            let camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lon, zoom: 17.0)
+            self.DetailMapView.camera = camera
+            self.DetailMapView.myLocationEnabled = true
+            self.DetailMapView.settings.compassButton = true
         }
     }
     
     func addHotSpot() {
         if let hotspot = selectedHotSpot {
-        let lat = Double(hotspot.hpLat)! as CLLocationDegrees
-        let lon = Double(hotspot.hpLon)! as CLLocationDegrees
-        
-        let hotSpotMarker = GMSMarker()
-        hotSpotMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
-        hotSpotMarker.title = hotspot.hpLocName
-        hotSpotMarker.map = DetailMapView
+            let lat = Double(hotspot.hpLat)! as CLLocationDegrees
+            let lon = Double(hotspot.hpLon)! as CLLocationDegrees
+            
+            let hotSpotMarker = GMSMarker()
+            hotSpotMarker.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+            hotSpotMarker.title = hotspot.hpLocName
+            hotSpotMarker.map = DetailMapView
         }
     }
     
+    func setupData () {
+        if let ssidName = selectedHotSpot?.hpSSIDName {
+            SSIDLabel.text = "Network Name - \(ssidName)"
+        }
+        if let downloadspeed = selectedHotSpot?.hpDown {
+            downloadLabel.text = "Download - \(downloadspeed)Mbps"
+        }
+        if let uploadspeed = selectedHotSpot?.hpUp {
+            uploadLabel.text = "Upload - \(uploadspeed)Mbps"
+        }
+        guard let street = selectedHotSpot?.hpStreet else {
+            return
+        }
+        guard let city = selectedHotSpot?.hpCity else {
+            return
+        }
+        guard let state = selectedHotSpot?.hpState else {
+            return
+        }
+        guard  let zip = selectedHotSpot?.hpZip else {
+            return
+        }
+        addressLabel.text = "\(street) \n\(city), \(state) \(zip)"
+    }
+    
+    
     //MARK: - Life Cycle Methods
+    
+    override func loadView() {
+        super.loadView()
+        setupDetailMap()
+        addHotSpot()
+        setupData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let name = selectedHotSpot!.hpLocName {
-//        print(name)
-//        }
-        print("GID = \(hotspotGID)")
-        setupDetailMap()
-        addHotSpot()
+        //        setupDetailMap()
+        //        addHotSpot()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(true)
+        print("GID = \(hotspotGID)")
     }
-
+    
 }
