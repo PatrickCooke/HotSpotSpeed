@@ -12,6 +12,7 @@ import GoogleMaps
 class DetailViewController: UIViewController {
 
     var selectedHotSpot = HotSpot?()
+    var hotspotGID : String!
     @IBOutlet weak var DetailMapView : GMSMapView!
     
     func setupDetailMap(){
@@ -38,11 +39,14 @@ class DetailViewController: UIViewController {
         }
     }
     
+    //MARK: - Life Cycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 //        if let name = selectedHotSpot!.hpLocName {
 //        print(name)
 //        }
+        print("GID = \(hotspotGID)")
         setupDetailMap()
         addHotSpot()
         

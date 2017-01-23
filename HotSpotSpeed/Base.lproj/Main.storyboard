@@ -221,7 +221,7 @@
                                             <outlet property="downSpeed" destination="QkH-1R-gwR" id="20B-Yc-CLl"/>
                                             <outlet property="locTitle" destination="tAq-p2-lkP" id="TsB-3s-EHC"/>
                                             <outlet property="upSpeed" destination="cP0-1D-yRg" id="lBV-Wh-Eox"/>
-                                            <segue destination="beS-xr-1hY" kind="show" identifier="detail" id="yxK-fg-D9Q"/>
+                                            <segue destination="beS-xr-1hY" kind="show" identifier="detail" id="XiO-o6-HcY"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -292,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1224.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1225" y="139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Njf-XT-Jij">
