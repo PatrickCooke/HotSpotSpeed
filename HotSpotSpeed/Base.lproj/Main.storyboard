@@ -129,7 +129,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zb9-9o-HzD" customClass="roundedCornerView" customModule="HotSpotSpeed" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zb9-9o-HzD" customClass="roundedCornerView" customModule="HotSpotSpeed" customModuleProvider="target">
                                 <rect key="frame" x="16" y="147" width="343" height="458"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.17174279689788818" green="0.76713091135025024" blue="0.70332330465316772" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -138,7 +138,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="646-w4-RNM" id="4iW-bU-MDg">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="98"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loc" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tAq-p2-lkP">
@@ -169,7 +169,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-1D-yRg">
-                                                    <rect key="frame" x="174" y="61.5" width="161" height="13.5"/>
+                                                    <rect key="frame" x="174" y="61" width="161" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -221,6 +221,7 @@
                                             <outlet property="downSpeed" destination="QkH-1R-gwR" id="20B-Yc-CLl"/>
                                             <outlet property="locTitle" destination="tAq-p2-lkP" id="TsB-3s-EHC"/>
                                             <outlet property="upSpeed" destination="cP0-1D-yRg" id="lBV-Wh-Eox"/>
+                                            <segue destination="beS-xr-1hY" kind="show" identifier="detail" id="yxK-fg-D9Q"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -292,6 +293,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224.8" y="138.98050974512745"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Njf-XT-Jij">
+            <objects>
+                <viewController id="beS-xr-1hY" customClass="DetailViewController" customModule="HotSpotSpeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="U1o-Qz-Cmp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uz2-ex-rdP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKo-OF-Fex">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WifiWombat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgZ-wY-bl2">
+                                <rect key="frame" x="91" y="72" width="268" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="TAH-re-o9S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifiwombaticon" translatesAutoresizingMaskIntoConstraints="NO" id="klL-GY-Ht0">
+                                <rect key="frame" x="16" y="72" width="67" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="klL-GY-Ht0" secondAttribute="height" multiplier="1:1" id="FD2-KO-KgM"/>
+                                    <constraint firstAttribute="height" constant="67" id="sIS-yb-cQi"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-yu-hoI" customClass="GMSMapView">
+                                <rect key="frame" x="16" y="147" width="343" height="336"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="klL-GY-Ht0" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="5RZ-Z1-U3e"/>
+                            <constraint firstItem="klL-GY-Ht0" firstAttribute="width" secondItem="klL-GY-Ht0" secondAttribute="height" multiplier="1:1" id="9Yt-sU-QQp"/>
+                            <constraint firstItem="XgZ-wY-bl2" firstAttribute="leading" secondItem="klL-GY-Ht0" secondAttribute="trailing" constant="8" id="Mwc-AB-F2i"/>
+                            <constraint firstItem="XgZ-wY-bl2" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="YAo-o5-f6h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="k0b-yu-hoI" secondAttribute="trailing" id="ZLC-z8-3CJ"/>
+                            <constraint firstItem="uz2-ex-rdP" firstAttribute="top" secondItem="k0b-yu-hoI" secondAttribute="bottom" constant="135" id="svW-Yn-AwA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="k0b-yu-hoI" secondAttribute="leading" id="u2O-Ge-Xcc"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="klL-GY-Ht0" secondAttribute="leading" id="ud1-l0-wq1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XgZ-wY-bl2" secondAttribute="trailing" id="zY2-zr-NJE"/>
+                            <constraint firstItem="k0b-yu-hoI" firstAttribute="top" secondItem="XgZ-wY-bl2" secondAttribute="bottom" constant="8" id="zgM-tA-wLR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="DetailMapView" destination="k0b-yu-hoI" id="Apm-jO-e4G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-r1-MrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2160.8000000000002" y="-81.409295352323838"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="zIi-AN-lq7">
@@ -605,7 +661,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qp-Yg-sXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2205.5999999999999" y="471.8140929535233"/>
+            <point key="canvasLocation" x="3017" y="484"/>
         </scene>
         <!--List-->
         <scene sceneID="QT5-TC-Pxt">

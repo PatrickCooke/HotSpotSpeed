@@ -283,6 +283,53 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    //MARK: - Segue Methods
+    
+    var selectedHotSpot : HotSpot!
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let sort = optionsManager.sortMethod
+        switch sort {
+        case 0:
+            print("you selected cell in section \(indexPath.section) at row \(indexPath.row)")
+            switch indexPath.section {
+            case 0:
+                selectedHotSpot = locMaxArray[indexPath.row]
+                print(selectedHotSpot.hpLocName)
+            case 1:
+                selectedHotSpot = locFasArray[indexPath.row]
+                print(selectedHotSpot.hpLocName)
+            case 2:
+                selectedHotSpot = locMedArray[indexPath.row]
+                print(selectedHotSpot.hpLocName)
+            case 3:
+                selectedHotSpot = locSloArray[indexPath.row]
+                print(selectedHotSpot.hpLocName)
+            default:
+                print("what")
+            }
+        case 1:
+            print("you selected cell at row \(indexPath.row)")
+            selectedHotSpot = locDistArray[indexPath.row]
+            print(selectedHotSpot.hpLocName)
+        default:
+            print("what?")
+        }
+        let destivationVC = DetailViewController()
+        destivationVC.selectedHotSpot = selectedHotSpot
+        destivationVC.performSegueWithIdentifier("detail", sender: self)
+    }
+    /*
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if selectedHotSpot != nil {
+            print(selectedHotSpot.hpLocName)
+            if segue.identifier == "detail" {
+                let destController : DetailViewController = segue.destinationViewController as! DetailViewController
+                destController.selectedHotSpot = selectedHotSpot
+            }
+        }
+    }
+    */
     //MARK: - Reoccuring Method
     
     func reFetch () {

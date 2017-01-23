@@ -10,6 +10,7 @@
 		3899A7081E1AC6ED008FE18A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7071E1AC6ED008FE18A /* Options.swift */; };
 		3899A70A1E1AC9A2008FE18A /* OptionsPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */; };
 		38AEB9871E2599B000627C18 /* NewHotSpotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C121D80D6DF0095672A /* NewHotSpotVC.swift */; };
+		38C096D81E3017F000644689 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C096D71E3017F000644689 /* DetailViewController.swift */; };
 		432584641DB0F9400020BCB7 /* reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584631DB0F9400020BCB7 /* reachability.swift */; };
 		432584661DBD27880020BCB7 /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432584651DBD27880020BCB7 /* UIColors.swift */; };
 		435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */; };
@@ -33,6 +34,7 @@
 		0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotSpotSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3899A7071E1AC6ED008FE18A /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsPopOverViewController.swift; sourceTree = "<group>"; };
+		38C096D71E3017F000644689 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		432584631DB0F9400020BCB7 /* reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = reachability.swift; path = ../reachability.swift; sourceTree = "<group>"; };
 		432584651DBD27880020BCB7 /* UIColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		435CDCDD1DAC5BC200AD2411 /* roundedCornerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundedCornerView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				43722BFD1D7F66980095672A /* AppDelegate.swift */,
 				43722BFF1D7F66980095672A /* ViewController.swift */,
+				38C096D71E3017F000644689 /* DetailViewController.swift */,
 				3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */,
 				43722C161D82093B0095672A /* MapViewController.swift */,
 				43722C121D80D6DF0095672A /* NewHotSpotVC.swift */,
@@ -301,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38AEB9871E2599B000627C18 /* NewHotSpotVC.swift in Sources */,
+				38C096D81E3017F000644689 /* DetailViewController.swift in Sources */,
 				436831341DEF884A00DE7DC8 /* RoundedEdgesButton.swift in Sources */,
 				435CDCDE1DAC5BC200AD2411 /* roundedCornerView.swift in Sources */,
 				43722C001D7F66980095672A /* ViewController.swift in Sources */,
