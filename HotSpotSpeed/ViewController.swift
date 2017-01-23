@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import Crashlytics
 
-class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, UIPopoverPresentationControllerDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPopoverPresentationControllerDelegate {
 
     var locManager = LocationManager.sharedInstance
     var dataManager = DataManager.sharedInstance
@@ -33,6 +33,44 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         if segue.identifier == "segue" {
             let destController = segue.destinationViewController as! OptionsPopOverViewController
             destController.popoverPresentationController?.delegate = self
+        } else if segue.identifier == "detail" {
+            
+            var selectedHS : HotSpot!
+            let indexPath = hsTable.indexPathForSelectedRow
+            hsTable.deselectRowAtIndexPath(indexPath!, animated: true)
+            let sort = optionsManager.sortMethod
+            print("start segue")
+            switch sort {
+            case 0:
+                print("you selected cell in section \(indexPath!.section) at row \(indexPath!.row)")
+                switch indexPath!.section {
+                case 0:
+                    selectedHS = locMaxArray[indexPath!.row]
+                    print(selectedHS.placeId)
+                case 1:
+                    selectedHS = locFasArray[indexPath!.row]
+                    print(selectedHS.hpLocName)
+                case 2:
+                    selectedHS = locMedArray[indexPath!.row]
+                    print(selectedHS.hpLocName)
+                case 3:
+                    selectedHS = locSloArray[indexPath!.row]
+                    print(selectedHS.hpLocName)
+                default:
+                    print("how!?!")
+                }
+            case 1:
+                print("you selected cell at row \(indexPath!.row)")
+                selectedHS = locDistArray[indexPath!.row]
+                print(selectedHS.hpLocName)
+                
+            default:
+                print("what?")
+            }
+            
+            let destController : DetailViewController = segue.destinationViewController as! DetailViewController
+            destController.selectedHotSpot = selectedHS
+            destController.title = selectedHS.hpLocName
         }
     }
     
@@ -282,107 +320,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
             return ""
         }
     }
-    
-    //MARK: - Segue Methods
-    
-    
-    /*
-     var selectedHotSpot : HotSpot!
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let sort = optionsManager.sortMethod
-        switch sort {
-        case 0:
-            print("you selected cell in section \(indexPath.section) at row \(indexPath.row)")
-            switch indexPath.section {
-            case 0:
-                selectedHotSpot = locMaxArray[indexPath.row]
-                print(selectedHotSpot.placeId)
-//                performSegueWithIdentifier("detail", sender: selectedHotSpot)
-            case 1:
-                selectedHotSpot = locFasArray[indexPath.row]
-                print(selectedHotSpot.hpLocName)
-//                performSegueWithIdentifier("detail", sender: selectedHotSpot)
-            case 2:
-                selectedHotSpot = locMedArray[indexPath.row]
-                print(selectedHotSpot.hpLocName)
-//                performSegueWithIdentifier("detail", sender: selectedHotSpot)
-            case 3:
-                selectedHotSpot = locSloArray[indexPath.row]
-                print(selectedHotSpot.hpLocName)
-//                performSegueWithIdentifier("detail", sender: selectedHotSpot)
-            default:
-                print("what")
-            }
-        case 1:
-            print("you selected cell at row \(indexPath.row)")
-            selectedHotSpot = locDistArray[indexPath.row]
-            print(selectedHotSpot.hpLocName)
-//            performSegueWithIdentifier("detail", sender: selectedHotSpot)
-        default:
-            print("what?")
-        }
-//        let destivationVC = DetailViewController()
-//        destivationVC.selectedHotSpot = selectedHotSpot
-//        destivationVC.performSegueWithIdentifier("detail", sender: self)
-    }
 
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("entering prepare for seque")
-        print(selectedHotSpot.hpLocName)
-            if segue.identifier == "detail" {
-                let destController : DetailViewController = segue.destinationViewController as! DetailViewController
-//                destController.selectedHotSpot = selectedHotSpot
-//                destController.title = selectedHotSpot.hpLocName
-                destController.hotspotGID = selectedHotSpot.placeId
-        }
-    }
-     */
-    var selectedHS : HotSpot!
-    
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-        if segue.identifier == "detail" {
-            let indexPath = hsTable.indexPathForSelectedRow
-            let sort = optionsManager.sortMethod
-            print("start segue")
-            switch sort {
-            case 0:
-                print("you selected cell in section \(indexPath!.section) at row \(indexPath!.row)")
-                switch indexPath!.section {
-                case 0:
-                    selectedHS = locMaxArray[indexPath!.row]
-                    print(selectedHS.placeId)
-                case 1:
-                    selectedHS = locFasArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
-                case 2:
-                    selectedHS = locMedArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
-                case 3:
-                    selectedHS = locSloArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
-                default:
-                    print("what")
-                }
-            case 1:
-                print("you selected cell at row \(indexPath!.row)")
-                selectedHS = locDistArray[indexPath!.row]
-                print(selectedHS.hpLocName)
-            
-            default:
-                print("what?")
-            }
-
-            let destController : DetailViewController = segue.destinationViewController as! DetailViewController
-            destController.selectedHotSpot = selectedHS
-            destController.title = selectedHS.hpLocName
-            
-        }
-    }
-
-    
     //MARK: - Reoccuring Method
     
     func reFetch () {
