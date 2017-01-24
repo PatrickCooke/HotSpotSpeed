@@ -27,14 +27,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    //MARK: - Sort/Popover control
+    //MARK: - Segue Methods
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue" {
             let destController = segue.destinationViewController as! OptionsPopOverViewController
             destController.popoverPresentationController?.delegate = self
+        } else if segue.identifier == "detail" {
+            
+            var selectedHS : HotSpot!
+            let indexPath = hsTable.indexPathForSelectedRow
+            hsTable.deselectRowAtIndexPath(indexPath!, animated: true)
+            let sort = optionsManager.sortMethod
+            switch sort {
+            case 0:
+                switch indexPath!.section {
+                case 0:
+                    selectedHS = locMaxArray[indexPath!.row]
+                case 1:
+                    selectedHS = locFasArray[indexPath!.row]
+                case 2:
+                    selectedHS = locMedArray[indexPath!.row]
+                case 3:
+                    selectedHS = locSloArray[indexPath!.row]
+                default:
+                    print("how!?!")
+                }
+            case 1:
+                print("you selected cell at row \(indexPath!.row)")
+                selectedHS = locDistArray[indexPath!.row]
+                
+            default:
+                print("what?")
+            }
+            
+            let destController : DetailViewController = segue.destinationViewController as! DetailViewController
+            destController.selectedHotSpot = selectedHS
+            destController.title = selectedHS.hpLocName
         }
     }
+    
+    //MARK: - Sort/Popover control
     
     func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
         dataManager.CalcDistanceToPoint(dataManager.hSArray)
@@ -282,7 +315,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return ""
         }
     }
-    
+
     //MARK: - Reoccuring Method
     
     func reFetch () {

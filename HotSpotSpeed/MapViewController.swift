@@ -62,6 +62,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
             marker.title = title
             marker.snippet = subtitle
             
+            
             if Float(downSpeed) < 2.00 {
                 marker.icon = UIImage(named:"unlockRed")
             } else if Float(downSpeed) < 10.00 {
