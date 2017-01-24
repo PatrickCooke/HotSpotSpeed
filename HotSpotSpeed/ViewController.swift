@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
     
-    //MARK: - Sort/Popover control
+    //MARK: - Segue Methods
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue" {
@@ -39,30 +39,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let indexPath = hsTable.indexPathForSelectedRow
             hsTable.deselectRowAtIndexPath(indexPath!, animated: true)
             let sort = optionsManager.sortMethod
-            print("start segue")
             switch sort {
             case 0:
-                print("you selected cell in section \(indexPath!.section) at row \(indexPath!.row)")
                 switch indexPath!.section {
                 case 0:
                     selectedHS = locMaxArray[indexPath!.row]
-                    print(selectedHS.placeId)
                 case 1:
                     selectedHS = locFasArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
                 case 2:
                     selectedHS = locMedArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
                 case 3:
                     selectedHS = locSloArray[indexPath!.row]
-                    print(selectedHS.hpLocName)
                 default:
                     print("how!?!")
                 }
             case 1:
                 print("you selected cell at row \(indexPath!.row)")
                 selectedHS = locDistArray[indexPath!.row]
-                print(selectedHS.hpLocName)
                 
             default:
                 print("what?")
@@ -73,6 +66,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             destController.title = selectedHS.hpLocName
         }
     }
+    
+    //MARK: - Sort/Popover control
     
     func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
         dataManager.CalcDistanceToPoint(dataManager.hSArray)

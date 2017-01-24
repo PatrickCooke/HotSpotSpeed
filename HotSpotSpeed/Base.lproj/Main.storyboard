@@ -282,7 +282,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="PdS-pK-dRw">
                             <connections>
-                                <segue destination="ZGt-W1-dhf" kind="show" id="JZD-xh-xYD"/>
+                                <segue destination="ZGt-W1-dhf" kind="show" identifier="addFromList" id="JZD-xh-xYD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -322,35 +322,54 @@
                                     <constraint firstAttribute="height" constant="67" id="sIS-yb-cQi"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSID Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-np-nad">
-                                <rect key="frame" x="16" y="491" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSID Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqT-np-nad">
+                                <rect key="frame" x="16" y="147" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rUw-Ys-r8x">
+                                <rect key="frame" x="16" y="168" width="166" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUw-Ys-r8x">
-                                <rect key="frame" x="16" y="520" width="166" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qe9-3s-jU1">
+                                <rect key="frame" x="190" y="168" width="169" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe9-3s-jU1">
-                                <rect key="frame" x="190" y="520" width="169" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-WK-drk">
-                                <rect key="frame" x="16" y="549" width="343" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-WK-drk">
+                                <rect key="frame" x="16" y="192" width="343" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="53" id="MDF-B5-HZo"/>
+                                    <constraint firstAttribute="height" constant="42" id="MDF-B5-HZo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-3J-nVe" customClass="RoundedEdgesButton" customModule="HotSpotSpeed" customModuleProvider="target">
+                                <rect key="frame" x="16" y="519" width="343" height="91"/>
+                                <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="ulN-2A-4IP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="21"/>
+                                <state key="normal" title="Click for Directions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="launchMapApp" destination="beS-xr-1hY" eventType="touchUpInside" id="dZh-9a-CY8"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-yu-hoI" customClass="GMSMapView">
-                                <rect key="frame" x="16" y="147" width="343" height="336"/>
+                                <rect key="frame" x="16" y="242" width="343" height="269"/>
                                 <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
@@ -359,27 +378,37 @@
                             <constraint firstItem="klL-GY-Ht0" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="5RZ-Z1-U3e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GGS-WK-drk" secondAttribute="trailing" id="8c2-30-qbY"/>
                             <constraint firstItem="klL-GY-Ht0" firstAttribute="width" secondItem="klL-GY-Ht0" secondAttribute="height" multiplier="1:1" id="9Yt-sU-QQp"/>
-                            <constraint firstItem="rUw-Ys-r8x" firstAttribute="top" secondItem="hqT-np-nad" secondAttribute="bottom" constant="8" id="AU7-0O-fhy"/>
+                            <constraint firstItem="uz2-ex-rdP" firstAttribute="top" secondItem="yu5-3J-nVe" secondAttribute="bottom" constant="8" id="AtV-pH-CF4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yu5-3J-nVe" secondAttribute="trailing" id="Cc4-yg-o5k"/>
                             <constraint firstItem="qe9-3s-jU1" firstAttribute="top" secondItem="rUw-Ys-r8x" secondAttribute="top" id="GCY-iD-tFJ"/>
+                            <constraint firstItem="yu5-3J-nVe" firstAttribute="top" secondItem="k0b-yu-hoI" secondAttribute="bottom" constant="8" id="HUl-u2-7xu"/>
                             <constraint firstItem="XgZ-wY-bl2" firstAttribute="leading" secondItem="klL-GY-Ht0" secondAttribute="trailing" constant="8" id="Mwc-AB-F2i"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qe9-3s-jU1" secondAttribute="trailing" id="PJJ-vX-e7B"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hqT-np-nad" secondAttribute="leading" id="SWp-Yr-sRr"/>
+                            <constraint firstItem="k0b-yu-hoI" firstAttribute="top" secondItem="GGS-WK-drk" secondAttribute="bottom" constant="8" id="UQ9-kn-OPV"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="yu5-3J-nVe" secondAttribute="leading" id="X4E-jv-X4I"/>
                             <constraint firstItem="qe9-3s-jU1" firstAttribute="leading" secondItem="rUw-Ys-r8x" secondAttribute="trailing" constant="8" id="XNv-qe-NSO"/>
                             <constraint firstItem="XgZ-wY-bl2" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="YAo-o5-f6h"/>
                             <constraint firstItem="GGS-WK-drk" firstAttribute="top" secondItem="rUw-Ys-r8x" secondAttribute="bottom" constant="8" id="YJv-JG-lF6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k0b-yu-hoI" secondAttribute="trailing" id="ZLC-z8-3CJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rUw-Ys-r8x" secondAttribute="leading" id="ZW6-Ab-Mz1"/>
+                            <constraint firstItem="hqT-np-nad" firstAttribute="top" secondItem="XgZ-wY-bl2" secondAttribute="bottom" constant="8" id="f0Q-HO-DEx"/>
                             <constraint firstItem="rUw-Ys-r8x" firstAttribute="width" secondItem="qe9-3s-jU1" secondAttribute="width" constant="-3" id="gqK-Tz-wxD"/>
+                            <constraint firstItem="rUw-Ys-r8x" firstAttribute="top" secondItem="hqT-np-nad" secondAttribute="bottom" constant="3" id="j8V-Mq-MVg"/>
                             <constraint firstAttribute="leadingMargin" secondItem="GGS-WK-drk" secondAttribute="leading" id="r5T-b6-NBr"/>
-                            <constraint firstItem="uz2-ex-rdP" firstAttribute="top" secondItem="k0b-yu-hoI" secondAttribute="bottom" constant="135" id="svW-Yn-AwA"/>
                             <constraint firstAttribute="leadingMargin" secondItem="k0b-yu-hoI" secondAttribute="leading" id="u2O-Ge-Xcc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="klL-GY-Ht0" secondAttribute="leading" id="ud1-l0-wq1"/>
-                            <constraint firstItem="uz2-ex-rdP" firstAttribute="top" secondItem="GGS-WK-drk" secondAttribute="bottom" constant="16" id="vAW-pw-S5G"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hqT-np-nad" secondAttribute="trailing" id="xBw-Bb-PAA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XgZ-wY-bl2" secondAttribute="trailing" id="zY2-zr-NJE"/>
-                            <constraint firstItem="k0b-yu-hoI" firstAttribute="top" secondItem="XgZ-wY-bl2" secondAttribute="bottom" constant="8" id="zgM-tA-wLR"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="c4O-vw-SEf">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="VYp-Ar-wo1">
+                            <connections>
+                                <segue destination="ZGt-W1-dhf" kind="show" identifier="edit" id="BNw-1Z-oFu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="DetailMapView" destination="k0b-yu-hoI" id="Apm-jO-e4G"/>
                         <outlet property="SSIDLabel" destination="hqT-np-nad" id="CAT-gc-LQF"/>
@@ -390,7 +419,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-r1-MrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2160.8000000000002" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="2058" y="-235"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="zIi-AN-lq7">
@@ -466,7 +495,7 @@
                         <barButtonItem key="backBarButtonItem" title="Map" id="OlF-Wn-Ob1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="65k-ws-KLU">
                             <connections>
-                                <segue destination="ZGt-W1-dhf" kind="show" id="WpN-2S-Lrz"/>
+                                <segue destination="ZGt-W1-dhf" kind="show" identifier="addFromMap" id="WpN-2S-Lrz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -704,7 +733,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qp-Yg-sXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017" y="484"/>
+            <point key="canvasLocation" x="2218" y="457"/>
         </scene>
         <!--List-->
         <scene sceneID="QT5-TC-Pxt">
@@ -712,7 +741,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -750,7 +779,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -770,6 +799,6 @@
         <image name="wifiwombaticon" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="JZD-xh-xYD"/>
+        <segue reference="BNw-1Z-oFu"/>
     </inferredMetricsTieBreakers>
 </document>

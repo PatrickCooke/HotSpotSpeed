@@ -16,6 +16,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
+    var newHS = HotSpot?()
     
     let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera bread", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
@@ -84,57 +85,86 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     func saveRecordSYNC() {
         
-        let newHS = HotSpot()
-        
-        if let ssid = ssidLabel.text {
-            newHS.hpSSIDName = ssid
+        //let newHS = HotSpot()
+        if newHS != nil {
+            if let downspeed1 = dlSpeedTfield.text {
+                if let downspeed2 = newHS?.hpDown {
+                let newDownSpeedsum = Double(downspeed1)! + Double(downspeed2)!
+                    let updatedDownspeed = newDownSpeedsum / 2
+                    newHS?.hpDown = String(updatedDownspeed)
+                }
+            }
+            if let upspeed1 = upSpeedTfield.text {
+                if let upspeed2 = newHS?.hpUp {
+                    let newUpSpeedsum = Double(upspeed1)! + Double(upspeed2)!
+                    let updatedUpspeed = newUpSpeedsum / 2
+                    newHS?.hpUp = String(updatedUpspeed)
+                }
+            }
+            
+            let dataStore = Backendless.sharedInstance().data.of(HotSpot.ofClass())
+            var error: Fault?
+            
+            let updatedHS = dataStore.save(newHS, fault: &error) as? HotSpot
+            if error == nil {
+                print("Contact has been updated: \(updatedHS!.objectId)")
+                self.navigationController?.popViewControllerAnimated(true)
+                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "saved", object: nil))
+            }
+            else {
+                print("Server reported an error (2): \(error)")
+            }
+            
+        } else {
+            if let ssid = ssidLabel.text {
+                newHS!.hpSSIDName = ssid
+            }
+            if let loc = locNameTfield.text {
+                newHS!.hpLocName = loc
+            }
+            if let downSpeed = dlSpeedTfield.text {
+                newHS!.hpDown = downSpeed
+            }
+            if let upSpeed = upSpeedTfield.text {
+                newHS!.hpUp = upSpeed
+            }
+            if let lat = latLabel.text {
+                newHS!.hpLat = lat
+                print("\(lat)")
+            }
+            if let lon = lonLabel.text {
+                newHS!.hpLon = lon
+                print("\(lon)")
+            }
+            if let street = addressTfield.text {
+                newHS!.hpStreet = street
+            }
+            if let city = cityTfield.text {
+                newHS!.hpCity = city
+            }
+            if let zip = zipTfield.text {
+                newHS!.hpZip = zip
+            }
+            if let state = stateTfield.text {
+                newHS!.hpState = state
+            }
+            newHS!.ownerId = ownerID
+            newHS!.placeId = googlePlaceID
+            
+            let dataStore = backendless.data.of(HotSpot.ofClass())
+            
+            // save object synchronously
+            var error: Fault?
+            let result = dataStore.save(newHS, fault: &error) as? HotSpot
+            if error == nil {
+                print("Hotspot has been saved: \(result?.hpSSIDName)")
+                self.navigationController?.popViewControllerAnimated(true)
+                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "saved", object: nil))
+            }
+            else {
+                print("Server reported an error: \(error)")
+            }
         }
-        if let loc = locNameTfield.text {
-            newHS.hpLocName = loc
-        }
-        if let downSpeed = dlSpeedTfield.text {
-            newHS.hpDown = downSpeed
-        }
-        if let upSpeed = upSpeedTfield.text {
-            newHS.hpUp = upSpeed
-        }
-        if let lat = latLabel.text {
-            newHS.hpLat = lat
-            print("\(lat)")
-        }
-        if let lon = lonLabel.text {
-            newHS.hpLon = lon
-            print("\(lon)")
-        }
-        if let street = addressTfield.text {
-            newHS.hpStreet = street
-        }
-        if let city = cityTfield.text {
-            newHS.hpCity = city
-        }
-        if let zip = zipTfield.text {
-            newHS.hpZip = zip
-        }
-        if let state = stateTfield.text {
-            newHS.hpState = state
-        }
-        newHS.ownerId = ownerID
-        newHS.placeId = googlePlaceID
-        
-        let dataStore = backendless.data.of(HotSpot.ofClass())
-        
-        // save object synchronously
-        var error: Fault?
-        let result = dataStore.save(newHS, fault: &error) as? HotSpot
-        if error == nil {
-            print("Hotspot has been saved: \(result?.hpSSIDName)")
-            self.navigationController?.popViewControllerAnimated(true)
-            NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "saved", object: nil))
-        }
-        else {
-            print("Server reported an error: \(error)")
-        }
-        
     }
     
     //MARK: - SpeedTest Website Viewer
@@ -224,59 +254,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
 
     }
     
-    //MARK: - Get GPS Coords from Loc
-    /*
-    @IBAction func useCurrent (sender: UIButton) {
-        
-        if let lat = pageLoc.location?.coordinate.latitude {
-            latLabel.text = String(lat)
-        }
-        if let lon = pageLoc.location?.coordinate.longitude {
-            lonLabel.text = String(lon)
-        }
-        
-    }
-    */
-    //MARK: - Get GPS Coords from Address
-    /*
-    @IBAction func useAddress (sender: UIButton) {
-        guard let street = addressTfield.text else{
-            return
-        }
-        guard let city = cityTfield.text else {
-            return
-        }
-        guard let zip = zipTfield.text else {
-            return
-        }
-        let address = String("\(street) \(city) \(zip)")
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) { (placemarks, error) in
-            if((error) != nil){
-            }
-            if let placemark = placemarks?.first {
-                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                self.latLabel.text = "\(coordinates.latitude)"
-                self.lonLabel.text = "\(coordinates.longitude)"
-            }
-        }
-        
-    }
-    */
-    
-    //MARK: - Textfield Return button Methods
-    /*
-    func makeTextFieldintoDelegrates() {
-        ssidTfield.delegate=self
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == self.ssidTfield {
-            self.ssidTfield.resignFirstResponder()
-        }
-        return true
-    }
- */
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -307,6 +284,24 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         }
     }
     
+    func setupFields() {
+        if newHS != nil {
+            guard let hotspot = newHS else {
+                return
+            }
+            ssidLabel.text = hotspot.hpSSIDName
+            locNameTfield.text = hotspot.hpLocName
+            addressTfield.text = hotspot.hpStreet
+            cityTfield.text = hotspot.hpCity
+            stateTfield.text = hotspot.hpState
+            zipTfield.text = hotspot.hpZip
+            latLabel.text = hotspot.hpLat
+            lonLabel.text = hotspot.hpLon
+            dlSpeedTfield.text = hotspot.hpDown
+            upSpeedTfield.text = hotspot.hpUp
+        }
+    }
+    
     //MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
@@ -318,6 +313,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         amIOnline()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        setupFields()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

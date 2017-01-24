@@ -11,6 +11,7 @@ import GoogleMaps
 
 class DetailViewController: UIViewController {
     
+    var dataManager = DataManager.sharedInstance
     var selectedHotSpot = HotSpot?()
     var hotspotGID : String!
     @IBOutlet weak var DetailMapView : GMSMapView!
@@ -18,6 +19,19 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var downloadLabel: UILabel!
     @IBOutlet weak var uploadLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    
+    
+    //MARK: - Segue Method
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "edit" {
+            let destController : NewHotSpotVC = segue.destinationViewController as! NewHotSpotVC
+            destController.newHS = selectedHotSpot
+            destController.title = selectedHotSpot!.hpLocName
+        }
+    }
+    
+    //MARK: - Setup Page Methods
     
     func setupDetailMap(){
         if let hotspot = selectedHotSpot {
@@ -68,6 +82,26 @@ class DetailViewController: UIViewController {
         addressLabel.text = "\(street) \n\(city), \(state) \(zip)"
     }
     
+    @IBAction func launchMapApp() {
+        guard let lat = selectedHotSpot?.hpLat else {
+            return
+        }
+        guard let lon = selectedHotSpot?.hpLon else {
+            return
+        }
+        guard let name = selectedHotSpot?.hpLocName else {
+            return
+        }
+        let coordinate = CLLocationCoordinate2DMake(Double(lat)!, Double(lon)!)
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+        mapItem.name = name
+        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsMapTypeKey])
+    }
+
+    func reFetch () {
+        dataManager.fetchData()
+        setupData()
+    }
     
     //MARK: - Life Cycle Methods
     
@@ -76,20 +110,15 @@ class DetailViewController: UIViewController {
         setupDetailMap()
         addHotSpot()
         setupData()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(reFetch), name: "saved", object: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        setupDetailMap()
-        //        addHotSpot()
-        
     }
-    
-    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(true)
-        print("GID = \(hotspotGID)")
     }
     
 }
