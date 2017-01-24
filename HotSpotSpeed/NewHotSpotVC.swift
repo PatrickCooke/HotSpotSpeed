@@ -12,6 +12,7 @@ import GooglePlacePicker
 import SystemConfiguration.CaptiveNetwork
 
 class NewHotSpotVC: UIViewController, UITextFieldDelegate {
+    var dataManager = DataManager.sharedInstance
     let pageLoc = CLLocationManager()
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
@@ -203,49 +204,64 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             
             if let place = foundPlace {
                 
-//                self.locNameTfield.text = place.name
-            
-                //self.addressLabel.text = place.formattedAddress!.components(separatedBy:", ").joined(separator:"\n")
-                let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
-                guard let streetAddress = addressArray?[0] else {
-                    return
-                }
-                self.addressTfield.text  = streetAddress
-                
-                self.googlePlaceID = place.placeID
-                print("placeID = \(self.googlePlaceID)")
-                
-                guard let cityAddress = addressArray?[1] else {
-                    return
-                }
-                print(cityAddress)
-                self.cityTfield.text = cityAddress
-                guard let stateZipAddress = addressArray?[2] else {
-                    return
-                }
-                
-                
-                for i in 0...(self.chainLocationArray.count - 1) {
-                    let chainString = self.chainLocationArray[i]
-                    if place.name.lowercaseString == chainString.lowercaseString {
-                        self.locNameTfield.text = "\(place.name) \(cityAddress)"
-                        if place.name.lowercaseString == "qdoba mexican eats" {
-                            self.locNameTfield.text = "Qdoba \(cityAddress)"
+                let gId = place.placeID
+                let allArray = self.dataManager.hSArray
+                for i in 0...(allArray.count - 1) {
+                    if gId == allArray[i].placeId {
+                        if self.currentSSID == allArray[i].hpSSIDName{
+                            print("Endpoint already exists")
+                            self.newHS = allArray[i]
                         }
-                        break
-                    } else {
-                        self.locNameTfield.text = place.name
                     }
                 }
                 
-                let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
-                let zipAddress = stateZipArray[1]
-                let stateAddress = stateZipArray[0]
-                self.stateTfield.text = stateAddress
-                self.zipTfield.text = zipAddress
-                self.latLabel.text = "\(place.coordinate.latitude)"
-                self.lonLabel.text = "\(place.coordinate.longitude)"
-                
+                if self.newHS != nil {
+                    print("fill in all the fields")
+                    self.setupFields()
+                } else {
+                    print("new endpoint!")
+                    let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                    guard let streetAddress = addressArray?[0] else {
+                        return
+                    }
+                    self.addressTfield.text  = streetAddress
+                    
+                    self.googlePlaceID = place.placeID
+                    print("placeID = \(self.googlePlaceID)")
+                    
+                    guard let cityAddress = addressArray?[1] else {
+                        return
+                    }
+                    print(cityAddress)
+                    self.cityTfield.text = cityAddress
+                    guard let stateZipAddress = addressArray?[2] else {
+                        return
+                    }
+                    
+                    
+                    for i in 0...(self.chainLocationArray.count - 1) {
+                        let chainString = self.chainLocationArray[i]
+                        if place.name.lowercaseString == chainString.lowercaseString {
+                            self.locNameTfield.text = "\(place.name) \(cityAddress)"
+                            if place.name.lowercaseString == "qdoba mexican eats" {
+                                self.locNameTfield.text = "Qdoba \(cityAddress)"
+                            }
+                            break
+                        } else {
+                            self.locNameTfield.text = place.name
+                        }
+                    }
+                    
+                    let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+                    let zipAddress = stateZipArray[1]
+                    let stateAddress = stateZipArray[0]
+                    self.stateTfield.text = stateAddress
+                    self.zipTfield.text = zipAddress
+                    self.latLabel.text = "\(place.coordinate.latitude)"
+                    self.lonLabel.text = "\(place.coordinate.longitude)"
+                    self.upSpeedTfield.text = ""
+                    self.dlSpeedTfield.text = ""
+                }
             } else {
                 self.locNameTfield.text = "No place selected"
                 self.addressTfield.text = ""
