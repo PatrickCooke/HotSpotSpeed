@@ -711,7 +711,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add HotSpot" id="qVd-5v-ZpY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="NQ0-IG-Rpw">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="NQ0-IG-Rpw">
                             <connections>
                                 <action selector="savePressed" destination="ZGt-W1-dhf" id="rqV-TT-aR8"/>
                             </connections>
@@ -724,6 +724,7 @@
                         <outlet property="latLabel" destination="j8g-Bs-cDl" id="DWd-x7-km6"/>
                         <outlet property="locNameTfield" destination="QJ1-nB-DSw" id="lLF-U7-WKq"/>
                         <outlet property="lonLabel" destination="dth-Yb-FP6" id="17E-Ix-2wH"/>
+                        <outlet property="saveButton" destination="NQ0-IG-Rpw" id="v01-pG-HNC"/>
                         <outlet property="speedTestWebView" destination="qX4-Gl-TAJ" id="X9b-bQ-vF4"/>
                         <outlet property="ssidLabel" destination="GuI-Mw-wy5" id="3pD-7a-6Ii"/>
                         <outlet property="stateTfield" destination="gVX-E3-Esp" id="yS1-g6-Nhs"/>
@@ -741,7 +742,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="faL-6O-DHg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="Bulleted List Filled-30" id="2zg-Cd-PbT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceq-yk-N47">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ceq-yk-N47">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -779,7 +780,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aos-Hc-TUi" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="Map Marker-30" id="Gke-w5-HVd"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9uE-fO-iE3">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9uE-fO-iE3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

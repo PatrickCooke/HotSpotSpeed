@@ -33,6 +33,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zipTfield: UILabel!
     @IBOutlet weak var stateTfield: UILabel!
     @IBOutlet weak var speedTestWebView: UIWebView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
 
@@ -218,8 +219,11 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 if self.newHS != nil {
                     print("fill in all the fields")
                     self.setupFields()
+                    self.saveButton.title = "Update"
+                    
                 } else {
                     print("new endpoint!")
+                    self.saveButton.title = "Save"
                     let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
                     guard let streetAddress = addressArray?[0] else {
                         return
@@ -327,6 +331,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         displaySpeedTest()
         hideKeyboardWhenTappedAround()
         amIOnline()
+        self.saveButton.title = "Save"
     }
     
     override func viewDidAppear(animated: Bool) {
