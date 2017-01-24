@@ -93,14 +93,14 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 if let downspeed2 = newHS?.hpDown {
                 let newDownSpeedsum = Double(downspeed1)! + Double(downspeed2)!
                     let updatedDownspeed = newDownSpeedsum / 2
-                    newHS?.hpDown = String(updatedDownspeed)
+                    newHS?.hpDown = String(format: "%.2f",updatedDownspeed)
                 }
             }
             if let upspeed1 = upSpeedTfield.text {
                 if let upspeed2 = newHS?.hpUp {
                     let newUpSpeedsum = Double(upspeed1)! + Double(upspeed2)!
                     let updatedUpspeed = newUpSpeedsum / 2
-                    newHS?.hpUp = String(updatedUpspeed)
+                    newHS?.hpUp = String(format: "%.2f", updatedUpspeed)
                 }
             }
             
