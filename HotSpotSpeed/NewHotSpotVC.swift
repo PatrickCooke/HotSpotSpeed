@@ -17,7 +17,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let backendless = Backendless.sharedInstance()
     var locManager = LocationManager.sharedInstance
     var placePicker: GMSPlacePicker?
-    var newHS = HotSpot?()
+    var currentHS = HotSpot?()
     
     let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera bread", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
@@ -36,6 +36,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
+    var saveOrEdit = "save"
 
     
     //MARK: - Get SSID
@@ -86,28 +87,29 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     }
     
     func saveRecordSYNC() {
+        print("save method begin")
         
-        //let newHS = HotSpot()
-        if newHS != nil {
+        if saveOrEdit == "edit" {
+            print("updating this record")
             if let downspeed1 = dlSpeedTfield.text {
-                if let downspeed2 = newHS?.hpDown {
+                if let downspeed2 = currentHS?.hpDown {
                 let newDownSpeedsum = Double(downspeed1)! + Double(downspeed2)!
                     let updatedDownspeed = newDownSpeedsum / 2
-                    newHS?.hpDown = String(format: "%.2f",updatedDownspeed)
+                    currentHS?.hpDown = String(format: "%.2f",updatedDownspeed)
                 }
             }
             if let upspeed1 = upSpeedTfield.text {
-                if let upspeed2 = newHS?.hpUp {
+                if let upspeed2 = currentHS?.hpUp {
                     let newUpSpeedsum = Double(upspeed1)! + Double(upspeed2)!
                     let updatedUpspeed = newUpSpeedsum / 2
-                    newHS?.hpUp = String(format: "%.2f", updatedUpspeed)
+                    currentHS?.hpUp = String(format: "%.2f", updatedUpspeed)
                 }
             }
             
             let dataStore = Backendless.sharedInstance().data.of(HotSpot.ofClass())
             var error: Fault?
             
-            let updatedHS = dataStore.save(newHS, fault: &error) as? HotSpot
+            let updatedHS = dataStore.save(currentHS, fault: &error) as? HotSpot
             if error == nil {
                 print("Contact has been updated: \(updatedHS!.objectId)")
                 self.navigationController?.popViewControllerAnimated(true)
@@ -118,40 +120,44 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             }
             
         } else {
+            
+            let newHS = HotSpot()
+            
+            print("recording new record")
             if let ssid = ssidLabel.text {
-                newHS!.hpSSIDName = ssid
+                newHS.hpSSIDName = ssid
             }
             if let loc = locNameTfield.text {
-                newHS!.hpLocName = loc
+                newHS.hpLocName = loc
             }
             if let downSpeed = dlSpeedTfield.text {
-                newHS!.hpDown = downSpeed
+                newHS.hpDown = downSpeed
             }
             if let upSpeed = upSpeedTfield.text {
-                newHS!.hpUp = upSpeed
+                newHS.hpUp = upSpeed
             }
             if let lat = latLabel.text {
-                newHS!.hpLat = lat
+                newHS.hpLat = lat
                 print("\(lat)")
             }
             if let lon = lonLabel.text {
-                newHS!.hpLon = lon
+                newHS.hpLon = lon
                 print("\(lon)")
             }
             if let street = addressTfield.text {
-                newHS!.hpStreet = street
+                newHS.hpStreet = street
             }
             if let city = cityTfield.text {
-                newHS!.hpCity = city
+                newHS.hpCity = city
             }
             if let zip = zipTfield.text {
-                newHS!.hpZip = zip
+                newHS.hpZip = zip
             }
             if let state = stateTfield.text {
-                newHS!.hpState = state
+                newHS.hpState = state
             }
-            newHS!.ownerId = ownerID
-            newHS!.placeId = googlePlaceID
+            newHS.ownerId = ownerID
+            newHS.placeId = googlePlaceID
             
             let dataStore = backendless.data.of(HotSpot.ofClass())
             
@@ -211,12 +217,12 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     if gId == allArray[i].placeId {
                         if self.currentSSID == allArray[i].hpSSIDName{
                             print("Endpoint already exists")
-                            self.newHS = allArray[i]
+                            self.currentHS = allArray[i]
                         }
                     }
                 }
                 
-                if self.newHS != nil {
+                if self.currentHS != nil {
                     print("fill in all the fields")
                     self.setupFields()
                     self.saveButton.title = "Update"
@@ -305,8 +311,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     }
     
     func setupFields() {
-        if newHS != nil {
-            guard let hotspot = newHS else {
+        if currentHS != nil {
+            guard let hotspot = currentHS else {
                 return
             }
             ssidLabel.text = hotspot.hpSSIDName
@@ -332,6 +338,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         hideKeyboardWhenTappedAround()
         amIOnline()
         self.saveButton.title = "Save"
+        //print("this record is set to be \(saveOrEdit)")
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -339,6 +346,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        saveOrEdit = "save"
     }
     
 }

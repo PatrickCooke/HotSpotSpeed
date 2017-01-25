@@ -13,11 +13,13 @@ import GoogleMaps
 
 class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate {
 
+    var selectedHS = HotSpot!()
     var locManager = LocationManager.sharedInstance
     var dataManager = DataManager.sharedInstance
     var wifiArray = [HotSpot]()
     //@IBOutlet weak var hsMapView    :   MKMapView!
     @IBOutlet weak var GMapView : GMSMapView!
+    
     
     func setupGMap(){
         if let lat = locManager.locManager.location?.coordinate.latitude {
@@ -61,6 +63,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
             marker.position = coords
             marker.title = title
             marker.snippet = subtitle
+            marker.userData = wifi
             
             
             if Float(downSpeed) < 2.00 {
@@ -80,9 +83,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
     //MARK: - Launch Map from Marker
     
     func mapView(mapView: GMSMapView, didTapInfoWindowOfMarker marker: GMSMarker) {
-        launchMapApp(marker.position.latitude, lon: marker.position.longitude, name: marker.title!)
+        selectedHS = marker.userData as! HotSpot
+                
+        //        launchMapApp(marker.position.latitude, lon: marker.position.longitude, name: marker.title!)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "addFromMap" {
+            
+        } else {
+            let destController : NewHotSpotVC = segue.destinationViewController as! NewHotSpotVC
+            destController.currentHS = selectedHS
+            destController.title = selectedHS!.hpLocName
+        }
+    }
     
     func launchMapApp(lat: CLLocationDegrees, lon : CLLocationDegrees, name: String) {
         let coordinate = CLLocationCoordinate2DMake(lat, lon)

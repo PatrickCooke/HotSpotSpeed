@@ -102,9 +102,9 @@
 				43C2A14D1DDFBFBD00CC5A62 /* View Controllers */,
 				43722C1A1D820D870095672A /* Singletons */,
 				43722C111D7F67630095672A /* Model */,
-				43722C011D7F66980095672A /* Main.storyboard */,
 				43C2A14E1DDFBFC900CC5A62 /* Helpers */,
 				43722C041D7F66980095672A /* Assets.xcassets */,
+				43722C011D7F66980095672A /* Main.storyboard */,
 				43722C061D7F66980095672A /* LaunchScreen.storyboard */,
 				43722C091D7F66980095672A /* Info.plist */,
 			);

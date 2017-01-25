@@ -26,8 +26,9 @@ class DetailViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "edit" {
             let destController : NewHotSpotVC = segue.destinationViewController as! NewHotSpotVC
-            destController.newHS = selectedHotSpot
+            destController.currentHS = selectedHotSpot
             destController.title = selectedHotSpot!.hpLocName
+            destController.saveOrEdit = "save"
         }
     }
     

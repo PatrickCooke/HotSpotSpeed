@@ -31,6 +31,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "segue" {
+            
             let destController = segue.destinationViewController as! OptionsPopOverViewController
             destController.popoverPresentationController?.delegate = self
         } else if segue.identifier == "detail" {
