@@ -13,7 +13,7 @@ import GoogleMaps
 
 class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate {
 
-    var selectedHS = HotSpot!()
+    var selectedHS = HotSpot()
     var locManager = LocationManager.sharedInstance
     var dataManager = DataManager.sharedInstance
     var wifiArray = [HotSpot]()
@@ -94,7 +94,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, GMSMapViewDelegate
         } else {
             let destController : NewHotSpotVC = segue.destinationViewController as! NewHotSpotVC
             destController.currentHS = selectedHS
-            destController.title = selectedHS!.hpLocName
+            destController.title = selectedHS.hpLocName
         }
     }
     
