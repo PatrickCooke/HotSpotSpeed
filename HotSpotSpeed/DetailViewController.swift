@@ -64,10 +64,10 @@ class DetailViewController: UIViewController {
             SSIDLabel.text = "Network Name - \(ssidName)"
         }
         if let downloadspeed = selectedHotSpot?.hpDown {
-            downloadLabel.text = "Download - \(downloadspeed)Mbps"
+            downloadLabel.text = "Download: \(downloadspeed) Mbps"
         }
         if let uploadspeed = selectedHotSpot?.hpUp {
-            uploadLabel.text = "Upload - \(uploadspeed)Mbps"
+            uploadLabel.text = "Upload: \(uploadspeed) Mbps"
         }
         /*
         guard let street = selectedHotSpot?.hpStreet else {
