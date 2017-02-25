@@ -21,17 +21,17 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     
     let chainLocationArray = ["McDonalds", "Starbucks", "BIGGBY COFFEE", "Barnes & Noble", "QDOBA mexican eats", "IHOP", "Panera bread", "Taco Bell", "Burger King", "Chick-fil-A", "Applebee's", "arby's", "einstein bros. bagels", "caribou coffee", "seattle's best coffee"]
     
-//    @IBOutlet weak var ssidTfield: UITextField!
+
     @IBOutlet weak var ssidLabel: UILabel!
     @IBOutlet weak var locNameTfield: UILabel!
     @IBOutlet weak var dlSpeedTfield: UITextField!
     @IBOutlet weak var upSpeedTfield: UITextField!
-    @IBOutlet weak var latLabel: UILabel!
-    @IBOutlet weak var lonLabel: UILabel!
-    @IBOutlet weak var addressTfield: UILabel!
-    @IBOutlet weak var cityTfield: UILabel!
-    @IBOutlet weak var zipTfield: UILabel!
-    @IBOutlet weak var stateTfield: UILabel!
+//    @IBOutlet weak var latLabel: UILabel!
+//    @IBOutlet weak var lonLabel: UILabel!
+//    @IBOutlet weak var addressTfield: UILabel!
+//    @IBOutlet weak var cityTfield: UILabel!
+//    @IBOutlet weak var zipTfield: UILabel!
+//    @IBOutlet weak var stateTfield: UILabel!
     @IBOutlet weak var addressTView: UITextView!
     @IBOutlet weak var speedTestWebView: UIWebView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
@@ -41,6 +41,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var latCoord = ""
     var lonCoord = ""
     var fullAdd = ""
+    var city = ""
+    var state = ""
     
     //MARK: - Get SSID
     var networkSSID : String?
@@ -72,14 +74,11 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         return currentSSID
     }
     
-
-    
-    
     //MARK: - Save Method
     
     @IBAction func savePressed () {
         print("save pressed")
-        if (ssidLabel.text != "" && latLabel.text != "" && lonLabel.text != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
+        if (ssidLabel.text != "" && self.latCoord != "" && self.lonCoord != "" && dlSpeedTfield.text != "" && upSpeedTfield.text != "") {
             saveRecordSYNC()
         } else {
             print("didn't save")
@@ -139,26 +138,34 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             if let upSpeed = upSpeedTfield.text {
                 newHS.hpUp = upSpeed
             }
-            if let lat = latLabel.text {
-                newHS.hpLat = self.latCoord
-                print("\(lat)")
-            }
-            if let lon = lonLabel.text {
-                newHS.hpLon = self.lonCoord
-                print("\(lon)")
-            }
-            if let street = addressTfield.text {
-                newHS.hpStreet = street
-            }
-            if let city = cityTfield.text {
-                newHS.hpCity = city
-            }
-            if let zip = zipTfield.text {
-                newHS.hpZip = zip
-            }
-            if let state = stateTfield.text {
-                newHS.hpState = state
-            }
+//            if let lat = latLabel.text {
+//                newHS.hpLat = self.latCoord
+//                print("\(lat)")
+//            }
+//            if let lon = lonLabel.text {
+//                newHS.hpLon = self.lonCoord
+//                print("\(lon)")
+//            }
+            
+            
+            newHS.hpLat = latCoord
+            newHS.hpLon = lonCoord
+            newHS.hpCity = city
+            newHS.hpState = state
+            
+            
+//            if let street = addressTfield.text {
+//                newHS.hpStreet = street
+//            }
+//            if let city = cityTfield.text {
+//                newHS.hpCity = city
+//            }
+//            if let zip = zipTfield.text {
+//                newHS.hpZip = zip
+//            }
+//            if let state = stateTfield.text {
+//                newHS.hpState = state
+//            }
             if let address = addressTView.text {
                 newHS.hpAddress = address
             }
@@ -237,61 +244,87 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 } else {
                     print("new endpoint!")
                     self.saveButton.title = "Save"
-                    let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                    self.googlePlaceID = place.placeID
+                    print("placeID = \(self.googlePlaceID)")
                     guard let fullAddress = place.formattedAddress else {
                         return
                     }
-                    guard let streetAddress = addressArray?[0] else {
-                        return
-                    }
                     
-                    
-                    self.addressTfield.text  = streetAddress
-                    
-                    self.googlePlaceID = place.placeID
-                    print("placeID = \(self.googlePlaceID)")
-                    
-                    guard let cityAddress = addressArray?[1] else {
-                        return
-                    }
-                    print(cityAddress)
-                    self.cityTfield.text = cityAddress
-                    guard let stateZipAddress = addressArray?[2] else {
-                        return
-                    }
-                    
-                    
-                    for i in 0...(self.chainLocationArray.count - 1) {
-                        let chainString = self.chainLocationArray[i]
-                        if place.name.lowercaseString == chainString.lowercaseString {
-                            self.locNameTfield.text = "\(place.name) \(cityAddress)"
-                            if place.name.lowercaseString == "qdoba mexican eats" {
-                                self.locNameTfield.text = "Qdoba \(cityAddress)"
-                            }
-                            break
-                        } else {
-                            self.locNameTfield.text = place.name
+                    let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                    if addressArray?.count >= 4 {
+                        guard let cityAddress = addressArray?[1] else {
+                            return
                         }
+                        print(cityAddress)
+                        guard let stateZipAddress = addressArray?[2] else {
+                            return
+                        }
+                        let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+                        let stateAddress = stateZipArray[0]
+                        print (stateAddress)
+                        
+                    } else {
+                        guard let cityAddress = addressArray?[0] else {
+                            return
+                        }
+                        self.city = cityAddress
+                        print(self.city)
+                        guard let stateZipAddress = addressArray?[1] else {
+                            return
+                        }
+                        let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+                        let stateAddress = stateZipArray[0]
+                        self.state = stateAddress
+                        print (self.state)
                     }
                     
-                    let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
-                    let zipAddress = stateZipArray[1]
-                    let stateAddress = stateZipArray[0]
                     
-                    self.addressTView.text = fullAddress
-                    self.stateTfield.text = stateAddress
-                    self.zipTfield.text = zipAddress
-                    self.latLabel.text = "\(place.coordinate.latitude)"
-                    self.lonLabel.text = "\(place.coordinate.longitude)"
+//                    guard let streetAddress = addressArray?[0] else {
+//                        return
+//                    }
+//                    self.addressTfield.text  = streetAddress
+//                    guard let cityAddress = addressArray?[1] else {
+//                        return
+//                    }
+//                    print(cityAddress)
+//                    self.cityTfield.text = cityAddress
+//                    guard let stateZipAddress = addressArray?[2] else {
+//                        return
+//                    }
+//                    let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
+//                    let stateAddress = stateZipArray[0]
+//                    for i in 0...(self.chainLocationArray.count - 1) {
+//                        let chainString = self.chainLocationArray[i]
+//                        if place.name.lowercaseString == chainString.lowercaseString {
+//                            self.locNameTfield.text = "\(place.name) \(cityAddress)"
+//                            if place.name.lowercaseString == "qdoba mexican eats" {
+//                                self.locNameTfield.text = "Qdoba \(cityAddress)"
+//                            }
+//                            break
+//                        } else {
+//                            self.locNameTfield.text = place.name
+//                        }
+//                    }
+//                    let zipAddress = stateZipArray[1]
+//                    self.stateTfield.text = stateAddress
+//                    self.zipTfield.text = zipAddress
+//                    self.latLabel.text = "\(place.coordinate.latitude)"
+//                    self.lonLabel.text = "\(place.coordinate.longitude)"
+                    
+                    self.addressTView.text = fullAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
+                    self.locNameTfield.text = place.name
                     self.latCoord = "\(place.coordinate.latitude)"
                     self.lonCoord = "\(place.coordinate.longitude)"
+                    print("\(self.latCoord) - \(self.lonCoord)")
                     self.fullAdd = fullAddress
                     self.upSpeedTfield.text = ""
                     self.dlSpeedTfield.text = ""
                 }
             } else {
                 self.locNameTfield.text = "No place selected"
-                self.addressTfield.text = ""
+                self.addressTView.text = ""
+                
+//                self.addressTfield.text = ""
             }
         })
 
@@ -334,15 +367,16 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             }
             ssidLabel.text = hotspot.hpSSIDName
             locNameTfield.text = hotspot.hpLocName
-            addressTfield.text = hotspot.hpStreet
-            cityTfield.text = hotspot.hpCity
-            stateTfield.text = hotspot.hpState
-            zipTfield.text = hotspot.hpZip
-            latLabel.text = hotspot.hpLat
-            lonLabel.text = hotspot.hpLon
+//            latLabel.text = hotspot.hpLat
+//            lonLabel.text = hotspot.hpLon
             dlSpeedTfield.text = hotspot.hpDown
             upSpeedTfield.text = hotspot.hpUp
             addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
+            
+            //            addressTfield.text = hotspot.hpStreet
+            //            cityTfield.text = hotspot.hpCity
+            //            stateTfield.text = hotspot.hpState
+            //            zipTfield.text = hotspot.hpZip
         }
     }
     
@@ -356,7 +390,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         hideKeyboardWhenTappedAround()
         amIOnline()
         self.saveButton.title = "Save"
-        //print("this record is set to be \(saveOrEdit)")
+//        print("this record is set to be \(saveOrEdit)")
     }
     
     override func viewDidAppear(animated: Bool) {
