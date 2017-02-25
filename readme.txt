@@ -1,0 +1,1 @@
+Welcome to WifiWombat, the user-created and maintained network speed platform. TL:DR - Gasbuddy, but for free wifi speeds. This repo contains the iOS app.It currently used the following cocoa pod dependencies:1: Google Maps2: Google Places3: Google Place Picker4: Fabric5: Crashlytics6: Backendless
