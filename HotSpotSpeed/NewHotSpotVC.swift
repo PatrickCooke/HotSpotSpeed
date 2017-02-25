@@ -147,7 +147,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
 //                print("\(lon)")
 //            }
             
-            
+            newHS.hpAddress = fullAdd
             newHS.hpLat = latCoord
             newHS.hpLon = lonCoord
             newHS.hpCity = city
@@ -166,10 +166,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
 //            if let state = stateTfield.text {
 //                newHS.hpState = state
 //            }
-            if let address = addressTView.text {
-                newHS.hpAddress = address
-            }
-            
+
             newHS.ownerId = ownerID
             newHS.placeId = googlePlaceID
             
@@ -252,18 +249,22 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     
                     let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
                     if addressArray?.count >= 4 {
+                        print("count is greater than 4")
                         guard let cityAddress = addressArray?[1] else {
                             return
                         }
+                        self.city = cityAddress
                         print(cityAddress)
                         guard let stateZipAddress = addressArray?[2] else {
                             return
                         }
                         let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
                         let stateAddress = stateZipArray[0]
+                        self.state = stateAddress
                         print (stateAddress)
                         
                     } else {
+                        print("count is less than 4")
                         guard let cityAddress = addressArray?[0] else {
                             return
                         }

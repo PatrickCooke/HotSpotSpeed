@@ -340,15 +340,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGS-WK-drk">
-                                <rect key="frame" x="16" y="192" width="343" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="MDF-B5-HZo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yu5-3J-nVe" customClass="RoundedEdgesButton" customModule="HotSpotSpeed" customModuleProvider="target">
                                 <rect key="frame" x="16" y="519" width="343" height="91"/>
                                 <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -369,33 +360,42 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-yu-hoI" customClass="GMSMapView">
-                                <rect key="frame" x="16" y="242" width="343" height="269"/>
+                                <rect key="frame" x="16" y="239" width="343" height="272"/>
                                 <color key="backgroundColor" red="0.17174279689999999" green="0.7671309114" blue="0.70332330470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV8-CL-NW1">
+                                <rect key="frame" x="16" y="183" width="343" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="WY1-ZO-QNy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="k0b-yu-hoI" firstAttribute="top" secondItem="mV8-CL-NW1" secondAttribute="bottom" id="0Ey-OP-WqP"/>
                             <constraint firstItem="klL-GY-Ht0" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="5RZ-Z1-U3e"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GGS-WK-drk" secondAttribute="trailing" id="8c2-30-qbY"/>
                             <constraint firstItem="klL-GY-Ht0" firstAttribute="width" secondItem="klL-GY-Ht0" secondAttribute="height" multiplier="1:1" id="9Yt-sU-QQp"/>
                             <constraint firstItem="uz2-ex-rdP" firstAttribute="top" secondItem="yu5-3J-nVe" secondAttribute="bottom" constant="8" id="AtV-pH-CF4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yu5-3J-nVe" secondAttribute="trailing" id="Cc4-yg-o5k"/>
+                            <constraint firstItem="mV8-CL-NW1" firstAttribute="top" secondItem="qe9-3s-jU1" secondAttribute="bottom" constant="-1" id="Exl-XF-JLY"/>
                             <constraint firstItem="qe9-3s-jU1" firstAttribute="top" secondItem="rUw-Ys-r8x" secondAttribute="top" id="GCY-iD-tFJ"/>
                             <constraint firstItem="yu5-3J-nVe" firstAttribute="top" secondItem="k0b-yu-hoI" secondAttribute="bottom" constant="8" id="HUl-u2-7xu"/>
                             <constraint firstItem="XgZ-wY-bl2" firstAttribute="leading" secondItem="klL-GY-Ht0" secondAttribute="trailing" constant="8" id="Mwc-AB-F2i"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mV8-CL-NW1" secondAttribute="trailing" id="OmC-Q4-RVf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qe9-3s-jU1" secondAttribute="trailing" id="PJJ-vX-e7B"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="mV8-CL-NW1" secondAttribute="leading" id="SKA-Ho-lCi"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hqT-np-nad" secondAttribute="leading" id="SWp-Yr-sRr"/>
-                            <constraint firstItem="k0b-yu-hoI" firstAttribute="top" secondItem="GGS-WK-drk" secondAttribute="bottom" constant="8" id="UQ9-kn-OPV"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yu5-3J-nVe" secondAttribute="leading" id="X4E-jv-X4I"/>
                             <constraint firstItem="qe9-3s-jU1" firstAttribute="leading" secondItem="rUw-Ys-r8x" secondAttribute="trailing" constant="8" id="XNv-qe-NSO"/>
                             <constraint firstItem="XgZ-wY-bl2" firstAttribute="top" secondItem="U1o-Qz-Cmp" secondAttribute="bottom" constant="8" id="YAo-o5-f6h"/>
-                            <constraint firstItem="GGS-WK-drk" firstAttribute="top" secondItem="rUw-Ys-r8x" secondAttribute="bottom" constant="8" id="YJv-JG-lF6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k0b-yu-hoI" secondAttribute="trailing" id="ZLC-z8-3CJ"/>
                             <constraint firstAttribute="leadingMargin" secondItem="rUw-Ys-r8x" secondAttribute="leading" id="ZW6-Ab-Mz1"/>
                             <constraint firstItem="hqT-np-nad" firstAttribute="top" secondItem="XgZ-wY-bl2" secondAttribute="bottom" constant="8" id="f0Q-HO-DEx"/>
                             <constraint firstItem="rUw-Ys-r8x" firstAttribute="width" secondItem="qe9-3s-jU1" secondAttribute="width" constant="-3" id="gqK-Tz-wxD"/>
                             <constraint firstItem="rUw-Ys-r8x" firstAttribute="top" secondItem="hqT-np-nad" secondAttribute="bottom" constant="3" id="j8V-Mq-MVg"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="GGS-WK-drk" secondAttribute="leading" id="r5T-b6-NBr"/>
                             <constraint firstAttribute="leadingMargin" secondItem="k0b-yu-hoI" secondAttribute="leading" id="u2O-Ge-Xcc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="klL-GY-Ht0" secondAttribute="leading" id="ud1-l0-wq1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hqT-np-nad" secondAttribute="trailing" id="xBw-Bb-PAA"/>
@@ -412,14 +412,14 @@
                     <connections>
                         <outlet property="DetailMapView" destination="k0b-yu-hoI" id="Apm-jO-e4G"/>
                         <outlet property="SSIDLabel" destination="hqT-np-nad" id="CAT-gc-LQF"/>
-                        <outlet property="addressLabel" destination="GGS-WK-drk" id="Qu2-lh-d8Q"/>
+                        <outlet property="addressTView" destination="mV8-CL-NW1" id="9W2-nz-43D"/>
                         <outlet property="downloadLabel" destination="rUw-Ys-r8x" id="bbU-Bo-uGE"/>
                         <outlet property="uploadLabel" destination="qe9-3s-jU1" id="WhO-wD-ssf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gNb-r1-MrM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="-235"/>
+            <point key="canvasLocation" x="2056.8000000000002" y="-235.23238380809596"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="zIi-AN-lq7">
@@ -562,7 +562,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-jt-BuT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqS-jt-BuT">
                                 <rect key="frame" x="16" y="193" width="343" height="71"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
