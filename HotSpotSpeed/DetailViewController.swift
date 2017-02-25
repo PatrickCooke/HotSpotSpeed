@@ -18,7 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var SSIDLabel: UILabel!
     @IBOutlet weak var downloadLabel: UILabel!
     @IBOutlet weak var uploadLabel: UILabel!
-    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressTView:    UITextView!
     
     
     //MARK: - Segue Method
@@ -63,24 +63,15 @@ class DetailViewController: UIViewController {
             SSIDLabel.text = "Network Name - \(ssidName)"
         }
         if let downloadspeed = selectedHotSpot?.hpDown {
-            downloadLabel.text = "Download - \(downloadspeed)Mbps"
+            downloadLabel.text = "Download: \(downloadspeed) Mbps"
         }
         if let uploadspeed = selectedHotSpot?.hpUp {
-            uploadLabel.text = "Upload - \(uploadspeed)Mbps"
+            uploadLabel.text = "Upload: \(uploadspeed) Mbps"
         }
-        guard let street = selectedHotSpot?.hpStreet else {
+        guard let address = selectedHotSpot?.hpAddress else {
             return
         }
-        guard let city = selectedHotSpot?.hpCity else {
-            return
-        }
-        guard let state = selectedHotSpot?.hpState else {
-            return
-        }
-        guard  let zip = selectedHotSpot?.hpZip else {
-            return
-        }
-        addressLabel.text = "\(street) \n\(city), \(state) \(zip)"
+        addressTView.text = address.stringByReplacingOccurrencesOfString(", ", withString: "\n")
     }
     
     @IBAction func launchMapApp() {
