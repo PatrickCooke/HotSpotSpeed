@@ -38,7 +38,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
     var saveOrEdit = "save"
-
+    var latCoord = ""
+    var lonCoord = ""
+    var fullAdd = ""
     
     //MARK: - Get SSID
     var networkSSID : String?
@@ -138,11 +140,11 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                 newHS.hpUp = upSpeed
             }
             if let lat = latLabel.text {
-                newHS.hpLat = lat
+                newHS.hpLat = self.latCoord
                 print("\(lat)")
             }
             if let lon = lonLabel.text {
-                newHS.hpLon = lon
+                newHS.hpLon = self.lonCoord
                 print("\(lon)")
             }
             if let street = addressTfield.text {
@@ -157,6 +159,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             if let state = stateTfield.text {
                 newHS.hpState = state
             }
+            if let address = addressTView.text {
+                newHS.hpAddress = address
+            }
+            
             newHS.ownerId = ownerID
             newHS.placeId = googlePlaceID
             
@@ -277,6 +283,9 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     self.zipTfield.text = zipAddress
                     self.latLabel.text = "\(place.coordinate.latitude)"
                     self.lonLabel.text = "\(place.coordinate.longitude)"
+                    self.latCoord = "\(place.coordinate.latitude)"
+                    self.lonCoord = "\(place.coordinate.longitude)"
+                    self.fullAdd = fullAddress
                     self.upSpeedTfield.text = ""
                     self.dlSpeedTfield.text = ""
                 }
@@ -333,6 +342,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             lonLabel.text = hotspot.hpLon
             dlSpeedTfield.text = hotspot.hpDown
             upSpeedTfield.text = hotspot.hpUp
+            addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
         }
     }
     
