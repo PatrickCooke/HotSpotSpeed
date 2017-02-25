@@ -18,7 +18,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var SSIDLabel: UILabel!
     @IBOutlet weak var downloadLabel: UILabel!
     @IBOutlet weak var uploadLabel: UILabel!
-//    @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var addressTView:    UITextView!
     
     
@@ -69,21 +68,6 @@ class DetailViewController: UIViewController {
         if let uploadspeed = selectedHotSpot?.hpUp {
             uploadLabel.text = "Upload: \(uploadspeed) Mbps"
         }
-        /*
-        guard let street = selectedHotSpot?.hpStreet else {
-            return
-        }
-        guard let city = selectedHotSpot?.hpCity else {
-            return
-        }
-        guard let state = selectedHotSpot?.hpState else {
-            return
-        }
-        guard  let zip = selectedHotSpot?.hpZip else {
-            return
-        }
-        addressLabel.text = "\(street) \n\(city), \(state) \(zip)"
-         */
         guard let address = selectedHotSpot?.hpAddress else {
             return
         }

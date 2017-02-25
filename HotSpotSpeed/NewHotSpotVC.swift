@@ -29,14 +29,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addressTView: UITextView!
     @IBOutlet weak var speedTestWebView: UIWebView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-//    @IBOutlet weak var latLabel: UILabel!
-//    @IBOutlet weak var lonLabel: UILabel!
-//    @IBOutlet weak var addressTfield: UILabel!
-//    @IBOutlet weak var cityTfield: UILabel!
-//    @IBOutlet weak var zipTfield: UILabel!
-//    @IBOutlet weak var stateTfield: UILabel!
-    
-    
     
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
@@ -149,29 +141,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             newHS.hpState = state
             newHS.ownerId = ownerID
             newHS.placeId = googlePlaceID
-//            if let lat = latLabel.text {
-//                newHS.hpLat = self.latCoord
-//                print("\(lat)")
-//            }
-//            if let lon = lonLabel.text {
-//                newHS.hpLon = self.lonCoord
-//                print("\(lon)")
-//            }
-//            if let street = addressTfield.text {
-//                newHS.hpStreet = street
-//            }
-//            if let city = cityTfield.text {
-//                newHS.hpCity = city
-//            }
-//            if let zip = zipTfield.text {
-//                newHS.hpZip = zip
-//            }
-//            if let state = stateTfield.text {
-//                newHS.hpState = state
-//            }
 
-
-            
             let dataStore = backendless.data.of(HotSpot.ofClass())
             
             // save object synchronously
@@ -197,7 +167,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
         
         speedTestWebView.layer.cornerRadius = 8
         speedTestWebView.layer.borderWidth = 2
-        //speedTestWebView.layer.borderColor = (UIColor().AquaGreen() as! CGColor)
         speedTestWebView.loadRequest(myURLRequest)
     }
     
@@ -281,39 +250,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                         print (self.state)
                     }
                     
-                    
-//                    guard let streetAddress = addressArray?[0] else {
-//                        return
-//                    }
-//                    self.addressTfield.text  = streetAddress
-//                    guard let cityAddress = addressArray?[1] else {
-//                        return
-//                    }
-//                    print(cityAddress)
-//                    self.cityTfield.text = cityAddress
-//                    guard let stateZipAddress = addressArray?[2] else {
-//                        return
-//                    }
-//                    let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
-//                    let stateAddress = stateZipArray[0]
-//                    for i in 0...(self.chainLocationArray.count - 1) {
-//                        let chainString = self.chainLocationArray[i]
-//                        if place.name.lowercaseString == chainString.lowercaseString {
-//                            self.locNameTfield.text = "\(place.name) \(cityAddress)"
-//                            if place.name.lowercaseString == "qdoba mexican eats" {
-//                                self.locNameTfield.text = "Qdoba \(cityAddress)"
-//                            }
-//                            break
-//                        } else {
-//                            self.locNameTfield.text = place.name
-//                        }
-//                    }
-//                    let zipAddress = stateZipArray[1]
-//                    self.stateTfield.text = stateAddress
-//                    self.zipTfield.text = zipAddress
-//                    self.latLabel.text = "\(place.coordinate.latitude)"
-//                    self.lonLabel.text = "\(place.coordinate.longitude)"
-                    
                     self.addressTView.text = fullAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
                     self.locNameTfield.text = place.name
                     self.latCoord = "\(place.coordinate.latitude)"
@@ -373,14 +309,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             dlSpeedTfield.text = hotspot.hpDown
             upSpeedTfield.text = hotspot.hpUp
             addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
-            
-            //            latLabel.text = hotspot.hpLat
-            //            lonLabel.text = hotspot.hpLon
-            //            addressTfield.text = hotspot.hpStreet
-            //            cityTfield.text = hotspot.hpCity
-            //            stateTfield.text = hotspot.hpState
-            //            zipTfield.text = hotspot.hpZip
-        }
+            }
     }
     
     //MARK: - Life Cycle Methods
@@ -388,12 +317,10 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         pageLoc.startUpdatingLocation()
-//        makeTextFieldintoDelegrates()
         displaySpeedTest()
         hideKeyboardWhenTappedAround()
         amIOnline()
         self.saveButton.title = "Save"
-//        print("this record is set to be \(saveOrEdit)")
     }
     
     override func viewDidAppear(animated: Bool) {
