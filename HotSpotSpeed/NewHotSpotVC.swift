@@ -26,15 +26,18 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var locNameTfield: UILabel!
     @IBOutlet weak var dlSpeedTfield: UITextField!
     @IBOutlet weak var upSpeedTfield: UITextField!
+    @IBOutlet weak var addressTView: UITextView!
+    @IBOutlet weak var speedTestWebView: UIWebView!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
 //    @IBOutlet weak var latLabel: UILabel!
 //    @IBOutlet weak var lonLabel: UILabel!
 //    @IBOutlet weak var addressTfield: UILabel!
 //    @IBOutlet weak var cityTfield: UILabel!
 //    @IBOutlet weak var zipTfield: UILabel!
 //    @IBOutlet weak var stateTfield: UILabel!
-    @IBOutlet weak var addressTView: UITextView!
-    @IBOutlet weak var speedTestWebView: UIWebView!
-    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    
+    
     let ownerID = UIDevice.currentDevice().name
     var googlePlaceID = ""
     var saveOrEdit = "save"
@@ -138,6 +141,14 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             if let upSpeed = upSpeedTfield.text {
                 newHS.hpUp = upSpeed
             }
+            
+            newHS.hpAddress = fullAdd
+            newHS.hpLat = latCoord
+            newHS.hpLon = lonCoord
+            newHS.hpCity = city
+            newHS.hpState = state
+            newHS.ownerId = ownerID
+            newHS.placeId = googlePlaceID
 //            if let lat = latLabel.text {
 //                newHS.hpLat = self.latCoord
 //                print("\(lat)")
@@ -146,14 +157,6 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
 //                newHS.hpLon = self.lonCoord
 //                print("\(lon)")
 //            }
-            
-            newHS.hpAddress = fullAdd
-            newHS.hpLat = latCoord
-            newHS.hpLon = lonCoord
-            newHS.hpCity = city
-            newHS.hpState = state
-            
-            
 //            if let street = addressTfield.text {
 //                newHS.hpStreet = street
 //            }
@@ -167,8 +170,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
 //                newHS.hpState = state
 //            }
 
-            newHS.ownerId = ownerID
-            newHS.placeId = googlePlaceID
+
             
             let dataStore = backendless.data.of(HotSpot.ofClass())
             
@@ -368,12 +370,12 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             }
             ssidLabel.text = hotspot.hpSSIDName
             locNameTfield.text = hotspot.hpLocName
-//            latLabel.text = hotspot.hpLat
-//            lonLabel.text = hotspot.hpLon
             dlSpeedTfield.text = hotspot.hpDown
             upSpeedTfield.text = hotspot.hpUp
             addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
             
+            //            latLabel.text = hotspot.hpLat
+            //            lonLabel.text = hotspot.hpLon
             //            addressTfield.text = hotspot.hpStreet
             //            cityTfield.text = hotspot.hpCity
             //            stateTfield.text = hotspot.hpState
