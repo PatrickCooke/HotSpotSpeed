@@ -32,6 +32,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityTfield: UILabel!
     @IBOutlet weak var zipTfield: UILabel!
     @IBOutlet weak var stateTfield: UILabel!
+    @IBOutlet weak var addressTView: UITextView!
     @IBOutlet weak var speedTestWebView: UIWebView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     let ownerID = UIDevice.currentDevice().name
@@ -231,9 +232,14 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     print("new endpoint!")
                     self.saveButton.title = "Save"
                     let addressArray = place.formattedAddress?.componentsSeparatedByString(", ")
+                    guard let fullAddress = place.formattedAddress else {
+                        return
+                    }
                     guard let streetAddress = addressArray?[0] else {
                         return
                     }
+                    
+                    
                     self.addressTfield.text  = streetAddress
                     
                     self.googlePlaceID = place.placeID
@@ -265,6 +271,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     let stateZipArray = stateZipAddress.componentsSeparatedByString(" ")
                     let zipAddress = stateZipArray[1]
                     let stateAddress = stateZipArray[0]
+                    
+                    self.addressTView.text = fullAddress
                     self.stateTfield.text = stateAddress
                     self.zipTfield.text = zipAddress
                     self.latLabel.text = "\(place.coordinate.latitude)"
