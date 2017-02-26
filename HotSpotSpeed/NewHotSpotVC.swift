@@ -309,6 +309,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             dlSpeedTfield.text = hotspot.hpDown
             upSpeedTfield.text = hotspot.hpUp
             addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
+            latCoord = hotspot.hpLat
+            lonCoord = hotspot.hpLon
             }
     }
     
