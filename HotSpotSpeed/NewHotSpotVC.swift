@@ -39,6 +39,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
     var city = ""
     var state = ""
     
+    
     //MARK: - Get SSID
     var networkSSID : String?
     var currentSSID = ""
@@ -77,7 +78,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             saveRecordSYNC()
         } else {
             print("didn't save")
-            let alert = UIAlertController(title: "Warning", message: "To Save This Hotspot, Please Enter Hotspot SSID, GPS Coordinates, And Up/Down Speeds", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Warning", message: "To Save This Hotspot, Please Pick Location and set Up/Down Speeds", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
@@ -102,6 +103,12 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     currentHS?.hpUp = String(format: "%.2f", updatedUpspeed)
                 }
             }
+            currentHS?.hpCity = city
+            currentHS?.hpState = state
+            currentHS?.hpAddress = fullAdd
+            currentHS?.hpLat = latCoord
+            currentHS?.hpLon = lonCoord
+            currentHS?.placeId = googlePlaceID
             
             let dataStore = Backendless.sharedInstance().data.of(HotSpot.ofClass())
             var error: Fault?
@@ -213,6 +220,7 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
                     print("new endpoint!")
                     self.saveButton.title = "Save"
                     self.googlePlaceID = place.placeID
+                    
                     print("placeID = \(self.googlePlaceID)")
                     guard let fullAddress = place.formattedAddress else {
                         return
@@ -311,6 +319,8 @@ class NewHotSpotVC: UIViewController, UITextFieldDelegate {
             addressTView.text = hotspot.hpAddress.stringByReplacingOccurrencesOfString(", ", withString: "\n")
             latCoord = hotspot.hpLat
             lonCoord = hotspot.hpLon
+            city = hotspot.hpCity
+            state = hotspot.hpState
             }
     }
     
