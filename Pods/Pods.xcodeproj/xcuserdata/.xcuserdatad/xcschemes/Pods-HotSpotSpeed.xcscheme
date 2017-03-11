@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'DCF258EFE1CCB5AF298C24C82E2DFC24'
+               BlueprintIdentifier = 'F6F5FF8D0D65BF5EDD44BF7F8C2613A1'
                BlueprintName = 'Pods-HotSpotSpeed'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-HotSpotSpeed.framework'>

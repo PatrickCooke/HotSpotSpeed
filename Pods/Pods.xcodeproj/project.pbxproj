@@ -1,2525 +1,970 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>012D6552D956ED520A2588241815688E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IServiceCall.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IServiceCall.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>034014829C1E4434983CF3A690C12017</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_DEBUG=1</string>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>04D1FED3DD636760C9CB4858425F2002</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UserService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/UserService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>06DCB12BBAA19F9D4BD06FFBD9C4FBF4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C193C6AE9E1C54A00E78E3BF4E5B6A09</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0749C7F45FBAC995CA7562E96D100752</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IPersistable.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IPersistable.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BCFB27C75C55CD931676E86A20A28B7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IRTMProtocol.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IRTMProtocol.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0C246FD27BBFBB9DA5BF49D743F27D90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ProtectedBackendlessGeoQuery.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/ProtectedBackendlessGeoQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0F855D6CFC51D7E01FA6C8ABE2897331</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IClientSharedObject.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IClientSharedObject.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>10AA2DD53E8D972922216E3F900118E4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FilePermission.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/FilePermission.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>12D83744EBFF8711CF0C08634D2DB21E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BinaryStream.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/BinaryStream.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>149CA28D0995FAD1F13D173384AE21D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>LocationTracker.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/LocationTracker.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>183A9F3046EBD842D7983D4D9A34C1AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>SubscriptionOptions.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/SubscriptionOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1BFB723F8F7EB4F2CADC0D6E33B6AC4A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1EC653F065559260F58C22302DA65DA8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Logging.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Logging.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2097E12063009C588A6BE5F29F936CE9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DEBUG.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/DEBUG.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>218E9945878EC499BACB0F718D72BED4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>GooglePlacePicker.bundle</string>
-			<key>path</key>
-			<string>Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2294E9D666342C104DC90CC706459A26</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2462BC75533ADD8C8CC57F034A3F2344</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PublishOptions.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/PublishOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24D2A7F7E94C41BFCBBFB60B06577C5B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BEFileInfo.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BEFileInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>25F3822A85D9E3DDA3BC71166F8DCEE6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CustomService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/CustomService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>265F4FAAC5F3F4639666005E3FEA109E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FlashorbBinaryWriter.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/FlashorbBinaryWriter.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2A4D769F15D50E29B6E0B055AF80689E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FileService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/FileService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>034014829C1E4434983CF3A690C12017</string>
-				<string>C7E474A03CAE21F1CB6046E7344C59BD</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2ED87718FB4EB868818342414635F74F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Backendless-Bridging-Header.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Backendless-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F999C83B277F0B26F475113131D2D4E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IClientSharedObjectDelegate.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IClientSharedObjectDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F9D193D7A38C72481F24444DBACB01E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>D244A86925FBE6143A3D151720F8A84B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-HotSpotSpeed/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_HotSpotSpeed</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>35A025B5F3248D446F29C208646A338E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Backendless.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Backendless.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3696B9CD6A024EE17DEA7F94F40B7E73</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>43D3BA8B96D8FF40F8B9B9030C1B7723</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>36C4D1FAF45227258E18F891CAC6C886</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DataStoreFactory.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/DataStoreFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A34E97380D8557ACB0DB04A7ED291A5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IDataStore.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/IDataStore.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3B456E7E6A08F69502FA2CACA9758686</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MessageStatus.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/MessageStatus.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3CE6691C3BCDC9DEE209891630310247</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BETableView.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BETableView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3D7D48B36E0388EF15F581A76B925588</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IPendingServiceCallback.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IPendingServiceCallback.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3DCAB2B7CDE207B3958B6CB957FCC758</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3DF8806383A0F04E844B016E0D52ABAC</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>776606EE3808031318818DB6CB384F2E</string>
-				<string>2F9D193D7A38C72481F24444DBACB01E</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3F238B6BE15EC1DD1FC7A742C562CFDC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>406A4B6F7EF7524ACAAC4A37C68C9373</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B797B2328E3D452544F8A20489C74BC7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>40B91329DCE0F492DF4D03B4C8F20C1A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DeviceRegistration.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/DeviceRegistration.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>43D3BA8B96D8FF40F8B9B9030C1B7723</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GooglePlacePicker.framework</string>
-			<key>path</key>
-			<string>Frameworks/GooglePlacePicker.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>446BD6B31DE26FAF868A0C8AFCB4B5EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Types.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/Types.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4517515F6B0D0FF6F6CD5E6CFF3B9933</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>63E9B2773BE9CDB7B8BC4D4787F7B1CA</string>
-				<string>A9749B737E5428D4E8B1C3A639A3723A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Maps</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>453CC65CB9B7862CBE3C1D9D216DF0E0</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GooglePlaces.framework</string>
-			<key>path</key>
-			<string>Frameworks/GooglePlaces.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>454418051735E6AC7B3286B85B29EE88</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A421D1D039750580FB4E8619DCE0909D</string>
-				<string>E41CCD0EB682A3005E40FC795DD9C858</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GooglePlaces</string>
-			<key>path</key>
-			<string>GooglePlaces</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4789B8D1B3767C6D5A8A9EEA30BBEB84</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ICallback.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/ICallback.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>48B144E2A9E12DA05D05CC5EC1D62CB0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessCacheProtocol.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessCacheProtocol.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49EAD80B7A761A4B39E1EC28E5D9BA26</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DataPermission.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/DataPermission.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>49EB0688B477FA2A54E39088948B2FEA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>QueryOptions.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/QueryOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4BF4A826CEE45462830A8DA057C889CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CacheFactory.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/CacheFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51378E4149C21D80C74C4BD37E3DBE89</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A0E2FC2767FEA658AAD3F8BC469D731D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5309CC1603BD1372B0D85E30C1594C7E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BodyParts.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BodyParts.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>54C42D38C9B7B7B2A7497FF7F206CB62</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Answers.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/Answers.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5AD3101546C1EC838B64704DB4DF4D3D</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleMaps.framework</string>
-			<key>path</key>
-			<string>Maps/Frameworks/GoogleMaps.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CA6DD867DE9B099F93A50066A01F8C1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Events.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Events.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5CDBB3ACFA56CB9F5AE96BA208D57840</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Crashlytics.framework</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5F73D1569F656BC0F67ED95D11C9723A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7BC9BB379174F4396FB6E41FC994388D</string>
-				<string>4517515F6B0D0FF6F6CD5E6CFF3B9933</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GoogleMaps</string>
-			<key>path</key>
-			<string>GoogleMaps</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>615BBC977E0BE4500AD20FF0BD5397ED</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>DA3EDCF2CF146871D75106852660E465</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>63E9B2773BE9CDB7B8BC4D4787F7B1CA</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5AD3101546C1EC838B64704DB4DF4D3D</string>
-				<string>7B659F279C847E56AF529355DF2EBB34</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>64E58053849A478356BFFBF633FC3527</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>PersistenceService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/PersistenceService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>65979609E8C792B815A58A40FD93B5E8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MessagingService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/MessagingService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>65D1E4EB52F788076CFCD3E87C3A112E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GeoCluster.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/GeoCluster.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>66FFFDB5A15DD49669ACFB493F5C8458</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>69DB84926110239F150EA60F85E31648</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Fabric.framework</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7122C0D5825F2B6357FED4C703758B1E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>66FFFDB5A15DD49669ACFB493F5C8458</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>737F8FDD876151E583C975D6180FF9FB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSLogging.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSLogging.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>74FA641DABC2228F4094EC7A75B500CE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSReport.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSReport.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>776606EE3808031318818DB6CB384F2E</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>DA02DD6FE02246C570AC6651142040F8</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-HotSpotSpeed/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_HotSpotSpeed</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7B659F279C847E56AF529355DF2EBB34</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleMapsCore.framework</string>
-			<key>path</key>
-			<string>Maps/Frameworks/GoogleMapsCore.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7BC9BB379174F4396FB6E41FC994388D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>615BBC977E0BE4500AD20FF0BD5397ED</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7CE0EAF8895CA5E9B18EC5BED8419695</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>967560F5D1E5CD0C370922E96642C4B5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D1A4BCB925C92EB294F0EBF70D234AB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BESubscription.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BESubscription.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D7473B1A45AAA4426A44B8D5DD714FA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UserProperty.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/UserProperty.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>A87E6964CE04F78DB0569E5938E97CB5</string>
-				<string>7CE0EAF8895CA5E9B18EC5BED8419695</string>
-				<string>51378E4149C21D80C74C4BD37E3DBE89</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7E37014F5A6C303AE96C4DFB9C131267</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Fabric.h</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework/Headers/Fabric.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7F4433FC767321CCE4C43662EB61D09A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GeoCategory.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/GeoCategory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7F6BF301B95AB78835DF484F9521B7E3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3696B9CD6A024EE17DEA7F94F40B7E73</string>
-				<string>926FF946703DB873325D2B59111F0D4C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GooglePlacePicker</string>
-			<key>path</key>
-			<string>GooglePlacePicker</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7FE59EB5B174E681DACFE2C903C2B2B8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BEAnnotation.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BEAnnotation.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8558403DCCD8F97A6E7795CA0CD589DC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessFile.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessFile.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8741BE5E44335F092C917D45BD0A4965</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AbstractProperty.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/AbstractProperty.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>88E64FCE2C7E0C79B9012BC9D96BCDFF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FlashorbBinaryReader.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/FlashorbBinaryReader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8A0A7A01DE97DC0019E8DFB0C61182EA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8AE4D7DB5807435AE3CE3041657F6367</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>69DB84926110239F150EA60F85E31648</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8B778046E2E840B728342A074D25256B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BinaryCodec.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/BinaryCodec.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C10AE36F1C496972C8036CCFB7EC16D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FABAttributes.h</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework/Headers/FABAttributes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C9C3B3277C664EBFF8094094AE28B9F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>HashMap.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/HashMap.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90537546B3225FDE4B28A0629679B620</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7122C0D5825F2B6357FED4C703758B1E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>910B891E2461517751E425B3BADA47F3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Logger.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Logger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>91F08E649B30D907F70E183FD61850C2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GeoFence.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/GeoFence.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9262049826FE9F52BF797D79F7791564</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>GooglePlaces.bundle</string>
-			<key>path</key>
-			<string>Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>926FF946703DB873325D2B59111F0D4C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>218E9945878EC499BACB0F718D72BED4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>92E656A6EEC1E6C8DA032A9BFD67DB6B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IAtomicCounters.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/IAtomicCounters.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>text.script.ruby</string>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>93B58BCE8A89C062BAD7FA4B51056161</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessUser.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessUser.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>967560F5D1E5CD0C370922E96642C4B5</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_HotSpotSpeed.framework</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>96D9BE46C7F9E10173F9E365F239B963</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Presence.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Presence.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9880A51EECF37F40361DB98C407C0D90</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CacheService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/CacheService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99B260E957E7BB6BB053DED12C38CC75</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IPresenceListener.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/IPresenceListener.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99B3C0368522CBEBC25D4E9053C3FA62</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.plug-in</string>
-			<key>name</key>
-			<string>GoogleMaps.bundle</string>
-			<key>path</key>
-			<string>Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9AE47856F2361030353E9652DB09D7CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AMFSerializer.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/AMFSerializer.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CFD75D9AB1DD258936AD23947EDBB5F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E55BCD793D030E63DB1CA1871F31F61</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8C10AE36F1C496972C8036CCFB7EC16D</string>
-				<string>7E37014F5A6C303AE96C4DFB9C131267</string>
-				<string>8AE4D7DB5807435AE3CE3041657F6367</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Fabric</string>
-			<key>path</key>
-			<string>Fabric</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9E57CA245AFD563ABB8586FE9F1C9C03</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessEntity.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessEntity.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A0E2FC2767FEA658AAD3F8BC469D731D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8A0A7A01DE97DC0019E8DFB0C61182EA</string>
-				<string>E4219915CE99002D8FA2E9301E4442CC</string>
-				<string>1BFB723F8F7EB4F2CADC0D6E33B6AC4A</string>
-				<string>2294E9D666342C104DC90CC706459A26</string>
-				<string>C193C6AE9E1C54A00E78E3BF4E5B6A09</string>
-				<string>9CFD75D9AB1DD258936AD23947EDBB5F</string>
-				<string>3F238B6BE15EC1DD1FC7A742C562CFDC</string>
-				<string>66FFFDB5A15DD49669ACFB493F5C8458</string>
-				<string>DA02DD6FE02246C570AC6651142040F8</string>
-				<string>D244A86925FBE6143A3D151720F8A84B</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-HotSpotSpeed</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-HotSpotSpeed</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A2BD59D725396A2FDFBD446E256706B5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessSimpleQuery.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessSimpleQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A3FA7ED67412E4431739A29D41036098</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BECollectionView.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BECollectionView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A41CDBF1C3896B1BDD265C3C9CBB8EAE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Crashlytics.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/Crashlytics.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A421D1D039750580FB4E8619DCE0909D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>453CC65CB9B7862CBE3C1D9D216DF0E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A87E6964CE04F78DB0569E5938E97CB5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EC9EA9515C1FB44DDC671E0E8E14EAE1</string>
-				<string>CAF71D09C3EE53E22EEA13B9A1DCC3B4</string>
-				<string>9E55BCD793D030E63DB1CA1871F31F61</string>
-				<string>5F73D1569F656BC0F67ED95D11C9723A</string>
-				<string>7F6BF301B95AB78835DF484F9521B7E3</string>
-				<string>454418051735E6AC7B3286B85B29EE88</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A9749B737E5428D4E8B1C3A639A3723A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>99B3C0368522CBEBC25D4E9053C3FA62</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AD4BFEA2FCF6F1950487A5B08185C970</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DeliveryOptions.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/DeliveryOptions.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AE6507EE4DED5CE5BA44A24FA05F63EC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>RTMPClient.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/RTMPClient.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AFA51C67D623F078C103E89A53A846B0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessCachePolicy.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessCachePolicy.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B3D54FE59CCA6648B21F3E3D5FA78F14</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Message.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Message.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B797B2328E3D452544F8A20489C74BC7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3DCAB2B7CDE207B3958B6CB957FCC758</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6D0A003FA73DDE275DD2DD7D1DCBA5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ISharedObjectListener.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/ISharedObjectListener.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF872CE9B3C5A09E0E9BE86CFE0BA005</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>MemoryTicker.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/MemoryTicker.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF8AEC6C4B33BB8B9F0D91DECC0570B9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessBeacon.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessBeacon.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C008E1B2630A903FB36E59C73668CEF6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessGeoQuery.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessGeoQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C193C6AE9E1C54A00E78E3BF4E5B6A09</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C195C7FE0C4CBBCA5808953DDEC5DEA6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessCollection.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessCollection.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7E474A03CAE21F1CB6046E7344C59BD</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>POD_CONFIGURATION_RELEASE=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CAF71D09C3EE53E22EEA13B9A1DCC3B4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CCE0D8436A9E0A57F1AE5C7342BC0FE0</string>
-				<string>54C42D38C9B7B7B2A7497FF7F206CB62</string>
-				<string>FDFB64FC3530D5296A5A7AC0F484EE64</string>
-				<string>737F8FDD876151E583C975D6180FF9FB</string>
-				<string>74FA641DABC2228F4094EC7A75B500CE</string>
-				<string>D71C371AA411A01987830890C717801C</string>
-				<string>A41CDBF1C3896B1BDD265C3C9CBB8EAE</string>
-				<string>E13E4890D4EA32FC27DD0B0E9E828804</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Crashlytics</string>
-			<key>path</key>
-			<string>Crashlytics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CBEF8E33BB0E754F9BEB1A2E2B0CFD04</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GeoPoint.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/GeoPoint.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CCE0D8436A9E0A57F1AE5C7342BC0FE0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ANSCompatibility.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/ANSCompatibility.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CD09B218CE8357D41C48BACD3D88320A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Responder.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/Responder.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEC22C73C1608DFA5D5D78BDCB218219</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>CF2A0725CC7AB182B9FAF1D56DDD878E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AtomicCountersFactory.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/AtomicCountersFactory.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D244A86925FBE6143A3D151720F8A84B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>7CE0EAF8895CA5E9B18EC5BED8419695</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>DCF258EFE1CCB5AF298C24C82E2DFC24</string>
-			</array>
-		</dict>
-		<key>D71C371AA411A01987830890C717801C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSStackFrame.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSStackFrame.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DA02DD6FE02246C570AC6651142040F8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DA0C842E7A12B3342601A7CE77AA9DB2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AbstractQuery.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/AbstractQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DA3EDCF2CF146871D75106852660E465</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleMapsBase.framework</string>
-			<key>path</key>
-			<string>Base/Frameworks/GoogleMapsBase.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DCF258EFE1CCB5AF298C24C82E2DFC24</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>3DF8806383A0F04E844B016E0D52ABAC</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E2B24434CC22BEB2EC2E628AB80FC3AC</string>
-				<string>406A4B6F7EF7524ACAAC4A37C68C9373</string>
-				<string>90537546B3225FDE4B28A0629679B620</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-HotSpotSpeed</string>
-			<key>productName</key>
-			<string>Pods-HotSpotSpeed</string>
-			<key>productReference</key>
-			<string>967560F5D1E5CD0C370922E96642C4B5</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>E07D6276C1EAD2CFA4A2F1C5A3C53BDD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ObjectProperty.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/ObjectProperty.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E13E4890D4EA32FC27DD0B0E9E828804</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5CDBB3ACFA56CB9F5AE96BA208D57840</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E145DB69DE0A0F2E0BFC6FB63FFD7F22</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Backendless-With-Media-Bridging-Header.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/Backendless-With-Media-Bridging-Header.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E2B24434CC22BEB2EC2E628AB80FC3AC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>06DCB12BBAA19F9D4BD06FFBD9C4FBF4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>E41CCD0EB682A3005E40FC795DD9C858</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9262049826FE9F52BF797D79F7791564</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E4219915CE99002D8FA2E9301E4442CC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-HotSpotSpeed.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EC9EA9515C1FB44DDC671E0E8E14EAE1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8741BE5E44335F092C917D45BD0A4965</string>
-				<string>DA0C842E7A12B3342601A7CE77AA9DB2</string>
-				<string>9AE47856F2361030353E9652DB09D7CA</string>
-				<string>F72148A2D0F8FB6FB6F2DFAF93965345</string>
-				<string>CF2A0725CC7AB182B9FAF1D56DDD878E</string>
-				<string>35A025B5F3248D446F29C208646A338E</string>
-				<string>2ED87718FB4EB868818342414635F74F</string>
-				<string>E145DB69DE0A0F2E0BFC6FB63FFD7F22</string>
-				<string>BF8AEC6C4B33BB8B9F0D91DECC0570B9</string>
-				<string>AFA51C67D623F078C103E89A53A846B0</string>
-				<string>48B144E2A9E12DA05D05CC5EC1D62CB0</string>
-				<string>C195C7FE0C4CBBCA5808953DDEC5DEA6</string>
-				<string>F978EE89051D1E5E5FB3B4756AFF8D10</string>
-				<string>9E57CA245AFD563ABB8586FE9F1C9C03</string>
-				<string>8558403DCCD8F97A6E7795CA0CD589DC</string>
-				<string>C008E1B2630A903FB36E59C73668CEF6</string>
-				<string>A2BD59D725396A2FDFBD446E256706B5</string>
-				<string>93B58BCE8A89C062BAD7FA4B51056161</string>
-				<string>7FE59EB5B174E681DACFE2C903C2B2B8</string>
-				<string>A3FA7ED67412E4431739A29D41036098</string>
-				<string>24D2A7F7E94C41BFCBBFB60B06577C5B</string>
-				<string>FB7C45298958523F05D9E142B5609410</string>
-				<string>7D1A4BCB925C92EB294F0EBF70D234AB</string>
-				<string>3CE6691C3BCDC9DEE209891630310247</string>
-				<string>8B778046E2E840B728342A074D25256B</string>
-				<string>12D83744EBFF8711CF0C08634D2DB21E</string>
-				<string>5309CC1603BD1372B0D85E30C1594C7E</string>
-				<string>4BF4A826CEE45462830A8DA057C889CC</string>
-				<string>9880A51EECF37F40361DB98C407C0D90</string>
-				<string>25F3822A85D9E3DDA3BC71166F8DCEE6</string>
-				<string>49EAD80B7A761A4B39E1EC28E5D9BA26</string>
-				<string>36C4D1FAF45227258E18F891CAC6C886</string>
-				<string>2097E12063009C588A6BE5F29F936CE9</string>
-				<string>AD4BFEA2FCF6F1950487A5B08185C970</string>
-				<string>40B91329DCE0F492DF4D03B4C8F20C1A</string>
-				<string>5CA6DD867DE9B099F93A50066A01F8C1</string>
-				<string>10AA2DD53E8D972922216E3F900118E4</string>
-				<string>2A4D769F15D50E29B6E0B055AF80689E</string>
-				<string>88E64FCE2C7E0C79B9012BC9D96BCDFF</string>
-				<string>265F4FAAC5F3F4639666005E3FEA109E</string>
-				<string>7F4433FC767321CCE4C43662EB61D09A</string>
-				<string>65D1E4EB52F788076CFCD3E87C3A112E</string>
-				<string>91F08E649B30D907F70E183FD61850C2</string>
-				<string>CBEF8E33BB0E754F9BEB1A2E2B0CFD04</string>
-				<string>F6E002DD605B20D5B6246EADFFEC8D9C</string>
-				<string>8C9C3B3277C664EBFF8094094AE28B9F</string>
-				<string>92E656A6EEC1E6C8DA032A9BFD67DB6B</string>
-				<string>FC4AAF3C939D19EE870016325C92F8A7</string>
-				<string>F2B1E1A6B311D607A83F765DBBB5C680</string>
-				<string>4789B8D1B3767C6D5A8A9EEA30BBEB84</string>
-				<string>0F855D6CFC51D7E01FA6C8ABE2897331</string>
-				<string>2F999C83B277F0B26F475113131D2D4E</string>
-				<string>3A34E97380D8557ACB0DB04A7ED291A5</string>
-				<string>3D7D48B36E0388EF15F581A76B925588</string>
-				<string>0749C7F45FBAC995CA7562E96D100752</string>
-				<string>99B260E957E7BB6BB053DED12C38CC75</string>
-				<string>0BCFB27C75C55CD931676E86A20A28B7</string>
-				<string>012D6552D956ED520A2588241815688E</string>
-				<string>BF6D0A003FA73DDE275DD2DD7D1DCBA5</string>
-				<string>149CA28D0995FAD1F13D173384AE21D6</string>
-				<string>910B891E2461517751E425B3BADA47F3</string>
-				<string>1EC653F065559260F58C22302DA65DA8</string>
-				<string>BF872CE9B3C5A09E0E9BE86CFE0BA005</string>
-				<string>B3D54FE59CCA6648B21F3E3D5FA78F14</string>
-				<string>3B456E7E6A08F69502FA2CACA9758686</string>
-				<string>65979609E8C792B815A58A40FD93B5E8</string>
-				<string>E07D6276C1EAD2CFA4A2F1C5A3C53BDD</string>
-				<string>64E58053849A478356BFFBF633FC3527</string>
-				<string>96D9BE46C7F9E10173F9E365F239B963</string>
-				<string>0C246FD27BBFBB9DA5BF49D743F27D90</string>
-				<string>2462BC75533ADD8C8CC57F034A3F2344</string>
-				<string>49EB0688B477FA2A54E39088948B2FEA</string>
-				<string>CD09B218CE8357D41C48BACD3D88320A</string>
-				<string>AE6507EE4DED5CE5BA44A24FA05F63EC</string>
-				<string>183A9F3046EBD842D7983D4D9A34C1AB</string>
-				<string>446BD6B31DE26FAF868A0C8AFCB4B5EA</string>
-				<string>7D7473B1A45AAA4426A44B8D5DD714FA</string>
-				<string>04D1FED3DD636760C9CB4858425F2002</string>
-				<string>F1B6F9B99E8C6DE5912807B45F641F46</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Backendless</string>
-			<key>path</key>
-			<string>Backendless</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1B6F9B99E8C6DE5912807B45F641F46</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>WeborbClient.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/WeborbClient.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F2B1E1A6B311D607A83F765DBBB5C680</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ICacheService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/ICacheService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F6E002DD605B20D5B6246EADFFEC8D9C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>GeoService.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/GeoService.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F72148A2D0F8FB6FB6F2DFAF93965345</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>AtomicCounters.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/AtomicCounters.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F978EE89051D1E5E5FB3B4756AFF8D10</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BackendlessDataQuery.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BackendlessDataQuery.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FB7C45298958523F05D9E142B5609410</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BEMapView.h</string>
-			<key>path</key>
-			<string>SDK/ios/backendless/include/BEMapView.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FC4AAF3C939D19EE870016325C92F8A7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>IAttributeStore.h</string>
-			<key>path</key>
-			<string>SDK/ios/CommLibiOS/include/IAttributeStore.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>FDFB64FC3530D5296A5A7AC0F484EE64</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSAttributes.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSAttributes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		497513724F88934C79990A8481FADB34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		497A95A0E7EAC177E8438885917E5145 /* Pods-HotSpotSpeed-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C193C6AE9E1C54A00E78E3BF4E5B6A09 /* Pods-HotSpotSpeed-dummy.m */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 0786316EBB3D15B21F68DBDAD8F1F0CB /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		769167FCF23C9FF4C5656EF31988DE7F /* Pods-HotSpotSpeed-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 66FFFDB5A15DD49669ACFB493F5C8458 /* Pods-HotSpotSpeed-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C05EE43D1C95CF8B4D555BCB62127606 /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F9E0E9EADF595FFA1B15483B04E357 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1003FE5E531C4B700857784486E74CD9 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E77291800BEBB424CC1B43D08BC1616 /* GoogleToolboxForMac-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7F7F3E41F3891AB105B2CE629240259B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
+			remoteInfo = GoogleToolboxForMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02EF9D4D7CF69F1B6C8562C54F8F0C5A /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		0307CBF25B246D59553C9057BA13125D /* BackendlessEntity.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessEntity.h; path = SDK/ios/backendless/include/BackendlessEntity.h; sourceTree = "<group>"; };
+		04341A38A6CC04CFBD637DB03B44380B /* IDataStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IDataStore.h; path = SDK/ios/backendless/include/IDataStore.h; sourceTree = "<group>"; };
+		04F9E0E9EADF595FFA1B15483B04E357 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		07386B4E664223C440739AC0F63D0A72 /* Types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Types.h; path = SDK/ios/CommLibiOS/include/Types.h; sourceTree = "<group>"; };
+		0786316EBB3D15B21F68DBDAD8F1F0CB /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		08153737956AEF93AAEFD3528B8EB39C /* IRTMProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IRTMProtocol.h; path = SDK/ios/CommLibiOS/include/IRTMProtocol.h; sourceTree = "<group>"; };
+		0E8B4A4AA2C536EF627C9E7BA0957E61 /* UserService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserService.h; path = SDK/ios/backendless/include/UserService.h; sourceTree = "<group>"; };
+		1003FE5E531C4B700857784486E74CD9 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		115AE0FFE7D204C6EB5B923906E00031 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		1317DCD23C01E61C5F24D0B49DE888DA /* BackendlessUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessUser.h; path = SDK/ios/backendless/include/BackendlessUser.h; sourceTree = "<group>"; };
+		1BFB723F8F7EB4F2CADC0D6E33B6AC4A /* Pods-HotSpotSpeed-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HotSpotSpeed-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1C786F4D4ABB62D38E8CE5ECEEF24C0B /* BESubscription.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BESubscription.h; path = SDK/ios/backendless/include/BESubscription.h; sourceTree = "<group>"; };
+		1DD7FDE354D9EE238D3E87A2F54E26C0 /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
+		2294E9D666342C104DC90CC706459A26 /* Pods-HotSpotSpeed-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HotSpotSpeed-acknowledgements.plist"; sourceTree = "<group>"; };
+		2344128E44F5FE39AAE79408217DC532 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		24545AA4B2A638B96761C02174FAD1B8 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		24BB725D5BDC3FE2805D1ECEDBBA4FD8 /* DeviceRegistration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeviceRegistration.h; path = SDK/ios/backendless/include/DeviceRegistration.h; sourceTree = "<group>"; };
+		252B99518B3280FC275DE2D48326A38B /* ICallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICallback.h; path = SDK/ios/backendless/include/ICallback.h; sourceTree = "<group>"; };
+		261647F3D3D81A32A3C05ED9745BCAA3 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		27DAA453AB16C480B793B81D61174A9E /* AbstractProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractProperty.h; path = SDK/ios/backendless/include/AbstractProperty.h; sourceTree = "<group>"; };
+		2A20CD938A2CDA631EB148FD6146B59A /* DataPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataPermission.h; path = SDK/ios/backendless/include/DataPermission.h; sourceTree = "<group>"; };
+		2A6C12D8011D1CE4CBDF86986180FAED /* BackendlessBeacon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessBeacon.h; path = SDK/ios/backendless/include/BackendlessBeacon.h; sourceTree = "<group>"; };
+		2AC28E9F3660853FCECCFB87CC74A37A /* Message.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Message.h; path = SDK/ios/backendless/include/Message.h; sourceTree = "<group>"; };
+		2B46DCA92E511C3D9AE1993D57F112D8 /* BEFileInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEFileInfo.h; path = SDK/ios/backendless/include/BEFileInfo.h; sourceTree = "<group>"; };
+		2FB9A8B64DAB26E61FA7453818AACFB9 /* ICacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ICacheService.h; path = SDK/ios/backendless/include/ICacheService.h; sourceTree = "<group>"; };
+		2FBCD8741736266AB3DF84D3C66981B0 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		3102A1310ACA0FC9B7D3FE66D95E47D4 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		326FA85553D32289E335DF7E4E80E8A8 /* BodyParts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BodyParts.h; path = SDK/ios/backendless/include/BodyParts.h; sourceTree = "<group>"; };
+		358DD7C79F1F9EFA4093EE4CE6576FBA /* BECollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BECollectionView.h; path = SDK/ios/backendless/include/BECollectionView.h; sourceTree = "<group>"; };
+		35DB54188C4B2D3B4716B38F33DBBF7E /* BEAnnotation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEAnnotation.h; path = SDK/ios/backendless/include/BEAnnotation.h; sourceTree = "<group>"; };
+		36441F1975E7EE4A957F879EB0F53EA7 /* Responder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Responder.h; path = SDK/ios/CommLibiOS/include/Responder.h; sourceTree = "<group>"; };
+		39243387C4B9558F3A0449B02F10F09B /* GeoCategory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCategory.h; path = SDK/ios/backendless/include/GeoCategory.h; sourceTree = "<group>"; };
+		3D57AB7A150A6A10BEFC02DDC249031A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F238B6BE15EC1DD1FC7A742C562CFDC /* Pods-HotSpotSpeed-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotSpotSpeed-resources.sh"; sourceTree = "<group>"; };
+		3FE636EE7DDD038E65472E0F51423E34 /* FlashorbBinaryWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryWriter.h; path = SDK/ios/CommLibiOS/include/FlashorbBinaryWriter.h; sourceTree = "<group>"; };
+		41E39AA5D4D3D944D0CA46A866B00D02 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		4219598BAEAC9D2E23CFA171F95610D7 /* RTMPClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RTMPClient.h; path = SDK/ios/CommLibiOS/include/RTMPClient.h; sourceTree = "<group>"; };
+		443902F81B88EEFA8C397EFBFA518A6B /* AMFSerializer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AMFSerializer.h; path = SDK/ios/CommLibiOS/include/AMFSerializer.h; sourceTree = "<group>"; };
+		45F12832CCD7E8B4D55D0D24D82BC85A /* IAttributeStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAttributeStore.h; path = SDK/ios/CommLibiOS/include/IAttributeStore.h; sourceTree = "<group>"; };
+		48AD5A612A92D7374970106006903754 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		48E7E79DE61D77F72E5AD2634928C64D /* SubscriptionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SubscriptionOptions.h; path = SDK/ios/backendless/include/SubscriptionOptions.h; sourceTree = "<group>"; };
+		4D1640C98BFD1879A7DC8E0D6270D5FD /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		4E271EE5DCD37CCDC57B01AF3C2DC520 /* AbstractQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractQuery.h; path = SDK/ios/backendless/include/AbstractQuery.h; sourceTree = "<group>"; };
+		590AB9D4E298414F4D735D22DD5650D5 /* UserProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UserProperty.h; path = SDK/ios/backendless/include/UserProperty.h; sourceTree = "<group>"; };
+		5A6630973F59C3ABA4E4433C0A5C947E /* GeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoPoint.h; path = SDK/ios/backendless/include/GeoPoint.h; sourceTree = "<group>"; };
+		5B971A333D85BCFA5400C2F7CF1EBE28 /* BackendlessSimpleQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessSimpleQuery.h; path = SDK/ios/backendless/include/BackendlessSimpleQuery.h; sourceTree = "<group>"; };
+		5C5E23588928A3C40368FED38728E495 /* BackendlessDataQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessDataQuery.h; path = SDK/ios/backendless/include/BackendlessDataQuery.h; sourceTree = "<group>"; };
+		5DCE84AF3AA4613865817D6538123241 /* ProtectedBackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProtectedBackendlessGeoQuery.h; path = SDK/ios/backendless/include/ProtectedBackendlessGeoQuery.h; sourceTree = "<group>"; };
+		5F1750CE18973517C0E241AAA8FB3154 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		63B4539D6A1FF052AEF4998A1467F0A8 /* BinaryCodec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryCodec.h; path = SDK/ios/CommLibiOS/include/BinaryCodec.h; sourceTree = "<group>"; };
+		64F80D09A6DF6A0B524A7CD1A0E3FBC5 /* FlashorbBinaryReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlashorbBinaryReader.h; path = SDK/ios/CommLibiOS/include/FlashorbBinaryReader.h; sourceTree = "<group>"; };
+		66FFFDB5A15DD49669ACFB493F5C8458 /* Pods-HotSpotSpeed-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HotSpotSpeed-umbrella.h"; sourceTree = "<group>"; };
+		676077F8A63D79260EA7173EF4229E8D /* Backendless-With-Media-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-With-Media-Bridging-Header.h"; path = "SDK/ios/backendless/include/Backendless-With-Media-Bridging-Header.h"; sourceTree = "<group>"; };
+		69C34F058D29324C95B1705799C384C6 /* IAtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IAtomicCounters.h; path = SDK/ios/backendless/include/IAtomicCounters.h; sourceTree = "<group>"; };
+		6A5877B81D37FB1463A84A03DADC356A /* ISharedObjectListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ISharedObjectListener.h; path = SDK/ios/CommLibiOS/include/ISharedObjectListener.h; sourceTree = "<group>"; };
+		6A83F5FC079620D2C0DF89BD5A449868 /* IServiceCall.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IServiceCall.h; path = SDK/ios/CommLibiOS/include/IServiceCall.h; sourceTree = "<group>"; };
+		6CE6092B966FA215D4876E72EC9935A2 /* Presence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Presence.h; path = SDK/ios/backendless/include/Presence.h; sourceTree = "<group>"; };
+		6E5AA719BD7D086D23CCFF12750A2DD9 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		6E863562C70285B6565CF41BE244B1C0 /* AtomicCounters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCounters.h; path = SDK/ios/backendless/include/AtomicCounters.h; sourceTree = "<group>"; };
+		6EFA9591810324780408FE4B7704C81B /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		71A1DC9D45231E0F973A76972937CED4 /* PublishOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PublishOptions.h; path = SDK/ios/backendless/include/PublishOptions.h; sourceTree = "<group>"; };
+		73FDDAF6DE5A051DC410232A4BA18999 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		781A5DDC68349381DD7BBD04B94B26DB /* FileService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FileService.h; path = SDK/ios/backendless/include/FileService.h; sourceTree = "<group>"; };
+		798556BBC2631348413F3B1DF33891FA /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		7C967DCA3D29D90DC96AEBE3868320F0 /* BackendlessCachePolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCachePolicy.h; path = SDK/ios/backendless/include/BackendlessCachePolicy.h; sourceTree = "<group>"; };
+		7CFBDA72C945F63909741CB43181599D /* MessagingService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessagingService.h; path = SDK/ios/backendless/include/MessagingService.h; sourceTree = "<group>"; };
+		82C8CB45831F066F1AFE1043AABAF2D4 /* BETableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BETableView.h; path = SDK/ios/backendless/include/BETableView.h; sourceTree = "<group>"; };
+		8470B67D695F5CA3855FDEC38776AA26 /* IClientSharedObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObject.h; path = SDK/ios/CommLibiOS/include/IClientSharedObject.h; sourceTree = "<group>"; };
+		8A0A7A01DE97DC0019E8DFB0C61182EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A299446A0D3A44BD480EBAFEF1A903D /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		8BA88010F78ADE6BDDB32AAC3002B6D8 /* IPersistable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPersistable.h; path = SDK/ios/CommLibiOS/include/IPersistable.h; sourceTree = "<group>"; };
+		90259658ED69D6B6338E0926E3C144D0 /* BackendlessCacheProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCacheProtocol.h; path = SDK/ios/backendless/include/BackendlessCacheProtocol.h; sourceTree = "<group>"; };
+		908D342092B2B2CB8D7C8FF7DA1C552F /* GeoService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoService.h; path = SDK/ios/backendless/include/GeoService.h; sourceTree = "<group>"; };
+		915492E923891EBB910FB3DB8B50B1B7 /* QueryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QueryOptions.h; path = SDK/ios/backendless/include/QueryOptions.h; sourceTree = "<group>"; };
+		91695E473CBC774A62A3123C5179233D /* PersistenceService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PersistenceService.h; path = SDK/ios/backendless/include/PersistenceService.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97925522F5B4BBF3D034BCCFCC4EC1CE /* IClientSharedObjectDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IClientSharedObjectDelegate.h; path = SDK/ios/CommLibiOS/include/IClientSharedObjectDelegate.h; sourceTree = "<group>"; };
+		9CFD75D9AB1DD258936AD23947EDBB5F /* Pods-HotSpotSpeed-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HotSpotSpeed-frameworks.sh"; sourceTree = "<group>"; };
+		9E77291800BEBB424CC1B43D08BC1616 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		A0127A2D601423A02E529E1D14AEDB3A /* WeborbClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = WeborbClient.h; path = SDK/ios/CommLibiOS/include/WeborbClient.h; sourceTree = "<group>"; };
+		A0B5AD3DE8592D25ADFFC170E18419D3 /* ObjectProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjectProperty.h; path = SDK/ios/backendless/include/ObjectProperty.h; sourceTree = "<group>"; };
+		A1D04D6BAED6F78E0DB03D23F1996486 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		A732EE2C3B140A88DB06E58F601E48DA /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		A96CAE97C6BC5494CBC91C545FC3D675 /* Backendless-Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Backendless-Bridging-Header.h"; path = "SDK/ios/backendless/include/Backendless-Bridging-Header.h"; sourceTree = "<group>"; };
+		A98E8EDE39103B5A962DAE7B6BF94B5B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		AADE7640FE65E81F0013935337A998A5 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		AC934581346D2B2C833D0138DA159563 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		AD81AB4FBB7889FF393BE75B843D2AAF /* CustomService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CustomService.h; path = SDK/ios/backendless/include/CustomService.h; sourceTree = "<group>"; };
+		AF9A8BE2CF648ABEEF084199216DF8FE /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		B1FBBBAC14B01025902A37F52EFE6745 /* Logging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logging.h; path = SDK/ios/backendless/include/Logging.h; sourceTree = "<group>"; };
+		B32152098E5A711B1DD7E17B730986B1 /* BackendlessGeoQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessGeoQuery.h; path = SDK/ios/backendless/include/BackendlessGeoQuery.h; sourceTree = "<group>"; };
+		B6445FD4DD52DA9466037E6A84081E61 /* GeoCluster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoCluster.h; path = SDK/ios/backendless/include/GeoCluster.h; sourceTree = "<group>"; };
+		BA48F39E1260CA2362D9507A027C6DC8 /* AtomicCountersFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AtomicCountersFactory.h; path = SDK/ios/backendless/include/AtomicCountersFactory.h; sourceTree = "<group>"; };
+		BD1290D09FB2845CFB6D64537FD679E7 /* DataStoreFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataStoreFactory.h; path = SDK/ios/backendless/include/DataStoreFactory.h; sourceTree = "<group>"; };
+		C05EE43D1C95CF8B4D555BCB62127606 /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		C0F168DA02EEB486E7DE1991FC963500 /* FilePermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FilePermission.h; path = SDK/ios/backendless/include/FilePermission.h; sourceTree = "<group>"; };
+		C193C6AE9E1C54A00E78E3BF4E5B6A09 /* Pods-HotSpotSpeed-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HotSpotSpeed-dummy.m"; sourceTree = "<group>"; };
+		C304ABC0CE96AB2EE926AF2086290E64 /* MemoryTicker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MemoryTicker.h; path = SDK/ios/CommLibiOS/include/MemoryTicker.h; sourceTree = "<group>"; };
+		C30E99AB94A9C6D3D11CB4BC882A75CA /* DEBUG.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DEBUG.h; path = SDK/ios/CommLibiOS/include/DEBUG.h; sourceTree = "<group>"; };
+		C78C5390E42933E60F18BCD2108B5D6B /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		C81796FEC91B03BF9498247E609BD460 /* IPresenceListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPresenceListener.h; path = SDK/ios/backendless/include/IPresenceListener.h; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CD99D42EF7857294C52D334AD0A85474 /* MessageStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MessageStatus.h; path = SDK/ios/backendless/include/MessageStatus.h; sourceTree = "<group>"; };
+		D0C9051AA7247431A1DCBAB951F23F0B /* Logger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Logger.h; path = SDK/ios/backendless/include/Logger.h; sourceTree = "<group>"; };
+		D1D76F624FF98B9161AD2F2704A6AFFC /* BEMapView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMapView.h; path = SDK/ios/backendless/include/BEMapView.h; sourceTree = "<group>"; };
+		D244A86925FBE6143A3D151720F8A84B /* Pods-HotSpotSpeed.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotSpotSpeed.release.xcconfig"; sourceTree = "<group>"; };
+		D2F30F9064A8CF6B902683624372F7A6 /* CacheService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheService.h; path = SDK/ios/backendless/include/CacheService.h; sourceTree = "<group>"; };
+		D4293687C535896FCEF7021AF2FB2E3D /* Backendless.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Backendless.h; path = SDK/ios/backendless/include/Backendless.h; sourceTree = "<group>"; };
+		D8F2846F24D5D4877E87AA36B8401E0B /* BackendlessCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessCollection.h; path = SDK/ios/backendless/include/BackendlessCollection.h; sourceTree = "<group>"; };
+		D9A398CEB50782FD3F59D830129FE5E3 /* BinaryStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BinaryStream.h; path = SDK/ios/CommLibiOS/include/BinaryStream.h; sourceTree = "<group>"; };
+		D9B2D7120D8E787021F22FD9F0BA170A /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA02DD6FE02246C570AC6651142040F8 /* Pods-HotSpotSpeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HotSpotSpeed.debug.xcconfig"; sourceTree = "<group>"; };
+		DB3569276C2ABCC8B62BAFB7DBF044C3 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		DDEA8859540B368B4B4AF6D3895AC304 /* Pods_HotSpotSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HotSpotSpeed.framework; path = "Pods-HotSpotSpeed.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E242E994C578BB318F311516C5DC10FF /* Events.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Events.h; path = SDK/ios/backendless/include/Events.h; sourceTree = "<group>"; };
+		E2BFDF19F4E7148A05D3C4D80B97AE50 /* CacheFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CacheFactory.h; path = SDK/ios/backendless/include/CacheFactory.h; sourceTree = "<group>"; };
+		E4219915CE99002D8FA2E9301E4442CC /* Pods-HotSpotSpeed.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-HotSpotSpeed.modulemap"; sourceTree = "<group>"; };
+		E7A74900BE7A165BBC6449094D90A35F /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		EB5F6FA37CE8965F16CC06427E565D1A /* IPendingServiceCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = IPendingServiceCallback.h; path = SDK/ios/CommLibiOS/include/IPendingServiceCallback.h; sourceTree = "<group>"; };
+		ED0C45779898C350CF5DA0BA23ABA59D /* LocationTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LocationTracker.h; path = SDK/ios/backendless/include/LocationTracker.h; sourceTree = "<group>"; };
+		F8BAB5F74BE25C1EEA5C75A56D731B6E /* HashMap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HashMap.h; path = SDK/ios/backendless/include/HashMap.h; sourceTree = "<group>"; };
+		FA5DDEEFC5BCCF703E42F3134059D457 /* DeliveryOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DeliveryOptions.h; path = SDK/ios/backendless/include/DeliveryOptions.h; sourceTree = "<group>"; };
+		FB9C950AA888612596DB709134B7A8B6 /* BackendlessFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BackendlessFile.h; path = SDK/ios/backendless/include/BackendlessFile.h; sourceTree = "<group>"; };
+		FFF3994FDDF31D98E2BF058EB992D57F /* GeoFence.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GeoFence.h; path = SDK/ios/backendless/include/GeoFence.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2659071727ADEAAF1474A58C16D7480C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497513724F88934C79990A8481FADB34 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3159D7CAFD56B809F40CA3330DA10889 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		075DB83A2E37A6407706F0661A55D5D4 /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				0786316EBB3D15B21F68DBDAD8F1F0CB /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		098196EFB7AF444460D6691E0DF6657A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AADE7640FE65E81F0013935337A998A5 /* GoogleMaps.framework */,
+				6E5AA719BD7D086D23CCFF12750A2DD9 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D1154A3C8216DDFD660BB9C788063A7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6699C8FAFE9792106AD2F273F3A5DD87 /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		195C1F612F307415C1DF3C052A76B2C8 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				0D1154A3C8216DDFD660BB9C788063A7 /* Base */,
+				97B070C3AA8D4D3FB452CB3E2E7306AA /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		1CB07E3E1E77CD59BE8B65594E0B15B2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2FBCD8741736266AB3DF84D3C66981B0 /* Firebase.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		469FCB06E65ED5E529843AF4997026A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02EF9D4D7CF69F1B6C8562C54F8F0C5A /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FA66AB9485B749AC7871345F01C8F90 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				261647F3D3D81A32A3C05ED9745BCAA3 /* ANSCompatibility.h */,
+				A732EE2C3B140A88DB06E58F601E48DA /* Answers.h */,
+				C78C5390E42933E60F18BCD2108B5D6B /* CLSAttributes.h */,
+				AF9A8BE2CF648ABEEF084199216DF8FE /* CLSLogging.h */,
+				115AE0FFE7D204C6EB5B923906E00031 /* CLSReport.h */,
+				4D1640C98BFD1879A7DC8E0D6270D5FD /* CLSStackFrame.h */,
+				41E39AA5D4D3D944D0CA46A866B00D02 /* Crashlytics.h */,
+				FAE563D77D348FD9E5B845A93ABF0CD7 /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		51378E4149C21D80C74C4BD37E3DBE89 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A0E2FC2767FEA658AAD3F8BC469D731D /* Pods-HotSpotSpeed */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5DC4533D3CB8FB173EA6303B2DA15DFB /* NSData+zlib */ = {
+			isa = PBXGroup;
+			children = (
+				04F9E0E9EADF595FFA1B15483B04E357 /* GTMNSData+zlib.h */,
+				1003FE5E531C4B700857784486E74CD9 /* GTMNSData+zlib.m */,
+			);
+			name = "NSData+zlib";
+			sourceTree = "<group>";
+		};
+		609AE51D70093D0F7AA9E222FA1E802D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EFA9591810324780408FE4B7704C81B /* GoogleToolboxForMac.modulemap */,
+				A1D04D6BAED6F78E0DB03D23F1996486 /* GoogleToolboxForMac.xcconfig */,
+				9E77291800BEBB424CC1B43D08BC1616 /* GoogleToolboxForMac-dummy.m */,
+				48AD5A612A92D7374970106006903754 /* GoogleToolboxForMac-prefix.pch */,
+				C05EE43D1C95CF8B4D555BCB62127606 /* GoogleToolboxForMac-umbrella.h */,
+				3D57AB7A150A6A10BEFC02DDC249031A /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
+			sourceTree = "<group>";
+		};
+		6332E6425C61715B4F5286412ECA3065 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3102A1310ACA0FC9B7D3FE66D95E47D4 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6699C8FAFE9792106AD2F273F3A5DD87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A299446A0D3A44BD480EBAFEF1A903D /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C3D17496AE1357D9E7F891FE8C71929 /* GooglePlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C6C2E9A108EBBAAE8671D53168D51BD6 /* Frameworks */,
+				B19ED1A160F5E3B703FF5317CD17BC46 /* Resources */,
+			);
+			name = GooglePlacePicker;
+			path = GooglePlacePicker;
+			sourceTree = "<group>";
+		};
+		6F125FB91D817A202E1135BEA1F0ADC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A98E8EDE39103B5A962DAE7B6BF94B5B /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70A7CE591C9929519FD45AF9D4678BD0 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				1CB07E3E1E77CD59BE8B65594E0B15B2 /* Core */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		7381AC119621776A64517DA7AD0173D7 /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				D2BFC71C144360C23E3E926C7E71F1CE /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				818CE84BE078810F5F2EC31D46188652 /* Pods */,
+				C3AFCC8939D3D430ECACA245196D6CA8 /* Products */,
+				51378E4149C21D80C74C4BD37E3DBE89 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		818190994D2E544D58C5087507B09423 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				469FCB06E65ED5E529843AF4997026A1 /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		818CE84BE078810F5F2EC31D46188652 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDF4B6353227063FFCCF6A3FFC9509F5 /* Backendless */,
+				4FA66AB9485B749AC7871345F01C8F90 /* Crashlytics */,
+				E7D3410E771FDE91F425D0CC71C63E69 /* Fabric */,
+				70A7CE591C9929519FD45AF9D4678BD0 /* Firebase */,
+				AF32C21CD4E46A60720CA945A0D4D51E /* FirebaseAnalytics */,
+				7381AC119621776A64517DA7AD0173D7 /* FirebaseCore */,
+				818190994D2E544D58C5087507B09423 /* FirebaseInstanceID */,
+				195C1F612F307415C1DF3C052A76B2C8 /* GoogleMaps */,
+				6C3D17496AE1357D9E7F891FE8C71929 /* GooglePlacePicker */,
+				E07A1EA5981C0DFAD4439CF029E40630 /* GooglePlaces */,
+				D1F22EFC818C4C3CEA7C2E44DE64F923 /* GoogleToolboxForMac */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		97B070C3AA8D4D3FB452CB3E2E7306AA /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				098196EFB7AF444460D6691E0DF6657A /* Frameworks */,
+				DDAB1F2D04C156EE6FE10EAF4BDE9B2C /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		A0E2FC2767FEA658AAD3F8BC469D731D /* Pods-HotSpotSpeed */ = {
+			isa = PBXGroup;
+			children = (
+				8A0A7A01DE97DC0019E8DFB0C61182EA /* Info.plist */,
+				E4219915CE99002D8FA2E9301E4442CC /* Pods-HotSpotSpeed.modulemap */,
+				1BFB723F8F7EB4F2CADC0D6E33B6AC4A /* Pods-HotSpotSpeed-acknowledgements.markdown */,
+				2294E9D666342C104DC90CC706459A26 /* Pods-HotSpotSpeed-acknowledgements.plist */,
+				C193C6AE9E1C54A00E78E3BF4E5B6A09 /* Pods-HotSpotSpeed-dummy.m */,
+				9CFD75D9AB1DD258936AD23947EDBB5F /* Pods-HotSpotSpeed-frameworks.sh */,
+				3F238B6BE15EC1DD1FC7A742C562CFDC /* Pods-HotSpotSpeed-resources.sh */,
+				66FFFDB5A15DD49669ACFB493F5C8458 /* Pods-HotSpotSpeed-umbrella.h */,
+				DA02DD6FE02246C570AC6651142040F8 /* Pods-HotSpotSpeed.debug.xcconfig */,
+				D244A86925FBE6143A3D151720F8A84B /* Pods-HotSpotSpeed.release.xcconfig */,
+			);
+			name = "Pods-HotSpotSpeed";
+			path = "Target Support Files/Pods-HotSpotSpeed";
+			sourceTree = "<group>";
+		};
+		AF32C21CD4E46A60720CA945A0D4D51E /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				B81C1B629E8016D57DE644EFDA02B2DB /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		B19ED1A160F5E3B703FF5317CD17BC46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73FDDAF6DE5A051DC410232A4BA18999 /* GooglePlacePicker.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B81C1B629E8016D57DE644EFDA02B2DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F1750CE18973517C0E241AAA8FB3154 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3AFCC8939D3D430ECACA245196D6CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9B2D7120D8E787021F22FD9F0BA170A /* GoogleToolboxForMac.framework */,
+				DDEA8859540B368B4B4AF6D3895AC304 /* Pods_HotSpotSpeed.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6C2E9A108EBBAAE8671D53168D51BD6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DD7FDE354D9EE238D3E87A2F54E26C0 /* GooglePlacePicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDF4B6353227063FFCCF6A3FFC9509F5 /* Backendless */ = {
+			isa = PBXGroup;
+			children = (
+				27DAA453AB16C480B793B81D61174A9E /* AbstractProperty.h */,
+				4E271EE5DCD37CCDC57B01AF3C2DC520 /* AbstractQuery.h */,
+				443902F81B88EEFA8C397EFBFA518A6B /* AMFSerializer.h */,
+				6E863562C70285B6565CF41BE244B1C0 /* AtomicCounters.h */,
+				BA48F39E1260CA2362D9507A027C6DC8 /* AtomicCountersFactory.h */,
+				D4293687C535896FCEF7021AF2FB2E3D /* Backendless.h */,
+				A96CAE97C6BC5494CBC91C545FC3D675 /* Backendless-Bridging-Header.h */,
+				676077F8A63D79260EA7173EF4229E8D /* Backendless-With-Media-Bridging-Header.h */,
+				2A6C12D8011D1CE4CBDF86986180FAED /* BackendlessBeacon.h */,
+				7C967DCA3D29D90DC96AEBE3868320F0 /* BackendlessCachePolicy.h */,
+				90259658ED69D6B6338E0926E3C144D0 /* BackendlessCacheProtocol.h */,
+				D8F2846F24D5D4877E87AA36B8401E0B /* BackendlessCollection.h */,
+				5C5E23588928A3C40368FED38728E495 /* BackendlessDataQuery.h */,
+				0307CBF25B246D59553C9057BA13125D /* BackendlessEntity.h */,
+				FB9C950AA888612596DB709134B7A8B6 /* BackendlessFile.h */,
+				B32152098E5A711B1DD7E17B730986B1 /* BackendlessGeoQuery.h */,
+				5B971A333D85BCFA5400C2F7CF1EBE28 /* BackendlessSimpleQuery.h */,
+				1317DCD23C01E61C5F24D0B49DE888DA /* BackendlessUser.h */,
+				35DB54188C4B2D3B4716B38F33DBBF7E /* BEAnnotation.h */,
+				358DD7C79F1F9EFA4093EE4CE6576FBA /* BECollectionView.h */,
+				2B46DCA92E511C3D9AE1993D57F112D8 /* BEFileInfo.h */,
+				D1D76F624FF98B9161AD2F2704A6AFFC /* BEMapView.h */,
+				1C786F4D4ABB62D38E8CE5ECEEF24C0B /* BESubscription.h */,
+				82C8CB45831F066F1AFE1043AABAF2D4 /* BETableView.h */,
+				63B4539D6A1FF052AEF4998A1467F0A8 /* BinaryCodec.h */,
+				D9A398CEB50782FD3F59D830129FE5E3 /* BinaryStream.h */,
+				326FA85553D32289E335DF7E4E80E8A8 /* BodyParts.h */,
+				E2BFDF19F4E7148A05D3C4D80B97AE50 /* CacheFactory.h */,
+				D2F30F9064A8CF6B902683624372F7A6 /* CacheService.h */,
+				AD81AB4FBB7889FF393BE75B843D2AAF /* CustomService.h */,
+				2A20CD938A2CDA631EB148FD6146B59A /* DataPermission.h */,
+				BD1290D09FB2845CFB6D64537FD679E7 /* DataStoreFactory.h */,
+				C30E99AB94A9C6D3D11CB4BC882A75CA /* DEBUG.h */,
+				FA5DDEEFC5BCCF703E42F3134059D457 /* DeliveryOptions.h */,
+				24BB725D5BDC3FE2805D1ECEDBBA4FD8 /* DeviceRegistration.h */,
+				E242E994C578BB318F311516C5DC10FF /* Events.h */,
+				C0F168DA02EEB486E7DE1991FC963500 /* FilePermission.h */,
+				781A5DDC68349381DD7BBD04B94B26DB /* FileService.h */,
+				64F80D09A6DF6A0B524A7CD1A0E3FBC5 /* FlashorbBinaryReader.h */,
+				3FE636EE7DDD038E65472E0F51423E34 /* FlashorbBinaryWriter.h */,
+				39243387C4B9558F3A0449B02F10F09B /* GeoCategory.h */,
+				B6445FD4DD52DA9466037E6A84081E61 /* GeoCluster.h */,
+				FFF3994FDDF31D98E2BF058EB992D57F /* GeoFence.h */,
+				5A6630973F59C3ABA4E4433C0A5C947E /* GeoPoint.h */,
+				908D342092B2B2CB8D7C8FF7DA1C552F /* GeoService.h */,
+				F8BAB5F74BE25C1EEA5C75A56D731B6E /* HashMap.h */,
+				69C34F058D29324C95B1705799C384C6 /* IAtomicCounters.h */,
+				45F12832CCD7E8B4D55D0D24D82BC85A /* IAttributeStore.h */,
+				2FB9A8B64DAB26E61FA7453818AACFB9 /* ICacheService.h */,
+				252B99518B3280FC275DE2D48326A38B /* ICallback.h */,
+				8470B67D695F5CA3855FDEC38776AA26 /* IClientSharedObject.h */,
+				97925522F5B4BBF3D034BCCFCC4EC1CE /* IClientSharedObjectDelegate.h */,
+				04341A38A6CC04CFBD637DB03B44380B /* IDataStore.h */,
+				EB5F6FA37CE8965F16CC06427E565D1A /* IPendingServiceCallback.h */,
+				8BA88010F78ADE6BDDB32AAC3002B6D8 /* IPersistable.h */,
+				C81796FEC91B03BF9498247E609BD460 /* IPresenceListener.h */,
+				08153737956AEF93AAEFD3528B8EB39C /* IRTMProtocol.h */,
+				6A83F5FC079620D2C0DF89BD5A449868 /* IServiceCall.h */,
+				6A5877B81D37FB1463A84A03DADC356A /* ISharedObjectListener.h */,
+				ED0C45779898C350CF5DA0BA23ABA59D /* LocationTracker.h */,
+				D0C9051AA7247431A1DCBAB951F23F0B /* Logger.h */,
+				B1FBBBAC14B01025902A37F52EFE6745 /* Logging.h */,
+				C304ABC0CE96AB2EE926AF2086290E64 /* MemoryTicker.h */,
+				2AC28E9F3660853FCECCFB87CC74A37A /* Message.h */,
+				CD99D42EF7857294C52D334AD0A85474 /* MessageStatus.h */,
+				7CFBDA72C945F63909741CB43181599D /* MessagingService.h */,
+				A0B5AD3DE8592D25ADFFC170E18419D3 /* ObjectProperty.h */,
+				91695E473CBC774A62A3123C5179233D /* PersistenceService.h */,
+				6CE6092B966FA215D4876E72EC9935A2 /* Presence.h */,
+				5DCE84AF3AA4613865817D6538123241 /* ProtectedBackendlessGeoQuery.h */,
+				71A1DC9D45231E0F973A76972937CED4 /* PublishOptions.h */,
+				915492E923891EBB910FB3DB8B50B1B7 /* QueryOptions.h */,
+				36441F1975E7EE4A957F879EB0F53EA7 /* Responder.h */,
+				4219598BAEAC9D2E23CFA171F95610D7 /* RTMPClient.h */,
+				48E7E79DE61D77F72E5AD2634928C64D /* SubscriptionOptions.h */,
+				07386B4E664223C440739AC0F63D0A72 /* Types.h */,
+				590AB9D4E298414F4D735D22DD5650D5 /* UserProperty.h */,
+				0E8B4A4AA2C536EF627C9E7BA0957E61 /* UserService.h */,
+				A0127A2D601423A02E529E1D14AEDB3A /* WeborbClient.h */,
+			);
+			name = Backendless;
+			path = Backendless;
+			sourceTree = "<group>";
+		};
+		D1F22EFC818C4C3CEA7C2E44DE64F923 /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				075DB83A2E37A6407706F0661A55D5D4 /* Defines */,
+				5DC4533D3CB8FB173EA6303B2DA15DFB /* NSData+zlib */,
+				609AE51D70093D0F7AA9E222FA1E802D /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
+		D2BFC71C144360C23E3E926C7E71F1CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2344128E44F5FE39AAE79408217DC532 /* FirebaseCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DB9A42E46086547F50021D170F5D8DEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24545AA4B2A638B96761C02174FAD1B8 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDAB1F2D04C156EE6FE10EAF4BDE9B2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB3569276C2ABCC8B62BAFB7DBF044C3 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E07A1EA5981C0DFAD4439CF029E40630 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				6F125FB91D817A202E1135BEA1F0ADC9 /* Frameworks */,
+				6332E6425C61715B4F5286412ECA3065 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		E7D3410E771FDE91F425D0CC71C63E69 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				AC934581346D2B2C833D0138DA159563 /* FABAttributes.h */,
+				798556BBC2631348413F3B1DF33891FA /* Fabric.h */,
+				DB9A42E46086547F50021D170F5D8DEE /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		FAE563D77D348FD9E5B845A93ABF0CD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7A74900BE7A165BBC6449094D90A35F /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F3E1020F6BD54A2B10F467BA2128CA45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				769167FCF23C9FF4C5656EF31988DE7F /* Pods-HotSpotSpeed-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */,
+				541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */,
+				DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */;
+			buildPhases = (
+				63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */,
+				F9BC43EEAF05BCB201B3D28C244AA7E1 /* Frameworks */,
+				FDA600FDC48ED17BA03DA2D85D4EDA97 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GoogleToolboxForMac;
+			productName = GoogleToolboxForMac;
+			productReference = D9B2D7120D8E787021F22FD9F0BA170A /* GoogleToolboxForMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F6F5FF8D0D65BF5EDD44BF7F8C2613A1 /* Pods-HotSpotSpeed */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99F1C3EC77032601523DB4058F33BCC /* Build configuration list for PBXNativeTarget "Pods-HotSpotSpeed" */;
+			buildPhases = (
+				38BC660A0803C03C4B4256F5C20E4856 /* Sources */,
+				2659071727ADEAAF1474A58C16D7480C /* Frameworks */,
+				F3E1020F6BD54A2B10F467BA2128CA45 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9FA074583DFB05573B78C5827F78FC2 /* PBXTargetDependency */,
+			);
+			name = "Pods-HotSpotSpeed";
+			productName = "Pods-HotSpotSpeed";
+			productReference = DDEA8859540B368B4B4AF6D3895AC304 /* Pods_HotSpotSpeed.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C3AFCC8939D3D430ECACA245196D6CA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
+				F6F5FF8D0D65BF5EDD44BF7F8C2613A1 /* Pods-HotSpotSpeed */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38BC660A0803C03C4B4256F5C20E4856 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				497A95A0E7EAC177E8438885917E5145 /* Pods-HotSpotSpeed-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D7DA997053F6B5D01DE8CB5817CB51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */,
+				F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9FA074583DFB05573B78C5827F78FC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleToolboxForMac;
+			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
+			targetProxy = 7F7F3E41F3891AB105B2CE629240259B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3728BD5A02E4292AB25900EA3388C57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D04D6BAED6F78E0DB03D23F1996486 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		7879FDB5F028AA3842E29B6EABEB9E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1D04D6BAED6F78E0DB03D23F1996486 /* GoogleToolboxForMac.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GoogleToolboxForMac/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GoogleToolboxForMac/GoogleToolboxForMac.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GoogleToolboxForMac;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFD473A22C3539D39DDD0D8CDA7FFB76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D244A86925FBE6143A3D151720F8A84B /* Pods-HotSpotSpeed.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HotSpotSpeed/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HotSpotSpeed;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F8ABDAD8A47E2A3875A2852B89324363 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA02DD6FE02246C570AC6651142040F8 /* Pods-HotSpotSpeed.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-HotSpotSpeed/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_HotSpotSpeed;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99F1C3EC77032601523DB4058F33BCC /* Build configuration list for PBXNativeTarget "Pods-HotSpotSpeed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8ABDAD8A47E2A3875A2852B89324363 /* Debug */,
+				CFD473A22C3539D39DDD0D8CDA7FFB76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7879FDB5F028AA3842E29B6EABEB9E07 /* Debug */,
+				3728BD5A02E4292AB25900EA3388C57A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

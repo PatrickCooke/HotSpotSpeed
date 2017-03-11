@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381A30FC1E739BAB00B4EBBA /* FireBaseDataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A30FB1E739BAB00B4EBBA /* FireBaseDataSaver.swift */; };
+		381A31001E739C3100B4EBBA /* FireBaseDataPuller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381A30FF1E739C3100B4EBBA /* FireBaseDataPuller.swift */; };
+		381A31021E739DEB00B4EBBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 381A31011E739DEB00B4EBBA /* GoogleService-Info.plist */; };
 		3899A7081E1AC6ED008FE18A /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7071E1AC6ED008FE18A /* Options.swift */; };
 		3899A70A1E1AC9A2008FE18A /* OptionsPopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */; };
 		38AEB9871E2599B000627C18 /* NewHotSpotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43722C121D80D6DF0095672A /* NewHotSpotVC.swift */; };
@@ -32,6 +35,9 @@
 
 /* Begin PBXFileReference section */
 		0F8892408EA1FC986800B0DA /* Pods_HotSpotSpeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotSpotSpeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		381A30FB1E739BAB00B4EBBA /* FireBaseDataSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseDataSaver.swift; sourceTree = "<group>"; };
+		381A30FF1E739C3100B4EBBA /* FireBaseDataPuller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FireBaseDataPuller.swift; sourceTree = "<group>"; };
+		381A31011E739DEB00B4EBBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3899A7071E1AC6ED008FE18A /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 		3899A7091E1AC9A2008FE18A /* OptionsPopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsPopOverViewController.swift; sourceTree = "<group>"; };
 		38C096D71E3017F000644689 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 				43722C041D7F66980095672A /* Assets.xcassets */,
 				43722C011D7F66980095672A /* Main.storyboard */,
 				43722C061D7F66980095672A /* LaunchScreen.storyboard */,
+				381A31011E739DEB00B4EBBA /* GoogleService-Info.plist */,
 				43722C091D7F66980095672A /* Info.plist */,
 			);
 			path = HotSpotSpeed;
@@ -124,6 +131,8 @@
 		43722C1A1D820D870095672A /* Singletons */ = {
 			isa = PBXGroup;
 			children = (
+				381A30FF1E739C3100B4EBBA /* FireBaseDataPuller.swift */,
+				381A30FB1E739BAB00B4EBBA /* FireBaseDataSaver.swift */,
 				43722C141D80E0740095672A /* LocationManager.swift */,
 				43722C181D820C010095672A /* DataManager.swift */,
 				3899A7071E1AC6ED008FE18A /* Options.swift */,
@@ -172,12 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43722C0C1D7F66980095672A /* Build configuration list for PBXNativeTarget "HotSpotSpeed" */;
 			buildPhases = (
-				A12077157A8F9EC48D9B39CA /* 📦 Check Pods Manifest.lock */,
+				A12077157A8F9EC48D9B39CA /* [CP] Check Pods Manifest.lock */,
 				43722BF61D7F66980095672A /* Sources */,
 				43722BF71D7F66980095672A /* Frameworks */,
 				43722BF81D7F66980095672A /* Resources */,
-				E84D7E024F88BEA20551FD37 /* 📦 Embed Pods Frameworks */,
-				9D0D47FA48634ECD7F770E7D /* 📦 Copy Pods Resources */,
+				E84D7E024F88BEA20551FD37 /* [CP] Embed Pods Frameworks */,
+				9D0D47FA48634ECD7F770E7D /* [CP] Copy Pods Resources */,
 				38F35B561E0211060094385C /* ShellScript */,
 			);
 			buildRules = (
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43722C081D7F66980095672A /* LaunchScreen.storyboard in Resources */,
+				381A31021E739DEB00B4EBBA /* GoogleService-Info.plist in Resources */,
 				43722C051D7F66980095672A /* Assets.xcassets in Resources */,
 				43722C031D7F66980095672A /* Main.storyboard in Resources */,
 			);
@@ -251,14 +261,14 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 116ed9f8227b0ca166ff1579d8a1da88deb4347f 5396a0735a6cbf2267d97e8484855415e5460acbfd3b7d66b224ba11398fdfb5";
 		};
-		9D0D47FA48634ECD7F770E7D /* 📦 Copy Pods Resources */ = {
+		9D0D47FA48634ECD7F770E7D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,29 +276,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotSpotSpeed/Pods-HotSpotSpeed-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A12077157A8F9EC48D9B39CA /* 📦 Check Pods Manifest.lock */ = {
+		A12077157A8F9EC48D9B39CA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E84D7E024F88BEA20551FD37 /* 📦 Embed Pods Frameworks */ = {
+		E84D7E024F88BEA20551FD37 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +327,9 @@
 				432584641DB0F9400020BCB7 /* reachability.swift in Sources */,
 				43C2A1501DDFC2F300CC5A62 /* wifiTableCell.swift in Sources */,
 				43722C221D8CCC340095672A /* wifiPin.swift in Sources */,
+				381A30FC1E739BAB00B4EBBA /* FireBaseDataSaver.swift in Sources */,
 				3899A7081E1AC6ED008FE18A /* Options.swift in Sources */,
+				381A31001E739C3100B4EBBA /* FireBaseDataPuller.swift in Sources */,
 				43722C101D7F66D80095672A /* HotSpot.swift in Sources */,
 				3899A70A1E1AC9A2008FE18A /* OptionsPopOverViewController.swift in Sources */,
 			);
